@@ -1,6 +1,12 @@
 $pink:#e21c3f;
 $blue:#04a2b6;
 $inputGrey:#b7b7b7;
+input{
+    border-radius: 10px;
+    width: 100px;
+    border: solid 2px $pink;
+    color: $inputGrey; 
+}
 .dropMenu{
     border-radius: 10px;
     border: solid 2px $pink;
@@ -23,12 +29,7 @@ $inputGrey:#b7b7b7;
 .show>.btn-primary.dropdown-toggle:focus{
     box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
 }
-input{
-    border-radius: 10px;
-    width: 100px;
-    border: solid 2px $pink;
-    color: $inputGrey; 
-}
+
 nav{
     button{
         height: 30px;
