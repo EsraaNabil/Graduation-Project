@@ -4,10 +4,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
+import { Sec3Component } from './sec3/sec3.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Sec3Component
   ],
   imports: [
     BrowserModule,

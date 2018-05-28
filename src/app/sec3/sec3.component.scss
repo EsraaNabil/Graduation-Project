@@ -1,0 +1,54 @@
+.sec3{
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+.head{
+    margin-bottom: 90px;
+    h2{
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    img{
+        margin-right: 5px;
+    }
+}
+.row{
+    padding: 20px;
+    .col-6{ 
+        .toys{
+            border: 10px solid #e21c3f;
+        }
+        .clothes{
+            border: 10px solid #04a2b6;
+        }   
+        .row{                                 
+            .col-7{
+                img{
+                    width: 100%;
+                }
+            }
+            .col-5{
+                display: flex;
+                align-items: center;
+                h5{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 20px; 
+                }
+            }
+        }
+    }
+    .div-content1{
+        padding-right: 30px;
+    } 
+    .div-content2{
+        padding-left: 30px 
+    }
+
+}
+
+
+
+
+   
