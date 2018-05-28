@@ -1,39 +1,74 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-  <ngb-panel title="Simple">
-    <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-      labore sustainable VHS.
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel>
-    <ng-template ngbPanelTitle>
-      <span>&#9733; <b>Fancy</b> title &#9733;</span>
-    </ng-template>
-    <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-      labore sustainable VHS.
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel title="Disabled" [disabled]="true">
-    <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-      labore sustainable VHS.
-    </ng-template>
-  </ngb-panel>
-</ngb-accordion>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <span class="verticalLine pr-3"><img src="../../images/girl.png" /></span>
+      <img src="../../images/boy.png" class="pl-3"/>
+      <div class="btn-group mr-3 ml-5">
+          <button type="button" class="btn dropMenu d-flex align-items-center pl-3 pl-3 pb-0 pt-0">Select Age</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-primary dropdown-toggle-split dropMenuToggle d-flex align-items-center" ngbDropdownToggle></button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button class="dropdown-item">baby to 5 years</button>
+              <button class="dropdown-item">5 years to 10 years</button>
+              <button class="dropdown-item">10 years to 15 years</button>
+            </div>
+          </div>
+        </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" [ngbCollapse]="navbarCollapsed">
+        <div class="navbar-nav d-flex align-items-center justify-content-center">
+         <span class="facebook d-flex align-items-center justify-content-center ml-2"><i class="fa fa-facebook-f"></i></span>
+         <span class="twitter d-flex align-items-center justify-content-center ml-2"><i class="fa fa-twitter"></i></span>
+         <span class="google d-flex align-items-center justify-content-center ml-2"><i class="fa fa-google-plus-g"></i></span>
+         <span class="insta d-flex align-items-center justify-content-center ml-2"><i class="fa fa-instagram"></i></span>
+         <input type="text" placeholder="Register" class="text-center register mr-2 ml-5">
+         <input type="text" placeholder="Login" class="input text-center login">
+        </div>
+      </div>
+    </div>
+  </nav>
 
-<i class="fa fa-adjust"></i>
+<nav class="navbar navbar-expand-lg navbar-light pl-0 pr-0 secondNav">
+  <div class="container">
+    <a class="navbar-brand" href="#">ANGULAR</a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" [ngbCollapse]="navbarCollapsed">
+      <div class="navbar-nav d-flex align-items-center justify-content-center ml-auto mr-auto">
+            <a class="nav-item nav-link">Home</a>
+            <a class="nav-item nav-link">Places</a>
+            <a class="nav-item nav-link">Media</a>
+            <a class="nav-item nav-link">Shop</a>
+            <a class="nav-item nav-link">Events</a>
+            <a class="nav-item nav-link">Games</a>
+            <a class="nav-item nav-link">BabyTraker</a>
+        <!-- <button type="button" name="button" (click)="goLogin()" class="btn mx-3 mb-2 px-4 my-lg-0 my-xl-0">Login</button> -->
+      </div>
+      <i class="fa fa-shopping-cart pr-3"></i>
+      <i class="fa fa-heart"></i>
+    </div>
+  </div>
+</nav>
+<!-- 
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <img [src]="images/slide01.jpg" alt="Random first slide">
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="" alt="Random second slide">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="" alt="Random third slide">
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel> -->
 
+<app-login></app-login>
