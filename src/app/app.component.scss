@@ -1,24 +1,5 @@
-$pink:#e21c3f;
-$blue:#04a2b6;
-$inputGrey:#b7b7b7;
-input{
-    border-radius: 10px;
-    width: 100px;
-    border: solid 2px $pink;
-    color: $inputGrey; 
-}
-.dropMenu{
-    border-radius: 10px;
-    border: solid 2px $pink;
-    color: $pink;
-    background: white;
-}
-.dropMenuToggle{
-    border-radius: 10px;
-    border: solid 2px $pink;
-    color: $pink;
-    background:$pink;
-}
+@import "../assets/variables .scss";
+
 .dropMenuToggle::after{
     color: white;
 }
