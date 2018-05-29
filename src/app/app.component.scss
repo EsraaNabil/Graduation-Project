@@ -1,5 +1,13 @@
 @import "../assets/variables .scss";
 
+// @font-face{
+//     font-family: nunito;
+//     src: url('../assets/Fonts/nunito/Nunito Regular.ttf');
+// }
+
+// body{
+//     font-family: nunito;
+// }
 .dropMenuToggle::after{
     color: white;
 }
@@ -10,8 +18,13 @@
 .show>.btn-primary.dropdown-toggle:focus{
     box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
 }
-
+button:focus{
+    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
+}
 nav{
+    .boy{
+        padding-left: 15px;
+    }
     button{
         height: 30px;
     }
@@ -53,12 +66,12 @@ nav{
     .register{
         background-color:$blue;
         border: $blue solid 2px; 
-    }
-    .register::placeholder{
+        border-radius: 10px;
         color: white;
     }
-    .input::placeholder{
-        color: $pink;
+    .register:focus{
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
     }
 }
 
@@ -71,4 +84,15 @@ nav{
     a:hover{
         color: white;
     }
+    .navbar-toggler-icon{
+        i{
+            color: white;
+        }
+    }
+    .navbar-toggler{
+        border-color: white;
+    }
+}
+.navbar-light .navbar-toggler-icon{
+    background-image: none;
 }

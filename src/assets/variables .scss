@@ -1,11 +1,24 @@
 $pink:#e21c3f;
 $blue:#04a2b6;
-$inputGrey:#b7b7b7;
+$inputGrey:hsl(0, 0%, 72%);
+$mai_margin:140px;
+
+.margin{
+    margin-bottom: 140px;
+}
 input{
     border-radius: 10px;
     width: 100px;
     border: solid 2px $pink;
     color: $inputGrey; 
+}
+input:active{
+    border-color: $pink;
+    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
+}
+input:focus{
+    border-color: $pink;
+    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
 }
 .dropMenu{
     border-radius: 10px;
@@ -18,4 +31,23 @@ input{
     border: solid 2px $pink;
     color: $pink;
     background:$pink;
+}
+a{
+    cursor: pointer;
+}
+
+.button-shadow{
+    background-color: #e21c3f;
+    color: white;
+    border: 2px solid #e21c3f;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    box-shadow:0px 6px 2.46px 0.54px rgba(167, 1, 30, 0.73);
+    font-size: 16px;
+    font-family: 'Nunito';
+}
+.button-shadow:hover{
+    box-shadow: none;
+    cursor: pointer;
 }

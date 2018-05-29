@@ -1,8 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <span class="verticalLine pr-3"><img src="../assets/images/girl.png" /></span>
-      <img src="../assets/images/boy.png" class="pl-3"/>
+      <span class="verticalLine pr-3"><a href="#"><img src="../assets/images/girl.png" /></a></span>
+      <a href="#"><img src="../assets/images/boy.png" class="boy"/></a>
+      <button class="navbar-toggler pb-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" (click)="navbarCollapsed = !navbarCollapsed">
+        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+      </button>
       <div class="btn-group mr-3 ml-5">
           <button type="button" class="btn dropMenu d-flex align-items-center pl-3 pl-3 pb-0 pt-0">Select Age</button>
           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
@@ -20,8 +23,9 @@
          <span class="twitter d-flex align-items-center justify-content-center ml-2"><i class="fa fa-twitter"></i></span>
          <span class="google d-flex align-items-center justify-content-center ml-2"><i class="fa fa-google-plus-g"></i></span>
          <span class="insta d-flex align-items-center justify-content-center ml-2"><i class="fa fa-instagram"></i></span>
-         <input type="text" placeholder="Register" class="text-center register mr-2 ml-5">
-         <input type="text" placeholder="Login" class="input text-center login">
+         <button (click)="redirectToRegister()" type="button" class="btn text-center register mr-2 ml-5 pt-0 pb-0">Register</button>
+         <button (click)="redirectToLogin()" type="button" class="btn text-center login dropMenu pt-0 pb-0">Login</button>
+
         </div>
       </div>
     </div>
@@ -30,6 +34,9 @@
 <nav class="navbar navbar-expand-lg navbar-light pl-0 pr-0 secondNav">
   <div class="container">
     <a class="navbar-brand" href="#">ANGULAR</a>
+    <button class="navbar-toggler pb-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" (click)="navbarCollapsed = !navbarCollapsed">
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+    </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" [ngbCollapse]="navbarCollapsed">
       <div class="navbar-nav d-flex align-items-center justify-content-center ml-auto mr-auto">
             <a class="nav-item nav-link">Home</a>
@@ -46,29 +53,5 @@
     </div>
   </div>
 </nav>
-<!-- 
-<ngb-carousel>
-  <ng-template ngbSlide>
-    <img [src]="images/slide01.jpg" alt="Random first slide">
-    <div class="carousel-caption">
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <img [src]="" alt="Random second slide">
-    <div class="carousel-caption">
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <img [src]="" alt="Random third slide">
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
-  </ng-template>
-</ngb-carousel> -->
 
-<app-login></app-login>
+<router-outlet></router-outlet>
