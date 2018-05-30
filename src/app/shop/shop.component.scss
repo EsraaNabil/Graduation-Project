@@ -10,7 +10,6 @@
     background-color: rgba(0, 0, 0, 0.3);
     h1{
         color: white;
-        font-family: 'Chewy';
         font-size: 50px;
     }
     span{
@@ -65,7 +64,6 @@
                 border-radius: 10px;               
                 border: 3px solid $blue;
                 color: black;
-                font-family: 'Nunito';
                 font-size: 20px;
             }
             .btn-secondary{
@@ -113,11 +111,9 @@
                     }
                     .card-body{
                         h5{
-                            font-family: 'Nunito';
                             font-size: 20px; 
                         }
                         p{
-                            font-family: 'Nunito';
                             font-size: 16px;
                             color: #696464; 
                         }
