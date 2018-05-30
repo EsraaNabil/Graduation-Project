@@ -1,26 +1,5 @@
 @import "../assets/variables .scss";
 
-// @font-face{
-//     font-family: nunito;
-//     src: url('../assets/Fonts/nunito/Nunito Regular.ttf');
-// }
-
-// body{
-//     font-family: nunito;
-// }
-.dropMenuToggle::after{
-    color: white;
-}
-.show>.btn-primary.dropdown-toggle{
-    background-color: $pink;
-    border-color: $pink;
-}
-.show>.btn-primary.dropdown-toggle:focus{
-    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
-}
-button:focus{
-    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
-}
 nav{
     .boy{
         padding-left: 15px;

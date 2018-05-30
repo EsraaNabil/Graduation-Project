@@ -1,3 +1,71 @@
-<p>
-  shop-item works!
-</p>
+<button (click)="getItemData()">this</button>
+<div class="container shopItem">
+  <div class="row"  *ngFor="let cd of itemData; let i = index;">
+    <div class="col-lg-4">
+      <img [src]="cd.img">
+    </div>
+    <div class="col-lg-6">
+      <h4>{{cd.title}}</h4>
+      <p class="pt-3">{{cd.body}}</p>
+      <span>Price:</span><span class="redPrice ml-2">{{cd.price}}</span>
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="mt-4 mb-2">Size</p>
+          <div class="btn-group">
+            <button type="button" class="btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{cd.size}}</button>
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+              <button class="btn btn-primary dropdown-toggle-split dropMenuToggle d-flex align-items-center" ngbDropdownToggle></button>
+              <div class="dropdown-menu" ngbDropdownMenu>
+                <button class="dropdown-item">small</button>
+                <button class="dropdown-item">meduim</button>
+                <button class="dropdown-item">large</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p class="mt-4 mb-2">Color</p>
+          <div class="btn-group">
+            <button type="button" class="btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{cd.color}}</button>
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+              <button class="btn btn-primary dropdown-toggle-split dropMenuToggle d-flex align-items-center" ngbDropdownToggle></button>
+              <div class="dropdown-menu" ngbDropdownMenu>
+                <button class="dropdown-item">yellow</button>
+                <button class="dropdown-item">blue</button>
+                <button class="dropdown-item">red</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="mt-4 mb-2">Material</p>
+        <div class="btn-group">
+          <button type="button" class="btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{cd.material}}</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-primary dropdown-toggle-split dropMenuToggle d-flex align-items-center" ngbDropdownToggle></button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button class="dropdown-item">coton</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-4 mb-2">Quantity</p>
+      <nav aria-label="...">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link background" href="#" tabindex="-1"><i class="fa fa-minus"></i></a>
+          </li>
+          <li class="page-item"><a class="page-link quantity" >1</a></li>
+          <li class="page-item">
+            <a class="page-link background" href="#"><i class="fa fa-plus"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <br>
+      <span>Subtotal:</span><span class="redPrice ml-2">{{cd.price}}</span><br>
+      <button type="button" class="btn margin button-shadow mt-5">ADD TO CART</button>
+    </div>
+  </div>
+</div>
+

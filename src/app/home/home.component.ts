@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import {QueryService} from '../query.service';
+import {ShopItemComponent} from'../shop-item/shop-item.component';
+
 
 @Component({
   selector: 'app-home',
@@ -8,8 +11,9 @@ import {QueryService} from '../query.service';
 })
 export class HomeComponent implements OnInit {
   sec2Data: Array<object>;
-  constructor(private q:QueryService) { 
+  constructor(private q:QueryService , private router:Router) { 
     this.sec2Data=[];
+    this.getSec2Data();
   }
 
   getSec2Data():void{
@@ -43,6 +47,11 @@ export class HomeComponent implements OnInit {
       () => {}
     );
   }
+  
+  redirectToPlay():void{
+    this.router.navigate(['/play/']);
+  }
+
 
   ngOnInit() {
   }

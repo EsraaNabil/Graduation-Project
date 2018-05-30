@@ -15,12 +15,15 @@ import { RegisterComponent } from './register/register.component';
 import {QueryService} from './query.service';
 //app validator
 import { EqualValidator } from '../assets/equal-validator.directive';
-import { ShopItemComponent } from './shop-item/shop-item.component';  // import validator
+import { ShopItemComponent } from './shop-item/shop-item.component';
+import { PlayComponent } from './play/play.component';  // import validator
 
 const routes:Routes=[
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent}
+  {path:'register',component:RegisterComponent},
+  {path:'play' , component:PlayComponent},
+  {path:'shopItem' , component:ShopItemComponent}
 ];
 
 @NgModule({
@@ -30,7 +33,8 @@ const routes:Routes=[
     HomeComponent,
     RegisterComponent,
     EqualValidator,
-    ShopItemComponent 
+    ShopItemComponent,
+    PlayComponent 
   ],
   imports: [
     BrowserModule,

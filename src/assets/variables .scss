@@ -3,6 +3,13 @@ $blue:#04a2b6;
 $inputGrey:hsl(0, 0%, 72%);
 $mai_margin:140px;
 
+// @font-face{
+//     font-family: nunito;
+//     src: url('Fonts/nunito/Nunito Regular.ttf');
+// }
+// body{
+//     font-family: nunito;
+// }
 .margin{
     margin-bottom: 140px;
 }
@@ -31,6 +38,19 @@ input:focus{
     border: solid 2px $pink;
     color: $pink;
     background:$pink;
+}
+.dropMenuToggle::after{
+    color: white;
+}
+.show>.btn-primary.dropdown-toggle{
+    background-color: $pink;
+    border-color: $pink;
+}
+.show>.btn-primary.dropdown-toggle:focus{
+    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
+}
+button:focus{
+    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
 }
 a{
     cursor: pointer;
