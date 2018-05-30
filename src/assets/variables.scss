@@ -1,29 +1,49 @@
 $pink:#e21c3f;
 $blue:#04a2b6;
+$orange:#ff9800;
 $inputGrey:hsl(0, 0%, 72%);
 $mai_margin:140px;
-
-// @font-face{
-//     font-family: nunito;
-//     src: url('Fonts/nunito/Nunito Regular.ttf');
-// }
-// body{
-//     font-family: nunito;
-// }
+@font-face {
+    font-family: 'Supermercado';
+	src: url('/assets/Fonts/supermercado/SupermercadoOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'Chewy';
+	src: url('/assets/Fonts/chewy/Chewy.ttf');
+}
+@font-face {
+    font-family: 'Nunito';
+	src: url('/assets/Fonts/nunito/Nunito-Regular.ttf');
+}
+h1{
+    font-family: 'Chewy'; 
+}
+h2{
+    font-family: 'Supermercado'; 
+}
+h5{
+    font-family: 'Nunito'; 
+}
+p{
+    font-family: 'Nunito';  
+}
+button{
+    font-family: 'Nunito';
+}
 .margin{
     margin-bottom: 140px;
 }
-input{
+.inputForm{
     border-radius: 10px;
     width: 100px;
     border: solid 2px $pink;
     color: $inputGrey; 
 }
-input:active{
+.inputForm:active{
     border-color: $pink;
     box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
 }
-input:focus{
+.inputForm:focus{
     border-color: $pink;
     box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
 }
