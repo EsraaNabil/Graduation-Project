@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Supermercado';
+	src: url('/assets/Fonts/supermercado/SupermercadoOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'Chewy';
+	src: url('/assets/Fonts/chewy/Chewy.ttf');
+}
+@font-face {
+    font-family: 'Nunito';
+	src: url('/assets/Fonts/nunito/Nunito-Regular.ttf');
+}
+.secshop{
+    background-image:url('/assets/shop/shophead.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+.secBg{
+    padding-top:140px;
+    padding-bottom: 140px;
+    background-color: rgba(0, 0, 0, 0.3);
+    h1{
+        color: white;
+        font-family: 'Chewy';
+        font-size: 50px;
+    }
+    span{
+        color:white;
+        font-family: 'Nunito';
+        font-size: 18px;
+    }
+    span:first-of-type{
+        color:#c0bebe;
+        padding-right: 20px;
+    }    
+}
+.container{
+    margin-top: 90px;
+    margin-bottom: 90px;
+    .row{
+        .col-4{
+            h4{
+                font-family: 'Nunito';
+                font-size: 25px;
+                color: white;
+                background-color: #e21c3f;
+                padding: 10px 0 10px 20px;
+                border-radius: 20px;
+                margin-bottom: 15px;
+            }
+            .form{
+                .inputGroup{
+                    border-bottom: 1px solid #d6d5d5;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    label{
+                        padding-left: 8px;
+                        font-family: 'Nunito';
+                        font-size: 20px;
+                    }
+                }
+                .inputGroup:hover{
+                    background-color: #e21c3f;
+                    label{
+                        color: white;
+                    }
+                    input{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .btn{
+                width: 85px;
+                height: 80px;
+                margin: 20px 25px 20px 0; 
+                border-radius: 10px;               
+                border: 3px solid #04a2b6;
+                color: black;
+                font-family: 'Nunito';
+                font-size: 20px;
+            }
+            .btn-secondary{
+                background-color: white;
+            }
+            .btn-secondary:hover{
+                background-color: #04a2b6;
+                color: white;
+            }
+        }
+        .col-8{
+            .row{
+                margin-bottom: 15px;
+            }
+            .card-columns{
+                .card{
+                    .ref{
+                        position: relative;
+                    }                   
+                    .btn-group-lg{
+                        position: absolute;
+                        bottom: 0;
+                        border:none;
+                        opacity: 0;
+                    }
+                    .btn{
+                        border-radius: 0;
+                        width: 76px;
+                        border:none;
+                    }
+                    .ref:hover{
+                        cursor: pointer;
+                        .btn-group-lg{
+                            opacity: 1;
+                        }
+                        
+                    }
+                    .btn:first-child{
+                        background-color: #e21c3f;                      
+                    }
+                    .btn:nth-child(2){
+                        background-color: #ff9800;                      
+                    }
+                    .btn:nth-child(3){
+                        background-color: #04a2b6;;                      
+                    }
+                    .card-body{
+                        h5{
+                            font-family: 'Nunito';
+                            font-size: 20px; 
+                        }
+                        p{
+                            font-family: 'Nunito';
+                            font-size: 16px;
+                            color: #696464; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

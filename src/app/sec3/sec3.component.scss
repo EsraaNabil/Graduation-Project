@@ -1,11 +1,13 @@
+// @import "~variables.scss";
 .sec3{
     margin-top: 140px;
     margin-bottom: 140px;
 }
 .head{
-    margin-bottom: 90px;
+    margin-bottom: 75px;
     h2{
         font-size: 50px;
+        font-family: 'Supermercado';
         margin-bottom: 15px;
     }
     img{
@@ -14,7 +16,7 @@
 }
 .row{
     padding: 20px;
-    .col-6{ 
+    .col-12{ 
         .toys{
             border: 10px solid #e21c3f;
         }
@@ -31,10 +33,13 @@
                 display: flex;
                 align-items: center;
                 h5{
-                    font-size: 30px;
+                    font-size: 28px;
+                    font-family: 'Nunito';
                 }
                 p{
-                    font-size: 20px; 
+                    font-size: 18px;
+                    font-family: 'Nunito'; 
+                    color: #3f3f3f;
                 }
             }
         }
@@ -45,8 +50,112 @@
     .div-content2{
         padding-left: 30px 
     }
-
 }
+.sec4{
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-image: url('/assets/sec3/BG.jpg');
+    background-size: cover;
+    background-position: bottom;
+    margin-bottom: 140px;
+    p{
+        width: 50%;
+        font-family: 'Nunito';
+        margin: 0 auto;
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+}
+@font-face {
+    font-family: 'Supermercado';
+	src: url('/assets/Fonts/supermercado/SupermercadoOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'Chewy';
+	src: url('/assets/Fonts/chewy/Chewy.ttf');
+}
+@font-face {
+    font-family: 'Nunito';
+	src: url('/assets/Fonts/nunito/Nunito-Regular.ttf');
+}
+.button-shadow{
+    background-color: #e21c3f;
+    color: white;
+    border: 2px solid #e21c3f;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    box-shadow:0px 6px 2.46px 0.54px rgba(167, 1, 30, 0.73);
+    font-size: 16px;
+    font-family: 'Nunito';
+}
+.button-shadow:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+@media all and (max-width:991px){
+    .row{
+        .div-content1{
+            padding-right: 15px;
+            margin-bottom: 20px;
+        } 
+        .div-content2{
+            padding-left: 15px; 
+        }
+    }
+  }
+  @media all and (max-width:440px){
+    .row{
+        .col-12{ 
+           .row{
+            .col-5{
+                h5{
+                    font-size: 23px;
+                }
+                p{
+                    font-size: 13px;
+                }
+            }
+           } 
+        }
+    }
+    .button-shadow{
+        width: 120px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .sec4{
+        p{
+            font-size: 12px;
+        }
+    }
+  }
+  @media all and (max-width:370px){
+    .row{
+        .col-12{ 
+           .row{
+            .col-5{
+                h5{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 10px;
+                }
+            }
+           } 
+        }
+    }
+    .button-shadow{
+        width: 90px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .sec4{
+        p{
+            font-size: 10px;
+        }
+    }
+  }
 
 
 

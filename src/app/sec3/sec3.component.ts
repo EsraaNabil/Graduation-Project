@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sec3',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Sec3Component implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router  
+  ) { }
+
+  redirectTo(): void {
+    this.router.navigate(['/shop/']);
+  }
 
   ngOnInit() {
   }
