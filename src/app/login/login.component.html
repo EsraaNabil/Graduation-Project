@@ -2,24 +2,36 @@
   <div class="d-flex">
     <div class="imgForm d-flex align-items-center justify-content-center"> <img src="../assets/images/sign.png"/> </div>
     <div class="text-center form">
-      <h2>Login</h2>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Email</span>
-        </div>
-        <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Password</span>
+      <h2 class="mt-5 pt-5">Login</h2>
+      <form name="loginForm" #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)" novalidate>
+        <div class="input-group mb-5 mt-5 ml-auto mr-auto">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Email</span>
+            </div>
+            <input type="text" class="form-control inputForm"  aria-label="Username" aria-describedby="basic-addon1" ngModel name="email" #email="ngModel" required>
           </div>
-          <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-        <button class="mb-3">Connect with facebook</button><br>
-        <button>Connect with twitter</button>
-        <div class="d-flex align-items-center justify-content-center">Login</div>
+          <div class="alert alert-danger mb-5" role="alert" *ngIf="email.touched && !email.valid">
+            Email is required
+          </div> 
+          <div class="input-group ml-auto mr-auto mb-5">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Password</span>
+            </div>
+            <input type="text" class="form-control inputForm"  aria-label="Username" aria-describedby="basic-addon1" ngModel name="password" #password="ngModel" required>       
+          </div>
+          <div class="alert alert-danger mb-2" role="alert" *ngIf="password.touched && !password.valid">
+            Password is required
+          </div> 
+        <button type="button" class="btn mb-3 facebook mb-4 mt-4">      
+          <a routerLink="/">Connect with facebook</a>
+          </button>
+          <br>
+        <button type="button" class="btn twitter">
+            <a routerLink="/">Connect with twitter</a>
+            </button><br>
+        <button class="btn LoginDiv"  [disabled]="!loginForm.valid" type="submit">Login</button>
+     </form>
     </div>
-   
-
   </div>
 </div>
+

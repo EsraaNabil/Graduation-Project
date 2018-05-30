@@ -1,4 +1,4 @@
-// @import "~variables.scss";
+@import "../../assets/variables.scss";
 .sec3{
     margin-top: 140px;
     margin-bottom: 140px;
@@ -18,10 +18,10 @@
     padding: 20px;
     .col-12{ 
         .toys{
-            border: 10px solid #e21c3f;
+            border: 10px solid $pink;
         }
         .clothes{
-            border: 10px solid #04a2b6;
+            border: 10px solid $blue;
         }   
         .row{                                 
             .col-7{
@@ -65,33 +65,6 @@
         margin-bottom: 40px;
         font-size: 18px;
     }
-}
-@font-face {
-    font-family: 'Supermercado';
-	src: url('/assets/Fonts/supermercado/SupermercadoOne-Regular.ttf');
-}
-@font-face {
-    font-family: 'Chewy';
-	src: url('/assets/Fonts/chewy/Chewy.ttf');
-}
-@font-face {
-    font-family: 'Nunito';
-	src: url('/assets/Fonts/nunito/Nunito-Regular.ttf');
-}
-.button-shadow{
-    background-color: #e21c3f;
-    color: white;
-    border: 2px solid #e21c3f;
-    border-radius: 10px;
-    width: 140px;
-    height: 40px;
-    box-shadow:0px 6px 2.46px 0.54px rgba(167, 1, 30, 0.73);
-    font-size: 16px;
-    font-family: 'Nunito';
-}
-.button-shadow:hover{
-    box-shadow: none;
-    cursor: pointer;
 }
 @media all and (max-width:991px){
     .row{

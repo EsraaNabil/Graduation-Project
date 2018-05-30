@@ -1,0 +1,91 @@
+@import "../../assets/variables.scss";
+
+.carousel-caption{
+    height:100% ;
+}
+img{
+    filter: grayscale(30%);
+}
+h1{
+    width: 60%;
+}
+/deep/ .carousel-indicators li{
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/deep/ .carousel-indicators .active{
+    background-color: $pink;
+}
+
+/deep/ .carousel-control-prev-icon{
+    background-image: none;
+}
+/deep/ .carousel-control-next-icon{
+    background-image: none;
+
+}
+.Categories{
+
+    button{
+        width: 141px;
+        height: 79px;
+        color: black;
+    }
+    button:focus{
+        width: 141px;
+        height: 79px;
+        color: white;
+        background-color: $pink;
+        box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
+    }
+    .categRight{
+        border: solid 2px $blue;
+        border-radius: 10px;
+        padding-top: 57px;
+        padding-bottom: 20px;
+
+        .card{
+            border: none;
+            img{
+                width: 50px;
+                height: 50px;
+            }
+            h5{
+                background-color: #ffb539;
+                border-radius: 10px;
+                padding: 7px;
+                width: 187px;
+                margin: 0 auto;
+                font-size: 15px;
+                transition: transform 0.5s;
+            }
+            h5:hover{
+                transform: matrix(1, 0.2, 0, 1, 0, 0);
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.secPlay{
+    background-image: url('../../assets/images/bg_calltoaction1.jpg');
+    background-size: cover;
+    padding: 115px 0px;
+    .play{
+        box-shadow: 4px 7px 10.27px 2.73px rgba(49, 47, 47, 0.23); 
+        width: 372px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 35px 39px;
+        p{
+            font-size: 12px;
+        }
+    }
+   
+}
+

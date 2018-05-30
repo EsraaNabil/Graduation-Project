@@ -1,0 +1,43 @@
+@import "../../assets/variables.scss";
+.shopItem{
+    margin-top: $mai_margin;
+    img{
+        width: 100%;
+    }
+    .redPrice{
+        color: red;
+        font-size: 18px;
+    }
+    .dropdown-item{
+        color: $inputGrey;
+    }
+    .dropdown-item:hover{
+        background-color: $pink;
+        color: white;
+    }
+   /deep/ .dropMenu{
+        color: $inputGrey;
+    }
+    nav{
+        ul{
+            li{
+                a{
+                    color: #545454;
+                }
+                .quantity:hover{
+                    background-color: white;
+                }
+                i{
+                    font-size:14px;
+                    color: #545454;
+                }
+                .background{
+                    background-color: #e5e5e5;
+
+                }
+            }
+        }
+    }
+
+
+}

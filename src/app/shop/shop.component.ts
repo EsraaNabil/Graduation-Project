@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import{GetServiceService} from '../get-service.service';
+import {QueryService} from '../query.service';
+
 
 @Component({
   selector: 'app-shop',
@@ -9,7 +10,7 @@ import{GetServiceService} from '../get-service.service';
 export class ShopComponent implements OnInit {
   mydata: Array<object>;
   constructor(
-    private q:GetServiceService
+    private q:QueryService
   ) { 
     this.mydata=[];
     this.getCardData();
