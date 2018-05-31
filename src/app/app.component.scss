@@ -56,6 +56,29 @@ nav{
 .secondNav{
     background-color: $pink;
     color: white;
+    .collapse{
+        .navbar-nav{
+         .btn{
+             height: initial;
+             border: none;
+             color: white;
+             font-family: Chewy;
+             letter-spacing: 1px;
+         }
+         .dropdown-toggle:after{
+             display: none;
+         }
+         .btn:hover{
+             background: transparent;
+             border: none;
+         }
+         .btn:focus{
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+        }
+    }
     a{
         color: white;
     }
