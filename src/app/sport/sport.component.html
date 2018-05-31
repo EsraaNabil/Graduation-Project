@@ -1,0 +1,36 @@
+<div class="secshop margin">
+  <div class="secBg text-center">
+    <h1>sport</h1>
+    <span><a routerLink="/">HOME</a></span>
+    <span><a routerLink="resturants" class="clicked">SPORT</a></span>
+  </div>
+</div> 
+
+<div class="container">
+  <nav class="navbar navbar-ligh mb-5">
+    <form class="form-inline">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Choose Sport" aria-label="Username" aria-describedby="basic-addon1">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fa fa-angle-down"></i></span>
+        </div>
+      </div>
+    </form>
+  </nav>
+
+  <div class="card-columns" >
+    <div class="card mb-5" *ngFor="let data of sportData">
+      <div class="cardImg">
+          <img class="card-img-top" src="{{data.img}}" alt="Card image cap">
+      </div> 
+      <div class="card-body pl-0">
+        <h5 class="card-title">{{data.name}}</h5>
+        <p class="card-text par">{{data.location}} </p>
+        <p class="card-text par">{{data.discription}} </p>
+      </div>
+    </div> 
+  </div>
+</div>
+
+
+

@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import {QueryService} from '../query.service';
-import {ShopItemComponent} from'../shop-item/shop-item.component';
-
 
 @Component({
   selector: 'app-home',

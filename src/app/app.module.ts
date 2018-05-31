@@ -21,7 +21,9 @@ import {QueryService} from './query.service';
 //app validator
 import { EqualValidator } from '../assets/equal-validator.directive';
 import { ShopItemComponent } from './shop-item/shop-item.component';
-import { PlayComponent } from './play/play.component';  // import validator
+import { PlayComponent } from './play/play.component';
+import { ResturantsComponent } from './resturants/resturants.component';
+import { SportComponent } from './sport/sport.component';  // import validator
 
 
 const routes:Routes=[
@@ -30,7 +32,9 @@ const routes:Routes=[
   {path:'register',component:RegisterComponent},
   {path:'play' , component:PlayComponent},
   {path:'shopItem' , component:ShopItemComponent},
-  {path:'shop', component:ShopComponent}
+  {path:'shop', component:ShopComponent},
+  {path:'resturants', component:ResturantsComponent},
+  {path:'sport',component:SportComponent}
 ];
 
 @NgModule({
@@ -44,7 +48,9 @@ const routes:Routes=[
     RegisterComponent,
     EqualValidator,
     ShopItemComponent,
-    PlayComponent 
+    PlayComponent,
+    ResturantsComponent,
+    SportComponent 
   ],
   imports: [
     BrowserModule,

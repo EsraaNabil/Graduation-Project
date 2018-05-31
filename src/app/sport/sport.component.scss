@@ -1,0 +1,21 @@
+@import "../../assets/variables.scss";
+.secshop{
+    background-image:url('/assets/images/sport/header.png');
+}
+.container{
+    .card{
+        padding: 40px;
+        border: dotted 4px black;
+        .card-body{
+            p{
+                font-size: 15px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+    form{
+        i{
+            font-size: 20px;
+        }
+    }
+}

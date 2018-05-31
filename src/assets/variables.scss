@@ -91,3 +91,61 @@ a{
     box-shadow: none;
     cursor: pointer;
 }
+.secshop{
+    background-size: cover;
+    background-position: center; 
+}
+.secBg{
+    padding-top:140px;
+    padding-bottom: 140px;
+    background-color: rgba(0, 0, 0, 0.3);
+    h1{
+        color: white;
+        font-size: 50px;
+    }
+    a,span{
+        color:#c0bebe;
+        font-family: 'Nunito';
+        font-size: 18px;
+        text-decoration: none;
+    }
+    a:focus{
+        color:white;
+    }
+    span:first-of-type{
+        color:#c0bebe;
+        padding-right: 20px;
+    }   
+    .clicked{
+        color: white;
+    } 
+}
+
+.navbar{
+    form{
+        position: absolute;
+        right: 0px;
+        .input-group{
+            .form-control{
+                border-radius: 10px;
+                border: solid 2px $pink;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                color: $inputGrey;
+            }
+            .form-control:focus{
+                box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
+            }
+            .input-group-text{
+                background-color: $pink;
+                border: solid 2px $pink;
+                border-radius: 10px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                i{
+                    color: white;
+                }
+            }
+        }
+    }
+}

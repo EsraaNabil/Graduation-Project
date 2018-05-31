@@ -1,0 +1,39 @@
+@import "../../assets/variables.scss";
+.secshop{
+    background-image:url('/assets/images/resturant.png');
+}
+.card{
+    border: none;
+    .cardImg{
+        position: relative;
+        .hover{
+            position: absolute;  
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(black,0.4);
+            opacity: 0;
+            span{
+                border-radius: 50%;
+                background-color: $pink;
+                padding: 9px 10px;
+                img{
+                    width: 22px;
+                    height: 20px;
+                }
+            }
+        }
+        .hover:hover{
+            opacity:1;
+        }
+    }
+    .card-body{
+        .par{
+            color: #696464;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+    }
+}
