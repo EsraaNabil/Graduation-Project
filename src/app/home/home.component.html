@@ -54,7 +54,7 @@
     </div>
   </div>
 
-<div class="text-center margin">
+<div class="text-center ">
   <h2 class="text-center mb-2">Play With Us</h2>
   <img src="../../assets/images/Group 1.png" class="mb-5"/>
   <div class="secPlay">
@@ -68,5 +68,37 @@
     </div>
 </div>
 
+
+
 <a routerLink="/shopItem">shopItem</a>
 <app-sec3></app-sec3>
+
+
+
+<section class="container home-contact pt-5 pb-5">
+  <img class="girlImg" src="../assets/images/girl1ornament.png">
+  <div class="row justify-content-center">
+    <div class="col-12 text-center pb-3">
+      <h2>Contact Us</h2>
+      <img src="../../assets/images/Group 1.png" class="mb-5"/>
+    </div>
+    <div class="col-5">
+      <form  name="contactForm" #contactForm ="ngForm" novalidate (ngSubmit)="contactUs(contactForm)">
+        <div class="form-group">
+          <input class="form-control w-100 inputForm" type="text" placeholder="Name" name="user_name" [(ngModel)]="user_name" required> 
+        </div>
+        <div class="form-group">
+              <input type="email " class="form-control w-100 inputForm" id="exampleFormControlInput1" placeholder="Email"  name="user_email" [(ngModel)]="user_email" required>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control textareaForm w-100" id="exampleFormControlTextarea1" rows="6" placeholder="Message..."  name="user_message" [(ngModel)]="user_message" required></textarea>
+        </div>
+        <div class="text-center ">
+          <button type="submit" class="btn" [disabled]="!contactForm.valid">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section> 
+
+

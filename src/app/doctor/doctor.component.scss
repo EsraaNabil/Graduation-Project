@@ -1,0 +1,95 @@
+@import "../../assets/variables.scss";
+
+.doctors{
+    h6{
+        font-size:13px;
+        color:$cardGray;
+    }
+    .dr-img{
+      max-height: 320px;
+      overflow: hidden;
+    }
+    .card-subtitle{
+        font-size: 20px;
+    }
+    .card-text{
+        font-size: 18px;
+        color: $cardGray;
+        font-family: NunitoLight;
+        i{
+        color: $blue;
+        }
+    }
+
+}
+
+
+.add-doctor{
+     background-image: url('../../assets/images/addDoctor.png');
+    background-attachment: fixed;
+    h3{
+        color:white;
+        font-family:'Nunito';
+        font-size:2.5rem;
+    }
+    input {
+        width:80%;
+        border-color: white;
+        color: $inputGrey;
+    }
+    select{
+        border-color: white;
+        color: #6c757d;
+    }
+    textarea{
+        border-radius: 10px;
+
+    }
+    button{
+        background-color: white;
+        color: $blue;
+        //box-shadow: 0px 6px 2.46px 0.54px rgba(163, 193, 228, 0.73);
+    }
+}
+
+
+
+
+@media (max-width:  768px) {
+  .doctors{
+    .dr-img{
+      height: 450px;
+      // border: 2px solid green;
+    }
+  }
+}
+
+.hover{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height:320px;
+    background-color:#04a2b680;
+    visibility:hidden;
+}
+
+.dr-img:hover
+ {
+   .hover {
+        visibility: visible;
+    }
+ }
+
+
+
+// modal
+.dark-modal .modal-content {
+    background-color: #292b2c;
+    color: white;
+}
+.dark-modal .close {
+    color: white;
+}
+.light-blue-backdrop {
+    background-color: #5cb3fd;
+}

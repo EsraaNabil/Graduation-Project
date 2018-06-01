@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import {QueryService} from '../query.service';
 import {ShopItemComponent} from'../shop-item/shop-item.component';
+import { NgForm , NgModel } from '@angular/forms';
 
 
 @Component({
@@ -52,6 +53,11 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/play/']);
   }
 
+contactUs(contactData:NgForm): void{
+    console.log(contactData);
+    contactData.reset();
+
+  }
 
   ngOnInit() {
   }

@@ -9,21 +9,21 @@ img{
 h1{
     width: 60%;
 }
-/deep/ .carousel-indicators li{
+.carousel-indicators li{
     width:10px;
     height: 10px;
     border-radius: 50%;
     background-color: white;
 }
 
-/deep/ .carousel-indicators .active{
+ .carousel-indicators .active{
     background-color: $pink;
 }
 
-/deep/ .carousel-control-prev-icon{
+ .carousel-control-prev-icon{
     background-image: none;
 }
-/deep/ .carousel-control-next-icon{
+ .carousel-control-next-icon{
     background-image: none;
 
 }
@@ -87,5 +87,23 @@ h1{
         }
     }
    
+}
+
+//contact us
+.home-contact{
+    position:relative;
+    .girlImg{
+        position:absolute;
+        top:-50px;
+    }
+    button{
+        background-color: $pink;
+        color: white;
+        transition: all 0.2s linear;
+    }
+    button:hover{
+        box-shadow: 3px 4px 2.46px 0.54px rgba(239, 103, 103, 0.73);
+    }
+  
 }
 

@@ -22,7 +22,7 @@
         <div class="navbar-nav d-flex align-items-center justify-content-center">
          <span class="facebook d-flex align-items-center justify-content-center ml-2"><i class="fa fa-facebook-f"></i></span>
          <span class="twitter d-flex align-items-center justify-content-center ml-2"><i class="fa fa-twitter"></i></span>
-         <span class="google d-flex align-items-center justify-content-center ml-2"><i class="fa fa-google-plus-g"></i></span>
+         <span class="google d-flex align-items-center justify-content-center ml-2"><i class="fa fa-google-plus"></i></span>
          <span class="insta d-flex align-items-center justify-content-center ml-2"><i class="fa fa-instagram"></i></span>
          <button (click)="redirectToRegister()" type="button" class="btn text-center register mr-2 ml-5 pt-0 pb-0">Register</button>
          <button (click)="redirectToLogin()" type="button" class="btn text-center login dropMenu pt-0 pb-0">Login</button>
@@ -54,8 +54,46 @@
     </div>
   </div>
 </nav>
-
-
+<app-view-cart></app-view-cart>
+<app-doctor></app-doctor>
 <router-outlet> </router-outlet>
+
+
+
+<footer class="container-fluid mr-0 ml-0   pt-5 pb-5">
+  <div class="row" >
+    <div class="col-md-4  ">
+     <img src="">
+     <p>This web app provide you with all you need to know for your child ( food , sports academy  , education and restaurant ) , and you can shop with us .</p>
+     <p class="d-flex"><span class="mr-3 socialMedia mobile d-flex align-items-center justify-content-center "><i class="fa fa-phone"></i></span>01235665954</p>
+     <p class="d-flex"><span class="mr-3 socialMedia envelope d-flex align-items-center justify-content-center "><i class="fa fa-envelope"></i></span>Example@gmail.com</p>
+    </div>
+    <div class="col-md-3 offset-md-1 ">
+      <h4>Usfel Links</h4>
+      <hr class="ml-0">
+      <ul class="pl-0">
+        <li><a routerLink="/places" >Places</a></li>
+        <li><a routerLink="/shop" > Shop</a></li>
+        <li><a routerLink="/media" > Media</a></li>
+        <li><a routerLink="/events" > Events</a></li>
+        <li><a routerLink="/games" > Game</a></li>
+        <li><a routerLink="/babyTracker" > Baby Tracker</a></li>
+      </ul>
+    </div>
+    <div class="col-md-4  follow">
+      <h4>Follow Us</h4>
+      <hr class="ml-0">
+      <ul class="pl-0 d-flex">
+        <li><a href="#" class="socialMedia facebook d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-facebook-f "></i></a></li>
+        <li><a href="#" class="socialMedia twitter d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" class="socialMedia google  d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-google-plus "></i></a></li>
+        <li><a href="#" class="socialMedia instgram d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-instagram"></i></a></li>
+      </ul>
+
+    </div>
+  </div>
+</footer>
+<div class="footerBottom col-12 text-center pt-3 pb-3 pl-0 pr-0"><p class="mb-0">copyright 	&copy; 2018 . All rights reserved.</p></div>
+
 
 

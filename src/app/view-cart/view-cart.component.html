@@ -1,0 +1,48 @@
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+v
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-12 table-responsive">
+        <img src="../assets/sec3/clothes.jpg" alt="clothes">
+
+        <table class="table">
+            <thead class="">
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+                <th scope="col">Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let x of cartdata "  >
+                <th scope="row" class="cart-img d-flex align-items-center">
+                  <img class="card-img-top img-fluid " src="{{x.cartImg}}">
+                  <!-- <span class="pl-5">{{x.aboutItem}}</span> -->
+                </th>
+                <td >{{x.price}}</td>
+                <!-- <td><span class="minus">-</span>1<span class="plus">+</span></td> -->
+                <td>
+                  <span class="minus pr-2">-</span>
+                  <input type="number" placeholder=" 1">
+                  <span class="minus pl-2">+</span>
+                </td>
+                <td>{{x.total}}</td>
+                <td><i class="fa fa-trash"></i></td>
+              </tr>
+            </tbody>
+        </table>
+          
+          
+    </div>
+
+  </div>
+</section>
+

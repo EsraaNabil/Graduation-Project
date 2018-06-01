@@ -16,12 +16,16 @@ import { LoginComponent } from './login/login.component';
 import { ShopComponent } from './shop/shop.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { DoctorComponent } from './doctor/doctor.component';
+
 //app srvice
 import {QueryService} from './query.service';
 //app validator
 import { EqualValidator } from '../assets/equal-validator.directive';
 import { ShopItemComponent } from './shop-item/shop-item.component';
 import { PlayComponent } from './play/play.component';  // import validator
+import { ViewCartComponent } from './view-cart/view-cart.component';  // import validator
+
 
 
 const routes:Routes=[
@@ -31,6 +35,12 @@ const routes:Routes=[
   {path:'play' , component:PlayComponent},
   {path:'shopItem' , component:ShopItemComponent},
   {path:'shop', component:ShopComponent}
+  //  ,{path:'places', component:PlacesComponent}
+// {path:'media', component:MediaComponent},
+// {path:'events', component:EventsComponent},
+// {path:'game', component:GamesComponent},
+//{path:'babyTracker', component:AbyTrackerComponent}
+
 ];
 
 @NgModule({
@@ -39,12 +49,14 @@ const routes:Routes=[
     Sec3Component,
     LoginComponent,
     ShopComponent,
-    LoginComponent,
     HomeComponent,
     RegisterComponent,
     EqualValidator,
     ShopItemComponent,
-    PlayComponent 
+    PlayComponent ,
+    DoctorComponent,
+    ViewCartComponent
+
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,7 @@ nav{
     .google{
         border-radius: 50%;
         background-color: #e16c6c;
-        color: white; 
+        color: white;
         width: 25px;
         height: 25px;
     }
@@ -39,11 +39,11 @@ nav{
         background-color: #e5397f;
         color: white;
         width: 25px;
-        height: 25px; 
+        height: 25px;
     }
     .register{
         background-color:$blue;
-        border: $blue solid 2px; 
+        border: $blue solid 2px;
         border-radius: 10px;
         color: white;
     }
@@ -73,4 +73,81 @@ nav{
 }
 .navbar-light .navbar-toggler-icon{
     background-image: none;
+}
+
+
+
+
+
+
+// footer
+
+footer {
+    background-color: #495052;
+    color: white;
+    font-family: 'NunitoLight';
+    font-size: 17px;
+    h4{
+        font-family: 'Nunito';
+
+    }
+    p{
+     font-family: 'NunitoLight';
+    }
+    ul{
+        list-style-type: none;
+        a{
+            color: white;
+        }
+    }
+    .mobile{
+        background-color: $blue;
+    }
+    .envelope{
+        background-color: $pink;
+
+    }
+    .follow{
+        .socialMedia{
+            width: 40px;
+            height: 40px;
+
+                i{
+                    font-size: 22px;
+                }
+        }
+    }
+
+}
+.footerBottom{
+    background-color: #404547;
+    color: white;
+ p{
+    font-family: 'NunitoLight';
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+// media query
+
+@media (max-width:  768px) {
+    footer{
+        .row{
+            div:nth-child(1) , div:nth-child(2)
+            {
+            margin-bottom: 50px;
+            }
+        }
+
+
+    }
 }
