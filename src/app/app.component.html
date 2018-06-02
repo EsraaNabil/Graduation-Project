@@ -40,14 +40,62 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" [ngbCollapse]="navbarCollapsed">
       <div class="navbar-nav d-flex align-items-center justify-content-center ml-auto mr-auto">
-            <a class="nav-item nav-link">Home</a>
-            <a class="nav-item nav-link">Places</a>
-            <a class="nav-item nav-link">Media</a>
-            <a class="nav-item nav-link">Shop</a>
-            <a class="nav-item nav-link">Events</a>
-            <a class="nav-item nav-link">Games</a>
-            <a class="nav-item nav-link">BabyTraker</a>
-        <!-- <button type="button" name="button" (click)="goLogin()" class="btn mx-3 mb-2 px-4 my-lg-0 my-xl-0">Login</button> -->
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/">Home</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <a href="#sec1"><button class="dropdown-item" >Categories</button></a>
+                <a href="#sec2"><button class="dropdown-item" routerLink="/">Play With Us</button></a>
+                <a href="#sec3"><button class="dropdown-item" routerLink="resturants">Shop Now</button></a>
+                <a href="#sec4"><button class="dropdown-item" routerLink="sport">Baby Care</button></a>
+                <a href="#sec5"><button class="dropdown-item" routerLink="/">Contact Us</button></a>
+              </div>
+          </div>
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Places</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item" routerLink="/">School</button>
+              <button class="dropdown-item" routerLink="/">nursery</button>
+              <button class="dropdown-item" routerLink="resturants">Resturant</button>
+              <button class="dropdown-item" routerLink="sport">Sport</button>
+              <button class="dropdown-item" routerLink="/">Doctor</button>
+            </div>
+          </div>
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Media</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button class="dropdown-item" routerLink="/">All Media</button>
+              <button class="dropdown-item" routerLink="/">Videos</button>
+              <button class="dropdown-item" routerLink="/">Books</button>
+            </div>
+          </div>
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Shop</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item" routerLink="/">Clothes</button>
+              <button class="dropdown-item" routerLink="/">Toys</button>
+            </div>
+          </div>
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Events</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button class="dropdown-item" routerLink="shop">All Events</button>
+              <button class="dropdown-item" routerLink="/">Alexandria Bibliotheca</button>
+              <button class="dropdown-item" routerLink="/">Alexandria Center of Arts</button>
+              <button class="dropdown-item" routerLink="/">Palace of Culture</button>
+            </div>
+          </div>
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Games</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item" routerLink="/play">Our Games</button>
+              <button class="dropdown-item" routerLink="/">Action - 1</button>
+              <button class="dropdown-item" routerLink="/">Another Action</button>
+              <button class="dropdown-item" routerLink="/">Something else is here</button>
+            </div>
+          </div>
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/">BabyTraker</button>
+          </div>
       </div>
       <i class="fa fa-shopping-cart pr-3"></i>
       <i class="fa fa-heart"></i>

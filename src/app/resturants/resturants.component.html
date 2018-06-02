@@ -1,0 +1,39 @@
+<div class="secshop margin">
+  <div class="secBg text-center">
+    <h1>Restaurants</h1>
+    <span><a routerLink="/">HOME</a></span>
+    <span><a routerLink="resturants" class="clicked">RESTURANTS</a></span>
+  </div>
+</div> 
+
+<div class="container">
+  <nav class="navbar navbar-ligh mb-5">
+    <form class="form-inline">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Choose Place" aria-label="Username" aria-describedby="basic-addon1">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+        </div>
+      </div>
+    </form>
+  </nav>
+
+  <div class="card-columns margin" >
+    <div class="card mb-5" *ngFor="let data of resData">
+      <div class="cardImg">
+          <div class="hover">
+            <span class="ml-1 mr-2"><img class="card-img-top " src="{{data.icon1}}" alt="Card image cap"></span>
+            <span class="ml-2 mr-1"><img class="card-img-top " src="{{data.icon2}}" alt="Card image cap"></span>            
+          </div>
+          <img class="card-img-top" src="{{data.img}}" alt="Card image cap">
+      </div> 
+      <div class="card-body pl-0">
+        <a href="{{data.link}}"><h5 class="card-title">{{data.name}}</h5></a>
+        <p class="card-text par">{{data.location}} </p>
+        <p class="card-text par">{{data.number}} </p>
+        <p class="card-text par">{{data.discription}} </p>
+      </div>
+    </div> 
+  </div>
+</div>
+

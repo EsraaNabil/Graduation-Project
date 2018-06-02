@@ -26,6 +26,8 @@ import { ShopItemComponent } from './shop-item/shop-item.component';
 import { PlayComponent } from './play/play.component';  // import validator
 import { ViewCartComponent } from './view-cart/view-cart.component';  // import validator
 
+import { ResturantsComponent } from './resturants/resturants.component';
+import { SportComponent } from './sport/sport.component';  // import validator
 
 
 const routes:Routes=[
@@ -34,13 +36,15 @@ const routes:Routes=[
   {path:'register',component:RegisterComponent},
   {path:'play' , component:PlayComponent},
   {path:'shopItem' , component:ShopItemComponent},
-  {path:'shop', component:ShopComponent}
+  {path:'shop', component:ShopComponent},
   //  ,{path:'places', component:PlacesComponent}
 // {path:'media', component:MediaComponent},
 // {path:'events', component:EventsComponent},
 // {path:'game', component:GamesComponent},
 //{path:'babyTracker', component:AbyTrackerComponent}
 
+  {path:'resturants', component:ResturantsComponent},
+  {path:'sport',component:SportComponent}
 ];
 
 @NgModule({
@@ -55,8 +59,9 @@ const routes:Routes=[
     ShopItemComponent,
     PlayComponent ,
     DoctorComponent,
-    ViewCartComponent
-
+    ViewCartComponent,
+    ResturantsComponent,
+    SportComponent 
   ],
   imports: [
     BrowserModule,
