@@ -1,0 +1,42 @@
+[{
+ "img":"assets/images/school/school1.jpg",
+ "name":"Elite International School (EIS)",
+ "location":"Airport Road off Ring Road, behind Nozha Airport, Abees 10th Alexandria, Egypt",
+ "description":"EIS delivers an outstanding best International education in Egypt ",
+ "link":"http://onlineelite.net"
+},
+{
+ "img":"assets/images/school/school3.jpg",
+ "name":"Alexandria International Academy (AIA)",
+ "location":"68, Heliopolis St.Alexandria, Egypt",
+ "description":"AIA delivers an outstanding best International education in Egypt",
+ "link":"https://www.facebook.com/AlexandriaInternationalAcademy/"
+},
+{
+ "img":"assets/images/school/school2.jpg",
+ "name":"IBCA International School",
+ "location":"Qetaa an Nahdah, Qesm Al Amereyah, Alexandria Governorate, Alexandria, Egypt",
+ "description":"IBCA can provide the best possible education for you not only in Alexandria but also in Egypt.",
+ "link":"http://www.ibcaschool.com"
+},
+{
+ "img":"assets/images/school/school4.jpg",
+ "name":"Egypt Modern School",
+ "location":"1 Km after Abis Gate, Alexandria-Cairo Agriculture Road, Alexandria Governorate 21529",
+ "description":"EMS delivers an outstanding best International education in Egypt ",
+ "link":"http://www.egyptmodernschool.edu.eg/"
+},
+{
+ "img":"assets/images/school/school5.jpg",
+ "name":"British International College (BICC)",
+ "location":"Fifth District - 1st Area, New Cairo, Cairo, Egypt",
+ "description":"BICC delivers an outstanding best International education in Egypt",
+ "link":"http://www.biccairo.com/"
+},
+{
+ "img":"assets/images/school/school6.jpg",
+ "name":"Bedayia International School",
+ "location":"1st Urban Distrcit, El Banafseg Zone, New Cairo City,Cairo, Egypt",
+ "description":" BIS delivers an outstanding best International education in Egypt",
+ "link":"https://www.facebook.com/Bedayia/"
+}]

@@ -1,6 +1,7 @@
 $pink:#e21c3f;
 $blue:#04a2b6;
 $orange:#ff9800;
+$green:#80cd33;
 $inputGrey:hsl(0, 0%, 72%);
 $mai_margin:140px;
 @font-face {
@@ -75,7 +76,6 @@ button:focus{
 a{
     cursor: pointer;
 }
-
 .button-shadow{
     background-color: #e21c3f;
     color: white;
@@ -86,10 +86,12 @@ a{
     box-shadow:0px 6px 2.46px 0.54px rgba(167, 1, 30, 0.73);
     font-size: 16px;
     font-family: 'Nunito';
+    transition: box-shadow 0.3s ease-in-out;
 }
 .button-shadow:hover{
     box-shadow: none;
     cursor: pointer;
+    transition: box-shadow 0.5s ease-in-out;
 }
 .secshop{
     background-size: cover;
@@ -120,7 +122,6 @@ a{
         color: white;
     } 
 }
-
 .navbar{
     form{
         position: absolute;
@@ -149,3 +150,77 @@ a{
         }
     }
 }
+ngb-pagination /deep/ .page-item.disabled .page-link {
+    background-color: $pink;
+    color: white;
+    border: 2px solid $pink;
+    border-radius: 10px;
+}
+ngb-pagination /deep/ .page-item.active .page-link {
+    background-color: $pink;
+    border: 2px solid $pink;
+    border-radius: 10px;
+}
+ngb-pagination /deep/ .page-link:hover{
+    background-color: $pink;
+    color: white;
+}
+ngb-pagination /deep/ .page-link{
+    color: black;
+    border: 2px solid $pink;
+    border-radius: 10px;
+    margin: 3px;
+}
+ngb-pagination /deep/ .page-item:last-child .page-link{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px;
+}
+ngb-pagination /deep/ .page-item:first-child .page-link{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px;
+}
+ngb-pagination /deep/ .page-link:focus{
+    box-shadow:none;
+}
+ngb-rating /deep/ span{
+    color: #fac917;
+    font-size: 22px;
+}
+.card{
+    border: none;
+    .cardImg{
+        position: relative;
+        border-radius: 25px;
+        .hover{
+            color: white;
+            position: absolute;
+            border-radius: 25px;
+            .zoomIcon{
+                border-radius: 50%;
+                background-color: $pink;
+                padding: 12px 13px;
+                font-size: 18px;
+            }
+            .zoomIcon:hover{
+                background-color: $blue;
+                cursor: pointer;
+            }
+            .zoomBtn{
+                background-color: transparent;
+                border: transparent;
+                color: white;
+            }
+            .zoomBtn:focus{
+                box-shadow: none;
+                outline: none;
+            }   
+        }
+        img{
+            border-radius: 25px;
+            width: 100%;
+        } 
+    }
+}
+
+
+

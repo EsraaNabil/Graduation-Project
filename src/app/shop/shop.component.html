@@ -1,8 +1,8 @@
 <div class="secshop">
   <div class="secBg text-center">
     <h1>OUR PRODUCTS</h1>
-    <span>HOME</span>
-    <span>PRODUCTS</span>
+    <span><a routerLink="/">HOME</a></span>
+    <span><a routerLink="shop" class="clicked">PRODUCTS</a></span>
   </div>
 </div> 
 <div class="container">
@@ -12,27 +12,11 @@
       <form class="form">
         <div class="inputGroup">
           <input id="radio1" name="radio" type="radio"/>
-          <label for="radio1">Category One</label>
+          <label for="radio1">Clothes</label>
         </div>
         <div class="inputGroup">
           <input id="radio2" name="radio" type="radio"/>
-          <label for="radio2">Category Two</label>
-        </div>
-        <div class="inputGroup">
-          <input id="radio2" name="radio" type="radio"/>
-          <label for="radio2">Category Three</label>
-        </div>
-        <div class="inputGroup">
-          <input id="radio2" name="radio" type="radio"/>
-          <label for="radio2">Category Four</label>
-        </div>
-        <div class="inputGroup">
-          <input id="radio2" name="radio" type="radio"/>
-          <label for="radio2">Category Five</label>
-        </div>
-        <div class="inputGroup">
-          <input id="radio2" name="radio" type="radio"/>
-          <label for="radio2">Category Six</label>
+          <label for="radio2">Toys</label>
         </div>
       </form>
       <br>
@@ -76,25 +60,25 @@
       <br>
       <div class="card-columns" >
         <div class="card mb-5 text-center" *ngFor="let data of mydata">
-          <div class="ref">
-              <img class="card-img-top" src="{{data.pic}}" alt="Card image cap">
-              <div class="btn-group-lg" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-secondary"><i class="fa fa-eye"></i></button>
-                  <button type="button" class="btn btn-secondary"><i class="fa fa-shopping-cart"></i></button>
-                  <button type="button" class="btn btn-secondary"><i class="fa fa-heart"></i></button>
-              </div>
+          <div class="cardImg">  
+            <div class="hover">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary"><i class="fa fa-eye"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa fa-shopping-cart"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>              
+            <img class="card-img-top" src="{{data.pic}}" alt="Card image cap">
           </div> 
           <div class="card-body">
             <h5 class="card-title">{{data.name}}</h5>
             <p class="card-text">{{data.price}} </p>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
+            <ngb-rating [rate]="3" [readonly]="true" max="5"></ngb-rating>
           </div>
         </div> 
       </div>
+      <br>
+      <ngb-pagination class="d-flex justify-content-center" [collectionSize]="50" [(page)]="currentPage"></ngb-pagination>
     </div>
   </div>
 </div>

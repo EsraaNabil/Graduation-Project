@@ -6,9 +6,6 @@ import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
-
-
 //app component
 import { AppComponent } from './app.component';
 import { Sec3Component } from './sec3/sec3.component';
@@ -23,7 +20,10 @@ import { EqualValidator } from '../assets/equal-validator.directive';
 import { ShopItemComponent } from './shop-item/shop-item.component';
 import { PlayComponent } from './play/play.component';
 import { ResturantsComponent } from './resturants/resturants.component';
-import { SportComponent } from './sport/sport.component';  // import validator
+import { SportComponent } from './sport/sport.component';
+import { SchoolComponent } from './school/school.component';
+import { NurseryComponent } from './nursery/nursery.component';
+import { EventsComponent } from './events/events.component';  // import validator
 
 
 const routes:Routes=[
@@ -34,7 +34,10 @@ const routes:Routes=[
   {path:'shopItem' , component:ShopItemComponent},
   {path:'shop', component:ShopComponent},
   {path:'resturants', component:ResturantsComponent},
-  {path:'sport',component:SportComponent}
+  {path:'sport',component:SportComponent},
+  {path:'schools',component:SchoolComponent},
+  {path:'nursery',component:NurseryComponent},
+  {path:'events',component:EventsComponent}
 ];
 
 @NgModule({
@@ -50,7 +53,10 @@ const routes:Routes=[
     ShopItemComponent,
     PlayComponent,
     ResturantsComponent,
-    SportComponent 
+    SportComponent,
+    SchoolComponent,
+    NurseryComponent,
+    EventsComponent 
   ],
   imports: [
     BrowserModule,
@@ -63,4 +69,6 @@ const routes:Routes=[
   providers: [QueryService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+
