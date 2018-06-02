@@ -1,31 +1,31 @@
 [
     {
-        "pic":"../assets/shop/clothes1.jpg",
+        "pic":"../assets/images/shop/clothes1.jpg",
         "name":"Baby Salobit",
         "price":"120.00 LE"
     },
     {
-        "pic":"../assets/shop/clothes1.jpg",
+        "pic":"../assets/images/shop/clothes1.jpg",
         "name":"Baby Salobit",
         "price":"100.00 LE"
     },
     {
-        "pic":"../assets/shop/clothes2.jpg",
+        "pic":"../assets/images/shop/clothes2.jpg",
         "name":"Baby Salobit",
         "price":"150.00 LE"
     },
     {
-        "pic":"../assets/shop/clothes2.jpg",
+        "pic":"../assets/images/shop/clothes2.jpg",
         "name":"Baby Salobit",
         "price":"120.00 LE"
     },
     {
-        "pic":"../assets/shop/clothes1.jpg",
+        "pic":"../assets/images/shop/clothes1.jpg",
         "name":"Baby Salobit",
         "price":"100.00 LE"
     },
     {
-        "pic":"../assets/shop/clothes1.jpg",
+        "pic":"../assets/images/shop/clothes1.jpg",
         "name":"Baby Salobit",
         "price":"150.00 LE"
     }
