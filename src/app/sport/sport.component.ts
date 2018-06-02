@@ -23,6 +23,48 @@ export class SportComponent implements OnInit {
       () => {}
     );
   }
+  getSwimData():void{
+    let path:string='./assets/swimming.json';
+    this.q.getData(path).subscribe(
+      res => {console.log(res);
+      this.sportData=res;
+      },
+      err => {console.log(err);},
+      () => {}
+    );
+  }
+  getKarateData():void{
+    let path:string='./assets/karate.json';
+    this.q.getData(path).subscribe(
+      res => {console.log(res);
+      this.sportData=res;
+      },
+      err => {console.log(err);},
+      () => {}
+    );
+  }
+  getBalletData():void{
+    let path:string='./assets/ballet.json';
+    this.q.getData(path).subscribe(
+      res => {console.log(res);
+      this.sportData=res;
+      },
+      err => {console.log(err);},
+      () => {}
+    );
+  }
+  getFootballData():void{
+    let path:string='./assets/football.json';
+    this.q.getData(path).subscribe(
+      res => {console.log(res);
+      this.sportData=res;
+      },
+      err => {console.log(err);},
+      () => {}
+    );
+  }
+
+
   ngOnInit() {
   }
 

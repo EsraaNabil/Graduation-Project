@@ -221,6 +221,37 @@ ngb-rating /deep/ span{
         } 
     }
 }
-
-
-
+.dropDownData{
+    .inputBtn{
+        width: 200px;
+    }
+    .dropdown-toggle-split{
+        width: 40px
+    }
+    .left{
+        background-color: transparent;
+        border: solid 2px $pink;
+        color: $inputGrey;
+        border-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        text-align: left;
+    }
+    .right{
+        background-color: $pink;
+        border: solid 2px $pink;
+        color: white;
+        border-radius: 10px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .dropdown-menu{
+        left:auto !important;
+        right: 0px;
+        width: 230px;
+        .dropdown-item:hover{
+        background-color: $pink;
+        color: white;
+        }
+    }
+}

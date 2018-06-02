@@ -44,20 +44,20 @@
       </form>
     </div>
     <div class="col-8">
-      <div class="row text-right">
-        <div class="col">
-          <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Sort by</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button class="dropdown-item">Price, low to high</button>
-              <button class="dropdown-item">Price, high to low</button>
-              <button class="dropdown-item">Date, old to new</button>
-              <button class="dropdown-item">Date, new to old</button>
-            </div>
+      <div class="text-right">
+          <div class="btn-group mb-5 dropDownData mr-auto ml-auto">
+              <button type="button" class="inputBtn btn btn-primary left">Sort By</button>
+              <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                <button class="btn btn-primary dropdown-toggle-split right" ngbDropdownToggle></button>
+                <div class="dropdown-menu" ngbDropdownMenu style="right:0px ;left:auto">
+                  <button class="dropdown-item">Price, low to high</button>
+                  <button class="dropdown-item">Price, high to low</button>
+                  <button class="dropdown-item">Date, old to new</button>
+                  <button class="dropdown-item">Date, new to old</button>
+                </div>
+              </div>
           </div>
-        </div>
       </div>
-      <br>
       <div class="card-columns" >
         <div class="card mb-5 text-center" *ngFor="let data of mydata">
           <div class="cardImg">  
