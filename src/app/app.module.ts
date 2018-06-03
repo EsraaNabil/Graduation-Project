@@ -27,7 +27,12 @@ import { PlayComponent } from './play/play.component';  // import validator
 import { ViewCartComponent } from './view-cart/view-cart.component';  // import validator
 
 import { ResturantsComponent } from './resturants/resturants.component';
-import { SportComponent } from './sport/sport.component';  // import validator
+import { SportComponent } from './sport/sport.component';
+import { WishListComponent } from './wish-list/wish-list.component';
+import { TrackBabyComponent } from './track-baby/track-baby.component';
+import { MediaComponent } from './media/media.component';
+import { MediaAllComponent } from './media-all/media-all.component';
+import { MediaBooksComponent } from './media-books/media-books.component';  // import validator
 
 
 const routes:Routes=[
@@ -61,7 +66,12 @@ const routes:Routes=[
     DoctorComponent,
     ViewCartComponent,
     ResturantsComponent,
-    SportComponent 
+    SportComponent,
+    WishListComponent,
+    TrackBabyComponent,
+    MediaComponent,
+    MediaAllComponent,
+    MediaBooksComponent 
   ],
   imports: [
     BrowserModule,

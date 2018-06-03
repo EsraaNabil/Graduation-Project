@@ -1,28 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-
 import {QueryService} from '../query.service';
 
 @Component({
-  selector: 'app-view-cart',
-  templateUrl: './view-cart.component.html',
-  styleUrls: ['./view-cart.component.scss']
+  selector: 'app-wish-list',
+  templateUrl: './wish-list.component.html',
+  styleUrls: ['./wish-list.component.scss']
 })
-export class ViewCartComponent implements OnInit {
-cartdata: Array<object>;
+export class WishListComponent implements OnInit {
+  wishListData: Array<object>;
   constructor(
     private q:QueryService ,
     private modalService: NgbModal
   ) { 
-    this.cartdata=[];
-    this.getCartData();
+    this.wishListData=[];
+    this.getListData();
   }
 
-  getCartData(): void{
-    let path: string = './assets/viewCart.json';
+  getListData(): void{
+    let path: string = './assets/wishList.json';
     this.q.getData(path).subscribe(
       res => {
-        this.cartdata = res;
+        this.wishListData = res;
         console.log(res);
       },
       err => {

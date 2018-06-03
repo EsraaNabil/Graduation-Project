@@ -1,7 +1,21 @@
 [
     {
         "cartImg":"../assets/shop/clothes1.jpg",
-        "aboutItem":"Baby Salobit  mall/red/salobit",
+        "aboutItem":"Baby Salobit",
+        "itemDetails":"small/red/salobit",
+        "price":"100 LE",
+        "total":"100 LE"
+    },
+     {
+        "cartImg":"../assets/shop/clothes2.jpg",
+        "aboutItem":"Baby Set  small/blue/baby sets",
+        "price":"200 LE",
+        "total":"200 LE"
+    },
+    {
+        "cartImg":"../assets/shop/clothes1.jpg",
+        "aboutItem":"Baby Salobit",
+        "itemDetails":"small/red/salobit",
         "price":"100 LE",
         "total":"100 LE"
     },

@@ -1,0 +1,32 @@
+<!-- <div class="container margin top-margin ">
+    <div class="text-right">
+      <div class="btn-group mb-5 dropDownData mr-auto ml-auto">
+          <button type="button" class="btn btn-primary left pr-5"> Choose</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-primary dropdown-toggle-split right" ngbDropdownToggle></button>
+            <div class="dropdown-menu" ngbDropdownMenu style="right:0px ;left:auto">
+              <button class="dropdown-item" (click)="getVideoData()">Videos</button>
+              <button class="dropdown-item" (click)="getBooksData()">Books</button>
+            </div>
+          </div>
+        </div>
+    </div> -->
+
+    <div class="row">
+        <div class="col-md-4 books mb-5 " *ngFor="let x of drdata ">
+          <div class="card">
+            <div class="main-img">
+              <img class="card-img-top img-fluid " src="{{x.img}}">
+               <div class="hover d-flex align-items-center justify-content-center" ><a href="{{x.pdf}}"><i class="fa fa-download"></i></a>
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1"> {{x.name}}</h5>
+              <p class="card-text"> by: <span> {{x.author}} </span></p>
+              <p class="card-text">{{x.rate}}</p>     
+            </div>
+          </div>
+        </div>
+    </div>
+
+

@@ -1,28 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-
 import {QueryService} from '../query.service';
-
 @Component({
-  selector: 'app-view-cart',
-  templateUrl: './view-cart.component.html',
-  styleUrls: ['./view-cart.component.scss']
+  selector: 'app-media-books',
+  templateUrl: './media-books.component.html',
+  styleUrls: ['./media-books.component.scss']
 })
-export class ViewCartComponent implements OnInit {
-cartdata: Array<object>;
+export class MediaBooksComponent implements OnInit {
+  booksdata: Array<object>;
   constructor(
-    private q:QueryService ,
+    private q:QueryService , 
     private modalService: NgbModal
   ) { 
-    this.cartdata=[];
-    this.getCartData();
+    this.booksdata=[];
+    this.getDrData();
   }
 
-  getCartData(): void{
-    let path: string = './assets/viewCart.json';
+  getDrData(): void{
+    let path: string = './assets/mediaBooks.json';
     this.q.getData(path).subscribe(
       res => {
-        this.cartdata = res;
+        this.booksdata = res;
         console.log(res);
       },
       err => {
@@ -33,10 +31,7 @@ cartdata: Array<object>;
 
 
 
-
-
   ngOnInit() {
   }
 
 }
-

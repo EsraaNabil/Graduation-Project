@@ -1,0 +1,18 @@
+@import "../../assets/variables.scss";
+.mediaa{
+    font-family: "Nunito";
+    .time{
+        background-color: $pink;
+        position: absolute;
+        top: 0px;
+        right:0px;
+        padding: 10px;
+        color: white;
+    }
+    span{
+        font-family: 'NunitoLight'
+    }
+    .card-body{
+        background-color:$cardBG;
+    }
+}

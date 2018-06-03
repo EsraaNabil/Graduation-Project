@@ -1,28 +1,37 @@
-
-
-<section class="container doctors pt-3 pb-3 ">
-  <div class="row">
-    <div class="col-12 ">
-      <form>
-        <div class="form-group">
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>Specialization</option>
-              <option>Women and Obstetrics</option>
-              <option>Dentist</option>
-              <option>Consultant Psychiatrist</option>
-            </select>
-        </div>
-      </form>
+<section class="doctors">
+  <div class="secshop margin">
+    <div class="secBg text-center">
+      <h1>Doctors</h1>
+      <span><a routerLink="/">HOME</a></span>
+      <span><a routerLink="resturants" class="clicked">DOCTORS</a></span>
     </div>
+  </div> 
+</section>
 
-    <div class="col-md-4 " *ngFor="let x of drdata ">
+<section class="container margin pt-3 pb-3 ">
+    <div class="text-right">
+        <div class="btn-group mb-5 dropDownData mr-auto ml-auto">
+            <button type="button" class="btn btn-primary left pr-5"> Specialization</button>
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+              <button class="btn btn-primary dropdown-toggle-split right" ngbDropdownToggle></button>
+              <div class="dropdown-menu" ngbDropdownMenu style="right:0px ;left:auto">
+                <button class="dropdown-item" (click)="getDrData()">All</button>
+                <button class="dropdown-item" (click)="getConsultantData()">Consultant Psychiatrist</button>
+                <button class="dropdown-item" (click)="getWomentData()">Women and Obstetrics</button>
+                <button class="dropdown-item" (click)="getDentistData()">Dentist</button>
+              </div>
+            </div>
+          </div>
+      </div>
+
+  <div class="row">
+    <div class="col-md-4 doctors " *ngFor="let x of drdata ">
       <div class="card">
-        <div class="dr-img">
-          <img class="card-img-top " src="{{x.drImg}}">
+        <div class="main-img">
+          <img class="card-img-top img-fluid " src="{{x.drImg}}">
            <div class="hover d-flex align-items-center justify-content-center" ><i class="fa fa-search-plus" (click)="openVerticallyCentered(content)"></i>
            </div>
         </div>
-        <!-- <img src="../assets/images/MohamedTaha.jpg" alt="girl"> -->
         <div class="card-body">
           <h5 class="card-title mb-1"> {{x.name}}</h5>
           <h6 class=" mb-3 ">{{x.drSpecialization}}</h6>

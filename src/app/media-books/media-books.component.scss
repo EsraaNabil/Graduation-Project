@@ -1,0 +1,30 @@
+@import "../../assets/variables.scss";
+.books{
+    .secshop{
+        background-image:url('/assets/images/doctors/doctorbg.png');
+        background-position: top;
+       
+    }
+    a:hover{
+        color: white;
+    }
+    .main-img{
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+    }
+  
+    .card-body{
+        background-color:$cardBG;
+        .card-text{
+            font-size: 18px;
+            span{
+                font-family: NunitoLight;
+            }   
+        }
+
+    }
+  
+
+}
+

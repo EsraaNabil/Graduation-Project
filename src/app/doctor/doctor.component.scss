@@ -1,24 +1,37 @@
 @import "../../assets/variables.scss";
 
 .doctors{
+    .secshop{
+        background-image:url('/assets/images/doctors/doctorbg.png');
+        background-position: top;
+       
+    }
+    a:hover{
+        color: white;
+    }
     h6{
         font-size:13px;
         color:$cardGray;
     }
-    .dr-img{
-      max-height: 320px;
-      overflow: hidden;
+    .main-img{
+        position: relative;
+        overflow: hidden;
+        height: 300px;
     }
-    .card-subtitle{
-        font-size: 20px;
-    }
-    .card-text{
-        font-size: 18px;
-        color: $cardGray;
-        font-family: NunitoLight;
-        i{
-        color: $blue;
-        }
+
+    .card-body{
+        background-color:$cardBG;
+            .card-subtitle{
+                font-size: 20px;
+            }
+            .card-text{
+                font-size: 18px;
+                color: $cardGray;
+                font-family: NunitoLight;
+                i{
+                color: $blue;
+                }
+            }
     }
 
 }
@@ -52,33 +65,6 @@
     }
 }
 
-
-
-
-@media (max-width:  768px) {
-  .doctors{
-    .dr-img{
-      height: 450px;
-      // border: 2px solid green;
-    }
-  }
-}
-
-.hover{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height:320px;
-    background-color:#04a2b680;
-    visibility:hidden;
-}
-
-.dr-img:hover
- {
-   .hover {
-        visibility: visible;
-    }
- }
 
 
 

@@ -13,7 +13,7 @@ import {QueryService} from '../query.service';
 })
 export class DoctorComponent implements OnInit {
   closeResult: string;
-drdata: Array<object>;
+  drdata: Array<object>;
   constructor(
     private q:QueryService , 
     private modalService: NgbModal
@@ -34,6 +34,45 @@ drdata: Array<object>;
       }
     );
   }
+
+
+  getConsultantData():void{
+    let path:string='./assets/drConsultant.json';
+    this.q.getData(path).subscribe(
+      res => {console.log(res);
+      this.drdata=res;
+      },
+      err => {console.log(err);},
+      () => {}
+    );
+  }
+
+
+  getWomentData():void{
+    let path:string='./assets/drWomen.json';
+    this.q.getData(path).subscribe(
+      res => {console.log(res);
+      this.drdata=res;
+      },
+      err => {console.log(err);},
+      () => {}
+    );
+  }
+
+  getDentistData():void{
+    let path:string='./assets/drDentist.json';
+    this.q.getData(path).subscribe(
+      res => {console.log(res);
+      this.drdata=res;
+      },
+      err => {console.log(err);},
+      () => {}
+    );
+  }
+
+
+
+
 
 
 
