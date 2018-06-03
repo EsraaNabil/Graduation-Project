@@ -1,5 +1,4 @@
 @import "../../assets/variables.scss";
-
 .carousel-caption{
     height:100% ;
 }
@@ -23,12 +22,19 @@ h1{
  .carousel-control-prev-icon{
     background-image: none;
 }
- .carousel-control-next-icon{
-    background-image: none;
+//  .carousel-control-next-icon{
+// ngb-carousel /deep/ .carousel-indicators .active{
+//     background-color: $pink;
+// }
 
-}
+// ngb-carousel /deep/ .carousel-control-prev-icon{
+//     background-image: none;
+// }
+// ngb-carousel /deep/ .carousel-control-next-icon{
+//     background-image: none;
+
+// }
 .Categories{
-
     button{
         width: 141px;
         height: 79px;
@@ -46,7 +52,6 @@ h1{
         border-radius: 10px;
         padding-top: 57px;
         padding-bottom: 20px;
-
         .card{
             border: none;
             img{
@@ -72,6 +77,8 @@ h1{
     }
 }
 
+
+
 .secPlay{
     background-image: url('../../assets/images/bg_calltoaction1.jpg');
     background-size: cover;
@@ -90,7 +97,8 @@ h1{
    
 }
 
-//contact us
+contact us
+
 .home-contact{
     position:relative;
     .girlImg{

@@ -1,0 +1,43 @@
+<div class="secshop">
+  <div class="secBg text-center">
+    <h1>Schools</h1>
+    <span><a routerLink="/">HOME</a></span>
+    <span><a routerLink="schools" class="clicked">SCHOOLS</a></span>
+  </div>
+</div> 
+<div class="container">
+  <div class=" buttons d-flex justify-content-center">
+      <button (click)="getschoolData()" type="button " class="button-shadow btn btn-outline-secondary mr-4">
+          International
+      </button>
+      <button (click)="getMschoolData()" type="button" class="button-shadow blueBtn btn btn-outline-secondary mr-4">
+          Multinational
+      </button>
+      <button (click)="getEschoolData()" type="button" class="button-shadow greenBtn btn btn-outline-secondary mr-4">
+          Experimental 
+      </button>
+      <button (click)="getPschoolData()" type="button" class="button-shadow orangeBtn btn btn-outline-secondary mr-4">
+          Public
+      </button>
+  </div>
+    
+  <div class="card-columns" >
+    <div class="card mb-5" *ngFor="let data of schoolData">
+      <div class="cardImg">
+          <div class="hover">
+            <div>
+              <p>{{data.description}}</p>
+              <button class="button-shadow"><a href="{{data.link}}" target="_blank">Website</a></button>
+            </div>
+          </div>
+          <img class="card-img-top" src="{{data.img}}" alt="Card image cap">
+      </div> 
+      <div class="card-body pl-0">
+        <h5 class="card-title">{{data.name}}</h5>
+        <p class="card-text">{{data.location}} </p>
+      </div>
+    </div> 
+  </div>
+  <br>
+  <ngb-pagination class="d-flex justify-content-center" [collectionSize]="50" [(page)]="currentPage"></ngb-pagination>
+</div>

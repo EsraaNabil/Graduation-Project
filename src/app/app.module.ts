@@ -6,9 +6,6 @@ import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
-
-
 //app component
 import { AppComponent } from './app.component';
 import { Sec3Component } from './sec3/sec3.component';
@@ -33,6 +30,9 @@ import { TrackBabyComponent } from './track-baby/track-baby.component';
 import { MediaComponent } from './media/media.component';
 import { MediaAllComponent } from './media-all/media-all.component';
 import { MediaBooksComponent } from './media-books/media-books.component';  // import validator
+import { SchoolComponent } from './school/school.component';
+import { NurseryComponent } from './nursery/nursery.component';
+import { EventsComponent } from './events/events.component';  // import validator
 
 
 const routes:Routes=[
@@ -42,14 +42,16 @@ const routes:Routes=[
   {path:'play' , component:PlayComponent},
   {path:'shopItem' , component:ShopItemComponent},
   {path:'shop', component:ShopComponent},
-  //  ,{path:'places', component:PlacesComponent}
 // {path:'media', component:MediaComponent},
-// {path:'events', component:EventsComponent},
+{path:'events', component:EventsComponent},
 // {path:'game', component:GamesComponent},
-//{path:'babyTracker', component:AbyTrackerComponent}
+{path:'babyTracker', component:TrackBabyComponent},
 
   {path:'resturants', component:ResturantsComponent},
-  {path:'sport',component:SportComponent}
+  {path:'sport',component:SportComponent},
+  {path:'schools',component:SchoolComponent},
+  {path:'nursery',component:NurseryComponent},
+  {path:'events',component:EventsComponent}
 ];
 
 @NgModule({
@@ -71,7 +73,10 @@ const routes:Routes=[
     TrackBabyComponent,
     MediaComponent,
     MediaAllComponent,
-    MediaBooksComponent 
+    MediaBooksComponent ,
+    SchoolComponent,
+    NurseryComponent,
+    EventsComponent 
   ],
   imports: [
     BrowserModule,
@@ -84,4 +89,6 @@ const routes:Routes=[
   providers: [QueryService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+

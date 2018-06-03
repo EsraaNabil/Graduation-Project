@@ -1,6 +1,6 @@
 @import "../../assets/variables.scss";
 .secshop{
-    background-image:url('/assets/shop/shophead.jpg');
+    background-image:url('/assets/images/shop/shophead.jpg');
 }
 .container{
     margin-top: 90px;
@@ -60,35 +60,38 @@
             }
             .card-columns{
                 .card{
-                    .ref{
-                        position: relative;
-                    }                   
-                    .btn-group-lg{
-                        position: absolute;
-                        bottom: 0;
-                        border:none;
-                        opacity: 0;
-                    }
-                    .btn{
-                        border-radius: 0;
-                        width: 76px;
-                        border:none;
-                    }
-                    .ref:hover{
-                        cursor: pointer;
-                        .btn-group-lg{
-                            opacity: 1;
-                        }                      
-                    }
-                    .btn:first-child{
-                        background-color: $pink;                      
-                    }
-                    .btn:nth-child(2){
-                        background-color: $orange;                      
-                    }
-                    .btn:nth-child(3){
-                        background-color: $blue;                      
-                    }
+                    .cardImg{
+                        .hover{
+                            display: flex;
+                            align-items:flex-end;
+                            height: 100%;
+                            width: 100%;
+                            opacity: 0;
+                        }
+                        .btn-group{
+                            width: 100%;
+                        }
+                        .btn{
+                            width: 34%;
+                            border-radius: 0;
+                            border:none;
+                        }
+                        .btn:first-child{
+                            background-color: $pink;
+                            border-bottom-left-radius: 20px;                      
+                        }
+                        .btn:nth-child(2){
+                            background-color: $orange;                      
+                        }
+                        .btn:nth-child(3){
+                            background-color: $blue;
+                            border-bottom-right-radius: 20px;                      
+                        }  
+                        .hover:hover{
+                            opacity:1;
+                            cursor: pointer;
+                        }                   
+                    }                                    
                     .card-body{
                         h5{
                             font-size: 20px; 
@@ -103,3 +106,4 @@
         }
     }
 }
+
