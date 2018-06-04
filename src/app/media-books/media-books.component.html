@@ -1,0 +1,22 @@
+<section class="container">
+
+
+<div class="row">
+    <div class="col-md-4 books mb-5 " *ngFor="let x of booksdata ">
+      <div class="card">
+        <div class="main-img">
+          <img class="card-img-top img-fluid " src="{{x.img}}">
+           <div class="hover d-flex align-items-center justify-content-center" ><a href="{{x.pdf}}"><i class="fa fa-download"></i></a>
+           </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title mb-1"> {{x.name}}</h5>
+          <p class="card-text"> by: <span> {{x.author}} </span></p>
+          <p class="card-text">{{x.rate}}</p>     
+        </div>
+      </div>
+    </div>
+</div>
+
+
+</section>

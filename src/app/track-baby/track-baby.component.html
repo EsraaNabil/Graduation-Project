@@ -1,0 +1,30 @@
+
+<section class="pt-5 pb-5  trackBaby">
+    <div class="container">
+      <div class="row   ">
+        <div class="col-12 d-flex mb-3 justify-content-center">
+          <h2 >Track Your Baby</h2>
+        </div>
+        <div class="col-md-6 offset-md-3   ">
+            <form class=" w-100" name="babyTrack" #babyTrack ="ngForm" novalidate (ngSubmit)="trackForm(babyTrack)">
+                  <div class="form-group">
+                    <input class="form-control " type="date" placeholder="Date Of Birth"  name="baby_birth" [(ngModel)]="baby_birth" required>
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control  " type="number" placeholder="Weight"  name="baby_weight" [(ngModel)]="baby_weight" required>
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control  " type="number" placeholder="Eat every how many hours ?"  name="eat_time" [(ngModel)]="eat_time" required>
+                  </div>
+                  <div class="d-flex justify-content-end ">
+                      <button type="submit" class="btn  button-shadow " [disabled]="!babyTrack.valid">Submit</button>
+                  </div>         
+             </form>
+        </div>
+  
+  
+      </div>
+    </div>
+  </section>
+  
+  

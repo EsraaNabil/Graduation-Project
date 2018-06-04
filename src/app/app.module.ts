@@ -13,14 +13,23 @@ import { LoginComponent } from './login/login.component';
 import { ShopComponent } from './shop/shop.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { DoctorComponent } from './doctor/doctor.component';
+
 //app srvice
 import {QueryService} from './query.service';
 //app validator
 import { EqualValidator } from '../assets/equal-validator.directive';
 import { ShopItemComponent } from './shop-item/shop-item.component';
-import { PlayComponent } from './play/play.component';
+import { PlayComponent } from './play/play.component';  // import validator
+import { ViewCartComponent } from './view-cart/view-cart.component';  // import validator
+
 import { ResturantsComponent } from './resturants/resturants.component';
 import { SportComponent } from './sport/sport.component';
+import { WishListComponent } from './wish-list/wish-list.component';
+import { TrackBabyComponent } from './track-baby/track-baby.component';
+import { MediaComponent } from './media/media.component';
+import { MediaAllComponent } from './media-all/media-all.component';
+import { MediaBooksComponent } from './media-books/media-books.component';  // import validator
 import { SchoolComponent } from './school/school.component';
 import { NurseryComponent } from './nursery/nursery.component';
 import { EventsComponent } from './events/events.component';  // import validator
@@ -33,6 +42,11 @@ const routes:Routes=[
   {path:'play' , component:PlayComponent},
   {path:'shopItem' , component:ShopItemComponent},
   {path:'shop', component:ShopComponent},
+// {path:'media', component:MediaComponent},
+{path:'events', component:EventsComponent},
+// {path:'game', component:GamesComponent},
+{path:'babyTracker', component:TrackBabyComponent},
+
   {path:'resturants', component:ResturantsComponent},
   {path:'sport',component:SportComponent},
   {path:'schools',component:SchoolComponent},
@@ -46,14 +60,20 @@ const routes:Routes=[
     Sec3Component,
     LoginComponent,
     ShopComponent,
-    LoginComponent,
     HomeComponent,
     RegisterComponent,
     EqualValidator,
     ShopItemComponent,
-    PlayComponent,
+    PlayComponent ,
+    DoctorComponent,
+    ViewCartComponent,
     ResturantsComponent,
     SportComponent,
+    WishListComponent,
+    TrackBabyComponent,
+    MediaComponent,
+    MediaAllComponent,
+    MediaBooksComponent ,
     SchoolComponent,
     NurseryComponent,
     EventsComponent 

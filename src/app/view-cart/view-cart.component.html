@@ -1,0 +1,63 @@
+<div class="secshop margin">
+    <div class="secBg text-center">
+      <h1>Shopping Cart</h1>
+      <span><a routerLink="/">HOME</a></span>
+      <span><a routerLink="resturants" class="clicked">SHOPPING CART</a></span>
+    </div>
+  </div> 
+
+<section class="container view-cart mb-5">
+  <div class="row">
+    <div class="col-12 table-responsive mb-3 ">
+        <table class="table">
+            <thead class="">
+              <tr>
+                <th scope="col" >Product</th>
+                <th scope="col" class="pl-0">Price</th>
+                <th scope="col" class="pl-0">Quantity</th>
+                <th scope="col" class="pl-0">Total</th>
+                <th scope="col" class="pl-0">Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let x of cartdata "  >
+                <th scope="row" class="cart-img pl-0 pr-3">
+                  <img class="card-img-top img-fluid " src="{{x.cartImg}}">
+                  <div class="text-center " >
+                    <p class="  about-item mb-0 mt-2">{{x.aboutItem}}</p>
+                    <p class=" about-item">{{x.itemDetails}}</p>
+                  </div>
+                </th>
+                <td >{{x.price}}</td>
+                <td>
+                  <nav class="item-nav" aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item disabled">
+                        <a class="page-link background" href="#" tabindex="-1"><i class="fa fa-minus"></i></a>
+                      </li>
+                      <li class="page-item"><a class="page-link quantity" >1</a></li>
+                      <li class="page-item">
+                        <a class="page-link background" href="#"><i class="fa fa-plus"></i></a>
+                      </li>
+                    </ul>
+                  </nav>
+                </td>
+                <td class="text-dark" >{{x.total}}</td>
+                <td class="delete"><i class="fa fa-trash"></i></td>
+              </tr>
+            </tbody>
+        </table>
+          
+    </div>
+
+
+    <div class="col-12">
+      <p class="subtotal">Subtotal : 750 LE </p>
+      <button class="button-shadow mr-2">Continue Shopping</button>
+      <button class="button-shadow mr-2">Update Cart</button>
+      <button class="button-shadow">Check Out</button>
+    </div>
+
+  </div>
+</section>
+
