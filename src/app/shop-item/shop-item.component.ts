@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Output} from '@angular/core';
 import { Router } from '@angular/router';
 import {QueryService} from '../query.service';
 
@@ -10,6 +10,7 @@ import {QueryService} from '../query.service';
 })
 export class ShopItemComponent implements OnInit {
   itemData: Array<object>;
+
   constructor(private q:QueryService ) { 
     this.itemData=[];
   }
@@ -24,10 +25,13 @@ export class ShopItemComponent implements OnInit {
       err => {console.log(err);},
       () => {}
     );
+  
+
   }
   
 
   ngOnInit() {
   }
+  
 
 }

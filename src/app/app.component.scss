@@ -3,6 +3,12 @@ nav{
     .boy{
         padding-left: 15px;
     }
+    .abs{
+        margin-left: 20px;
+    }
+    .none{
+        display: none;
+    }
     button{
         height: 30px;
     }
@@ -13,33 +19,26 @@ nav{
     .verticalLine{
         border-right: solid black 1px;
     }
-    .facebook{
+    .socailMedia{
         border-radius: 50%;
-        background-color: #5977b8;
         color: white;
         width: 25px;
         height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .facebook{
+        background-color: #5977b8;
     }
     .twitter{
-        border-radius: 50%;
         background-color: #74cee4;
-        color: white;
-        width: 25px;
-        height: 25px;
     }
     .google{
-        border-radius: 50%;
         background-color: #e16c6c;
-        color: white; 
-        width: 25px;
-        height: 25px;
     }
     .insta{
-        border-radius: 50%;
         background-color: #e5397f;
-        color: white;
-        width: 25px;
-        height: 25px; 
     }
     .register{
         background-color:$blue;
@@ -100,4 +99,39 @@ nav{
 a{
     color: none;
     text-decoration: none;
+}
+
+@media all and (max-width:992px){
+    nav{
+        .abs{
+            position: absolute;
+            margin:0px;
+        }
+       .socailMedia,.register,.login{
+           display: none;
+       } 
+       .none{
+           display: inline-block;
+       }
+       .register{
+           margin-right: 10px;
+       }
+       .verticalLine{
+           display: none;
+       }
+       img{
+           display: none;
+       }
+    }
+}
+
+@media all and (max-width:576px){
+    .none{
+        font-size: 13px;;
+    }
+    .abs{
+        button{
+            font-size: 13px;
+        }
+    }
 }

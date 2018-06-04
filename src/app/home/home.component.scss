@@ -32,8 +32,6 @@ ngb-carousel /deep/ .carousel-control-next-icon{
         color: black;
     }
     button:focus{
-        width: 141px;
-        height: 79px;
         color: white;
         background-color: $pink;
         box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
@@ -41,7 +39,7 @@ ngb-carousel /deep/ .carousel-control-next-icon{
     .categRight{
         border: solid 2px $blue;
         border-radius: 10px;
-        padding-top: 57px;
+        padding-top: 55px;
         padding-bottom: 20px;
         .card{
             border: none;
@@ -53,7 +51,7 @@ ngb-carousel /deep/ .carousel-control-next-icon{
                 background-color: #ffb539;
                 border-radius: 10px;
                 padding: 7px;
-                width: 187px;
+                // width: 187px;
                 margin: 0 auto;
                 font-size: 15px;
                 transition: transform 0.5s;
@@ -68,7 +66,7 @@ ngb-carousel /deep/ .carousel-control-next-icon{
     }
 }
 .secPlay{
-    background-image: url('../../assets/images/bg_calltoaction1.jpg');
+    background-image: url('../../assets/images/home/bg_calltoaction1.jpg');
     background-size: cover;
     background-attachment: fixed;
     padding: 115px 0px;
@@ -85,3 +83,52 @@ ngb-carousel /deep/ .carousel-control-next-icon{
    
 }
 
+@media all and (max-width:1200px){
+    .Categories{
+        .categRight{
+            padding-top: 45px;
+            padding-bottom: 15px;
+            .card{
+                h5{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:992px){
+    .Categories{
+        .col-sm-12{
+            display: flex;
+            div{
+                padding: 0px;
+            }
+        }
+    }
+}
+
+@media all and (max-width:579px){
+    .Categories{
+        button{
+            width: 90px;
+            height: 59px;
+        }
+        .categRight{
+            .card{
+                h5{
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+}
+
+@media all and (max-width:400px){
+    .secPlay{
+        .play{
+            width: initial;
+        }
+    }
+}

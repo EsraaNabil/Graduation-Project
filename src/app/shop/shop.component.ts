@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {QueryService} from '../query.service';
-
 
 @Component({
   selector: 'app-shop',
@@ -9,11 +8,12 @@ import {QueryService} from '../query.service';
 })
 export class ShopComponent implements OnInit {
   mydata: Array<object>;
+
   constructor(
-    private q:QueryService
-  ) { 
+    private q:QueryService) { 
     this.mydata=[];
     this.getCardData();
+
   }
 
   getCardData(): void{

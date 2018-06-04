@@ -2,12 +2,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <span class="verticalLine pr-3"><a href="#"><img src="../assets/images/girl.png" /></a></span>
-      <a href="#"><img src="../assets/images/boy.png" class="boy"/></a>
-      <button class="navbar-toggler pb-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" (click)="navbarCollapsed = !navbarCollapsed">
-        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-      </button>
-      <div class="btn-group mr-3 ml-5">
+      <span class="verticalLine pr-3"><a href="#"><img src="../assets/images/home/girl.png" /></a></span>
+      <a href="#"><img src="../assets/images/home/boy.png" class="boy"/></a>
+      <div>
+          <button (click)="redirectToRegister()" type="button" class="btn text-center register  pt-0 pb-0 none">Register</button>
+          <button (click)="redirectToLogin()" type="button" class="btn text-center login dropMenu pt-0 pb-0 none">Login</button>
+      </div>
+      <div class="btn-group abs">
           <button type="button" class="btn dropMenu d-flex align-items-center pl-3 pl-3 pb-0 pt-0">Select Age</button>
           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
             <button class="btn btn-primary dropdown-toggle-split dropMenuToggle d-flex align-items-center" ngbDropdownToggle></button>
@@ -18,12 +19,13 @@
             </div>
           </div>
         </div>
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" [ngbCollapse]="navbarCollapsed">
         <div class="navbar-nav d-flex align-items-center justify-content-center">
-         <span class="facebook d-flex align-items-center justify-content-center ml-2"><i class="fa fa-facebook-f"></i></span>
-         <span class="twitter d-flex align-items-center justify-content-center ml-2"><i class="fa fa-twitter"></i></span>
-         <span class="google d-flex align-items-center justify-content-center ml-2"><i class="fa fa-google-plus-g"></i></span>
-         <span class="insta d-flex align-items-center justify-content-center ml-2"><i class="fa fa-instagram"></i></span>
+         <span class="facebook socailMedia ml-2"><i class="fa fa-facebook-f"></i></span>
+         <span class="twitter socailMedia ml-2"><i class="fa fa-twitter"></i></span>
+         <span class="google socailMedia ml-2"><i class="fa fa-google-plus"></i></span>
+         <span class="insta socailMedia ml-2"><i class="fa fa-instagram"></i></span>
          <button (click)="redirectToRegister()" type="button" class="btn text-center register mr-2 ml-5 pt-0 pb-0">Register</button>
          <button (click)="redirectToLogin()" type="button" class="btn text-center login dropMenu pt-0 pb-0">Login</button>
 
