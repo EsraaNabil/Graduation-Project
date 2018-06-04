@@ -8,32 +8,25 @@ img{
 h1{
     width: 60%;
 }
-.carousel-indicators li{
+
+ngb-carousel /deep/ .carousel-indicators li{
     width:10px;
     height: 10px;
     border-radius: 50%;
     background-color: white;
 }
-
- .carousel-indicators .active{
+ngb-carousel /deep/ .carousel-indicators .active{
     background-color: $pink;
 }
 
- .carousel-control-prev-icon{
+ngb-carousel /deep/ .carousel-control-prev-icon{
     background-image: none;
 }
-//  .carousel-control-next-icon{
-// ngb-carousel /deep/ .carousel-indicators .active{
-//     background-color: $pink;
-// }
+ngb-carousel /deep/ .carousel-control-next-icon{
+    background-image: none;
 
-// ngb-carousel /deep/ .carousel-control-prev-icon{
-//     background-image: none;
-// }
-// ngb-carousel /deep/ .carousel-control-next-icon{
-//     background-image: none;
+}
 
-// }
 .Categories{
     button{
         width: 141px;
@@ -97,13 +90,14 @@ h1{
    
 }
 
-contact us
+//contact us
 
 .home-contact{
     position:relative;
     .girlImg{
         position:absolute;
-        top:-50px;
+        top:-60px;
+        left:0;
     }
     button{
         background-color: $pink;
