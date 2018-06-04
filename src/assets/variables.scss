@@ -4,6 +4,9 @@ $orange:#ff9800;
 $green:#80cd33;
 $inputGrey:hsl(0, 0%, 72%);
 $mai_margin:140px;
+$cardGray:#696464;
+$cardBG:#f8f8f8;
+
 @font-face {
     font-family: 'Supermercado';
 	src: url('/assets/Fonts/supermercado/SupermercadoOne-Regular.ttf');
@@ -16,17 +19,23 @@ $mai_margin:140px;
     font-family: 'Nunito';
 	src: url('/assets/Fonts/nunito/Nunito-Regular.ttf');
 }
+
+@font-face {
+    font-family: 'NunitoLight';
+	src: url('/assets/Fonts/nunito/Nunito-Light.ttf');
+}
+
 h1{
-    font-family: 'Chewy'; 
+    font-family: 'Chewy';
 }
 h2{
-    font-family: 'Supermercado'; 
+    font-family: 'Supermercado';
 }
 h5{
-    font-family: 'Nunito'; 
+    font-family: 'Nunito';
 }
 p{
-    font-family: 'Nunito';  
+    font-family: 'Nunito';
 }
 button{
     font-family: 'Nunito';
@@ -34,11 +43,11 @@ button{
 .margin{
     margin-bottom: 140px;
 }
-.inputForm{
+.inputForm , .textareaForm{
     border-radius: 10px;
     width: 100px;
     border: solid 2px $pink;
-    color: $inputGrey; 
+    color: $inputGrey;
 }
 .inputForm:active{
     border-color: $pink;
@@ -76,13 +85,13 @@ button:focus{
 a{
     cursor: pointer;
 }
+
 .button-shadow{
     background-color: #e21c3f;
     color: white;
     border: 2px solid #e21c3f;
     border-radius: 10px;
-    width: 140px;
-    height: 40px;
+    padding: 5px 30px;
     box-shadow:0px 6px 2.46px 0.54px rgba(167, 1, 30, 0.73);
     font-size: 16px;
     font-family: 'Nunito';
@@ -92,6 +101,66 @@ a{
     box-shadow: none;
     cursor: pointer;
     transition: box-shadow 0.5s ease-in-out;
+}
+
+
+select{
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    border: solid 2px $pink;
+    color:black;
+    font-size: 18px;
+    option:hover{
+        background-color: $blue;
+    }
+}
+
+.form-control:focus{
+    box-shadow:none;
+    border-color: $pink;
+}
+
+.socialMedia{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.facebook{
+    background-color: #3b5998;
+};
+.google{
+    background-color: #d34836;
+}
+.skype{
+    background-color: #00aff0;
+}
+.instgram{
+    background-color: #cd486b;
+}
+.twitter{
+    background-color: #00aced;
+}
+
+
+hr {
+    display: block;
+    border: 0;
+    border-top: 2px solid white;
+    width: 30px;
+    margin-top: 0;
+    padding:0;
+}
+
+
+button:focus{
+    box-shadow:none;
 }
 .secshop{
     background-size: cover;
@@ -221,6 +290,7 @@ ngb-rating /deep/ span{
         } 
     }
 }
+
 .dropDownData{
     .inputBtn{
         width: 200px;
@@ -255,3 +325,100 @@ ngb-rating /deep/ span{
         }
     }
 }
+
+.item-nav{
+    ul{
+        li{
+            a{
+                color: #545454;
+            }
+            .quantity:hover{
+                background-color: white;
+            }
+            i{
+                font-size:14px;
+                color: #545454;
+            }
+            .background{
+                background-color: #e5e5e5;
+
+            }
+        }
+    }
+}
+
+.view-cart{
+    .subtotal{
+        font-size:30px;
+    }
+
+    table{
+        thead{
+        background-color:$pink;
+        color: white; 
+            th{
+                font-family: 'Nunito';
+            }
+        }
+        .cart-img{
+        width:200px;
+        height:200px;
+            p{
+                font-family: 'NunitoLight';
+                color:$cardGray;
+            }
+        }
+        tr{
+            border-bottom:1px solid $cardGray;
+            .delete{
+                font-size: 26px;
+            }
+        }
+        td , th{
+            vertical-align:middle;
+            border-top:0px;
+            font-family: 'NunitoLight';
+            
+
+            
+        }
+        td{
+            color:$cardGray;
+            span{
+                border:1px solid gray;
+                height:25px;
+                display:inline-block;
+
+
+            }
+        }
+    
+    }
+}
+
+
+// .hover{
+//     position: absolute;
+//     top: 0px;
+//     width: 100%;
+//     height:100%;
+//     background-color:#04a2b680;
+//     visibility:hidden;
+//     i{
+//         color: white;
+//         font-size: 27px;
+//     }
+// }
+
+// .main-img:hover
+//  {
+//    .hover {
+//         visibility: visible;
+//     }
+//  }
+
+
+
+
+ 
+

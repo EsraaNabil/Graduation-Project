@@ -1,8 +1,13 @@
 @import "../../assets/variables.scss";
 .secshop{
-    background-image:url('/assets/images/resturant.png');
+    background-image:url('/assets/images/resturant/resturant.png');
 }
 .card{
+    height: 480px;
+    a{
+        color: white;
+        text-decoration: none;
+    }
     border: none;
     .cardImg{
         position: relative;
@@ -39,5 +44,11 @@
             font-size: 15px;
             margin-bottom: 8px;
         }
+    }
+}
+
+@media all and (max-width:576px){
+    .card{
+        height: initial;
     }
 }

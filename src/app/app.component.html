@@ -2,12 +2,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <span class="verticalLine pr-3"><a href="#"><img src="../assets/images/girl.png" /></a></span>
-      <a href="#"><img src="../assets/images/boy.png" class="boy"/></a>
-      <button class="navbar-toggler pb-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" (click)="navbarCollapsed = !navbarCollapsed">
-        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-      </button>
-      <div class="btn-group mr-3 ml-5">
+      <span class="verticalLine pr-3"><a href="#"><img src="../assets/images/home/girl.png" /></a></span>
+      <a href="#"><img src="../assets/images/home/boy.png" class="boy"/></a>
+      <div>
+          <button (click)="redirectToRegister()" type="button" class="btn text-center register  pt-0 pb-0 none">Register</button>
+          <button (click)="redirectToLogin()" type="button" class="btn text-center login dropMenu pt-0 pb-0 none">Login</button>
+      </div>
+      <div class="btn-group abs">
           <button type="button" class="btn dropMenu d-flex align-items-center pl-3 pl-3 pb-0 pt-0">Select Age</button>
           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
             <button class="btn btn-primary dropdown-toggle-split dropMenuToggle d-flex align-items-center" ngbDropdownToggle></button>
@@ -18,12 +19,13 @@
             </div>
           </div>
         </div>
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" [ngbCollapse]="navbarCollapsed">
         <div class="navbar-nav d-flex align-items-center justify-content-center">
-         <span class="facebook d-flex align-items-center justify-content-center ml-2"><i class="fa fa-facebook-f"></i></span>
-         <span class="twitter d-flex align-items-center justify-content-center ml-2"><i class="fa fa-twitter"></i></span>
-         <span class="google d-flex align-items-center justify-content-center ml-2"><i class="fa fa-google-plus-g"></i></span>
-         <span class="insta d-flex align-items-center justify-content-center ml-2"><i class="fa fa-instagram"></i></span>
+         <span class="facebook socailMedia ml-2"><i class="fa fa-facebook-f"></i></span>
+         <span class="twitter socailMedia ml-2"><i class="fa fa-twitter"></i></span>
+         <span class="google socailMedia ml-2"><i class="fa fa-google-plus"></i></span>
+         <span class="insta socailMedia ml-2"><i class="fa fa-instagram"></i></span>
          <button (click)="redirectToRegister()" type="button" class="btn text-center register mr-2 ml-5 pt-0 pb-0">Register</button>
          <button (click)="redirectToLogin()" type="button" class="btn text-center login dropMenu pt-0 pb-0">Login</button>
 
@@ -42,13 +44,6 @@
       <div class="navbar-nav d-flex align-items-center justify-content-center ml-auto mr-auto">
           <div ngbDropdown class="d-inline-block">
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/">Home</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <a href="#sec1"><button class="dropdown-item" >Categories</button></a>
-                <a href="#sec2"><button class="dropdown-item" routerLink="/">Play With Us</button></a>
-                <a href="#sec3"><button class="dropdown-item" routerLink="shop">Shop Now</button></a>
-                <a href="#sec4"><button class="dropdown-item" routerLink="sport">Baby Care</button></a>
-                <a href="#sec5"><button class="dropdown-item" routerLink="/">Contact Us</button></a>
-              </div>
           </div>
           <div ngbDropdown class="d-inline-block">
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Places</button>
@@ -96,6 +91,9 @@
           <div ngbDropdown class="d-inline-block">
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/">BabyTraker</button>
           </div>
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/">Contact Us</button>
+          </div>
       </div>
       <i class="fa fa-shopping-cart pr-3"></i>
       <i class="fa fa-heart"></i>
@@ -103,7 +101,42 @@
   </div>
 </nav>
 
+<router-outlet></router-outlet>
 
-<router-outlet> </router-outlet>
+<footer class=" mr-0 ml-0   pt-5 pb-5">
+  <div class="container">
+  <div class="row" >
+    <div class="col-md-4  ">
+     <img src="">
+     <p>This web app provide you with all you need to know for your child ( food , sports academy  , education and restaurant ) , and you can shop with us .</p>
+     <p class="d-flex"><span class="mr-3 socialMedia mobile d-flex align-items-center justify-content-center "><i class="fa fa-phone"></i></span>01235665954</p>
+     <p class="d-flex"><span class="mr-3 socialMedia envelope d-flex align-items-center justify-content-center "><i class="fa fa-envelope"></i></span>Example@gmail.com</p>
+    </div>
+    <div class="col-md-3 offset-md-1 ">
+      <h4>Usfel Links</h4>
+      <hr class="ml-0">
+      <ul class="pl-0">
+        <li><a routerLink="/shop" > Shop</a></li>
+        <li><a routerLink="/media" > Media</a></li>
+        <li><a routerLink="/events" > Events</a></li>
+        <li><a routerLink="/games" > Game</a></li>
+        <li><a routerLink="/babyTracker" > Baby Tracker</a></li>
+      </ul>
+    </div>
+    <div class="col-md-4  follow">
+      <h4>Follow Us</h4>
+      <hr class="ml-0">
+      <ul class="pl-0 d-flex">
+        <li><a href="#" class="socialMedia facebook d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-facebook-f "></i></a></li>
+        <li><a href="#" class="socialMedia twitter d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" class="socialMedia google  d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-google-plus "></i></a></li>
+        <li><a href="#" class="socialMedia instgram d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</footer>
+<div class="footerBottom col-12 text-center pt-3 pb-3 pl-0 pr-0"><p class="mb-0">copyright 	&copy; 2018 . All rights reserved.</p></div>
+
 
 

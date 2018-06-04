@@ -1,0 +1,18 @@
+
+<section class="container">
+  <div class="row">
+    <div class="col-md-4 books mb-5 mediaa " *ngFor="let data of videoData">
+      <div class="card mb-5" >
+        <div class="cardImg">
+          <iframe class="w-100" src="http://www.youtube.com/embed/W7qWa52k-nE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> 
+        <div class="card-body ">
+          <h5 class="card-title mb-0">{{data.name}}</h5>
+          <p class="card-text par mb-0">By : <span>{{data.by}} </span></p>
+          <span class="card-text par mb-0">{{data.views}} Views </span>
+        </div>
+        <div class="time">{{data.time}} </div>
+      </div> 
+    </div>
+  </div>
+</section>

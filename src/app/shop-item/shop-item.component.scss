@@ -18,26 +18,18 @@
    /deep/ .dropMenu{
         color: $inputGrey;
     }
-    nav{
-        ul{
-            li{
-                a{
-                    color: #545454;
-                }
-                .quantity:hover{
-                    background-color: white;
-                }
-                i{
-                    font-size:14px;
-                    color: #545454;
-                }
-                .background{
-                    background-color: #e5e5e5;
 
-                }
-            }
+
+
+}
+
+@media all and (max-width:992px){
+    .shopItem{
+        img{
+            width: 60%;
+        }
+        h4{
+            padding-top: 10px;
         }
     }
-
-
 }
