@@ -88,13 +88,31 @@ ngb-carousel /deep/ .carousel-control-next-icon{
    
 }
 
+//contact us
+
 .home-contact{
     position:relative;
-    .girlImg{
-        position:absolute;
-        top:-220px;
-        left:0px;
+    .movegirl{
+        position: relative;
+        -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+        animation-name: example;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function:linear;
+        .girlImg{
+            position:absolute;
+            top:-100px;
+            left:0px;
+        }
     }
+    @keyframes example {
+        0%   { left:0px; }
+        100% {left:calc(100px);
+        }
+    }
+
+
     button{
         background-color: $pink;
         color: white;
@@ -156,3 +174,14 @@ ngb-carousel /deep/ .carousel-control-next-icon{
 
 
 
+
+
+
+@media all and (max-width:907px){
+    // .movegirl{
+    //    animation-name: none !important;
+    // }
+    .movegirl{
+        display: none;
+    }
+}
