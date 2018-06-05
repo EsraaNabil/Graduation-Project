@@ -10,23 +10,26 @@ import {QueryService} from '../query.service';
 })
 export class ShopItemComponent implements OnInit {
   itemData: Array<object>;
+  backUrl: string;
 
   constructor(private q:QueryService ) { 
     this.itemData=[];
+    this.backUrl = this.q.getUrlHistoryObj();
+    this.getItemData();
+
   }
   
-
-  getItemData():void{
-    let path:string='./assets/shopItem1.json';
+  getItemData(): void{
+    let path: string = this.backUrl;
     this.q.getData(path).subscribe(
-      res => {console.log(res);
-      this.itemData=res;
+      res => {
+        this.itemData = res;
+        console.log(res);
       },
-      err => {console.log(err);},
-      () => {}
+      err => {
+        console.log(err);
+      }
     );
-  
-
   }
   
 

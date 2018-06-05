@@ -1,17 +1,15 @@
 @import "../../assets/variables.scss";
-.container{
-    margin-top: $mai_margin;
-    margin-bottom: $mai_margin;
-}
+
 .imgForm{
-    flex-basis: 50%;
     background-color: #fcedea;
-    height: 800px;
+    height: 600px;
 }
 .form{
-    flex-basis: 50%;
-    height: 800px;
+    height: 600px;
     position: relative;
+    h2{
+        padding-top: 10px;
+    }
 }
 .input-group-text{
     background-color: $pink;
@@ -43,5 +41,35 @@ button{
     color: white;
 }
 img{
-    width: 55%;
+    width: 38%;
 }
+.alert{
+    font-size: 12px;
+    margin-bottom: 0px;
+    position: absolute;
+    left: 15%;
+    width: 23%;
+}
+
+@media all and (max-width:992px){
+ 
+    .row{
+        .girlImg{
+            display: none;
+        }
+        h2{
+            padding-top: 0px;
+        }
+    }
+    
+}
+
+@media all and (max-width:576px){
+    .row{
+        .input-group-text{
+            font-size: 12px;
+        }
+    }
+}
+
+    

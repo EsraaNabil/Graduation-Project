@@ -1,11 +1,10 @@
-<button (click)="getItemData()">this</button>
 <div class="container shopItem">
   <div class="row"  *ngFor="let cd of itemData; let i = index;">
     <div class="col-lg-4">
-      <img [src]="cd.img">
+      <img [src]="cd.pic">
     </div>
     <div class="col-lg-6">
-      <h4>{{cd.title}}</h4>
+      <h4>{{cd.name}}</h4>
       <p class="pt-3">{{cd.body}}</p>
       <span>Price:</span><span class="redPrice ml-2">{{cd.price}}</span>
       <div class="row">
