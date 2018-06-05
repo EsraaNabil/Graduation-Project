@@ -40,7 +40,7 @@ const routes:Routes=[
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'play' , component:PlayComponent},
-  {path:'shopItem' , component:ShopItemComponent},
+  {path:'shopItem/:id' , component:ShopItemComponent},
   {path:'shop', component:ShopComponent},
   {path:'mediavideos', component:MediaComponent},
   {path:'mediabooks', component:MediaBooksComponent},
