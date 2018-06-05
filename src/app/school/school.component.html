@@ -7,20 +7,29 @@
 </div> 
 <div class="container">
   <div class=" buttons d-flex justify-content-center">
-      <button (click)="getschoolData()" type="button " class="button-shadow btn btn-outline-secondary mr-4">
-          International
-      </button>
-      <button (click)="getMschoolData()" type="button" class="button-shadow blueBtn btn btn-outline-secondary mr-4">
-          Multinational
-      </button>
-      <button (click)="getEschoolData()" type="button" class="button-shadow greenBtn btn btn-outline-secondary mr-4">
-          Experimental 
-      </button>
-      <button (click)="getPschoolData()" type="button" class="button-shadow orangeBtn btn btn-outline-secondary mr-4">
-          Public
-      </button>
-  </div>
-    
+    <div class="row d-flex justify-content-center">
+      <div class="col-6 col-md-3">
+          <button (click)="getschoolData()" type="button " class="button-shadow btn btn-outline-secondary mr-4">
+              International
+          </button>
+      </div>
+      <div class="col-6 col-md-3">
+          <button (click)="getMschoolData()" type="button" class="button-shadow blueBtn btn btn-outline-secondary mr-4">
+              Multinational
+          </button>
+      </div>
+      <div class="col-6 col-md-3">
+          <button (click)="getEschoolData()" type="button" class="button-shadow greenBtn btn btn-outline-secondary mr-4">
+              Experimental 
+          </button>
+      </div>
+      <div class="col-6 col-md-3">
+          <button (click)="getPschoolData()" type="button" class="button-shadow orangeBtn btn btn-outline-secondary mr-4">
+              Public
+          </button>
+      </div>
+    </div>  
+  </div>  
   <div class="card-columns" >
     <div class="card mb-5" *ngFor="let data of schoolData">
       <div class="cardImg">

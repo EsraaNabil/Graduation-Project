@@ -5,9 +5,10 @@
 .container{
     .row{
         .col-4{
+            display: inline-block;
             h4{
                 font-family: 'Nunito';
-                font-size: 25px;
+                font-size: 20px;
                 color: white;
                 background-color: $pink;
                 padding: 10px 0 10px 20px;
@@ -22,7 +23,7 @@
                     label{
                         padding-left: 8px;
                         font-family: 'Nunito';
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                 }
                 .inputGroup:hover{
@@ -36,13 +37,13 @@
                 }
             }
             .btn{
-                width: 85px;
-                height: 80px;
-                margin: 20px 25px 20px 0; 
+                width: 55px;
+                height: 50px;
+                margin: 20px 20px 20px 0; 
                 border-radius: 10px;               
                 border: 3px solid $blue;
                 color: black;
-                font-size: 20px;
+                font-size: 18px;
             }
             .btn-secondary{
                 background-color: white;
@@ -52,7 +53,7 @@
                 color: white;
             }
         }
-        .col-8{
+        .col-12{
             .row{
                 margin-bottom: 15px;
             }
@@ -71,6 +72,7 @@
                         }
                         .btn{
                             width: 34%;
+                            padding: 10px;
                             border-radius: 0;
                             border:none;
                         }
@@ -104,4 +106,13 @@
         }
     }
 }
+@media all and (max-width:768px){
+    .container{
+        .row{
+            .col-4{
+                display: none;
+            }
+        }
+    }
+  }
 
