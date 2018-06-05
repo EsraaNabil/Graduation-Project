@@ -22,10 +22,10 @@
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" [ngbCollapse]="navbarCollapsed">
         <div class="navbar-nav d-flex align-items-center justify-content-center">
-         <span class="facebook socailMedia ml-2"><i class="fa fa-facebook-f"></i></span>
-         <span class="twitter socailMedia ml-2"><i class="fa fa-twitter"></i></span>
-         <span class="google socailMedia ml-2"><i class="fa fa-google-plus"></i></span>
-         <span class="insta socailMedia ml-2"><i class="fa fa-instagram"></i></span>
+         <a href="https://www.facebook.com/"><span class="facebook socailMedia ml-2"><i class="fa fa-facebook-f"></i></span></a>
+         <a href="https://www.twitter.com/"><span class="twitter socailMedia ml-2"><i class="fa fa-twitter"></i></span></a>
+         <a href="https://www.google.com/"><span class="google socailMedia ml-2"><i class="fa fa-google-plus"></i></span></a>
+         <a href="https://www.instagram.com/"><span class="insta socailMedia ml-2"><i class="fa fa-instagram"></i></span></a>
          <button (click)="redirectToRegister()" type="button" class="btn text-center register mr-2 ml-5 pt-0 pb-0">Register</button>
          <button (click)="redirectToLogin()" type="button" class="btn text-center login dropMenu pt-0 pb-0">Login</button>
 
@@ -52,15 +52,14 @@
               <button class="dropdown-item" routerLink="nursery">nursery</button>
               <button class="dropdown-item" routerLink="resturants">Resturant</button>
               <button class="dropdown-item" routerLink="sport">Sport</button>
-              <button class="dropdown-item" routerLink="/">Doctor</button>
+              <button class="dropdown-item" routerLink="doctors">Doctor</button>
             </div>
           </div>
           <div ngbDropdown class="d-inline-block">
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Media</button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button class="dropdown-item" routerLink="/">All Media</button>
-              <button class="dropdown-item" routerLink="/">Videos</button>
-              <button class="dropdown-item" routerLink="/">Books</button>
+              <button class="dropdown-item" routerLink="mediavideos">Videos</button>
+              <button class="dropdown-item" routerLink="mediabooks">Books</button>
             </div>
           </div>
           <div ngbDropdown class="d-inline-block">
@@ -89,19 +88,19 @@
             </div>
           </div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/">BabyTraker</button>
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="babyTracker">BabyTraker</button>
           </div>
           <div ngbDropdown class="d-inline-block">
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/">Contact Us</button>
           </div>
       </div>
-      <i class="fa fa-shopping-cart pr-3"></i>
-      <i class="fa fa-heart"></i>
+      <i class="fa fa-shopping-cart pr-3" routerLink="cart"></i>
+      <i class="fa fa-heart" routerLink="WishList" ></i>
     </div>
   </div>
 </nav>
+<router-outlet></router-outlet> 
 
-<router-outlet></router-outlet>
 
 <footer class=" mr-0 ml-0   pt-5 pb-5">
   <div class="container">
@@ -127,10 +126,10 @@
       <h4>Follow Us</h4>
       <hr class="ml-0">
       <ul class="pl-0 d-flex">
-        <li><a href="#" class="socialMedia facebook d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-facebook-f "></i></a></li>
-        <li><a href="#" class="socialMedia twitter d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#" class="socialMedia google  d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-google-plus "></i></a></li>
-        <li><a href="#" class="socialMedia instgram d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/" class="socialMedia facebook d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-facebook-f "></i></a></li>
+        <li><a href="https://www.twitter.com/" class="socialMedia twitter d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.google.com/" class="socialMedia google  d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-google-plus "></i></a></li>
+        <li><a href="https://www.instagram.com/" class="socialMedia instgram d-flex align-items-center justify-content-center mr-3" ><i class="fa fa-instagram"></i></a></li>
       </ul>
     </div>
   </div>
