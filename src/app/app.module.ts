@@ -42,16 +42,19 @@ const routes:Routes=[
   {path:'play' , component:PlayComponent},
   {path:'shopItem' , component:ShopItemComponent},
   {path:'shop', component:ShopComponent},
-// {path:'media', component:MediaComponent},
-{path:'events', component:EventsComponent},
-// {path:'game', component:GamesComponent},
-{path:'babyTracker', component:TrackBabyComponent},
-
+  {path:'mediavideos', component:MediaComponent},
+  {path:'mediabooks', component:MediaBooksComponent},
+  {path:'events', component:EventsComponent},
+  {path:'babyTracker', component:TrackBabyComponent},
   {path:'resturants', component:ResturantsComponent},
   {path:'sport',component:SportComponent},
   {path:'schools',component:SchoolComponent},
   {path:'nursery',component:NurseryComponent},
-  {path:'events',component:EventsComponent}
+  {path:'doctors',component:DoctorComponent},
+  {path:'cart',component:ViewCartComponent},
+  {path:'WishList',component:WishListComponent}
+
+
 ];
 
 @NgModule({

@@ -22,3 +22,14 @@
 
 
 }
+
+@media all and (max-width:992px){
+    .shopItem{
+        img{
+            width: 60%;
+        }
+        h4{
+            padding-top: 10px;
+        }
+    }
+}

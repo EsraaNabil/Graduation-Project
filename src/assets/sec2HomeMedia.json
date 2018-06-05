@@ -1,12 +1,12 @@
 [
     {
-        "img":"assets/images/return-of-video-to-elearning.png",
+        "img":"assets/images/home/return-of-video-to-elearning.png",
         "head":"VIDEOS",
-        "par":"Some videos for you and your child to improve his skills and you skills either to help your child grouth better."
+        "par":"Some videos for you and your child to improve his skills to help your child grouth better."
     },
     {
-        "img":"assets/images/Capture5.png",
+        "img":"assets/images/home/Capture5.png",
         "head":"BOOKS",
-        "par":"Some Books for you and your child to improve his skills and you skills either to help your child grouth better."
+        "par":"Some Books for you and your child to improve his skills to help your child grouth better."
     }
 ]

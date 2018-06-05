@@ -1,9 +1,58 @@
 @import "../../assets/variables.scss";
 .trackBaby{
-    background-color: lavenderblush;
+    // background-color: lavenderblush;
+   
+    .track{
+background-color: white;
+box-shadow:5px 5px 10px #80808024  
+
+    }
     input{
     border-radius: 10px;
     border: solid 2px $pink;
     color: $inputGrey;
     }
 }
+
+.trackbg{
+    background-image:url('/assets/images/trackbaby/bg5-02.png') ;
+    background-repeat: no-repeat !important;
+
+}
+
+.move{
+    width:200px;
+    height: 200px;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:linear;
+
+
+}
+
+
+
+/* Safari 4.0 - 8.0 */
+// @-webkit-keyframes example {
+//     0%   { left:0px; top:0px;}
+//     25%  { left:200px; top:0px;}
+//     50%  { left:200px; top:200px;}
+//     75%  { left:0px; top:200px;}
+//     100% {left:0px; top:0px;}
+// }
+
+/* Standard syntax */
+
+@keyframes example {
+    0%   { left:0px; }
+    100% {left:calc(100vw - 250px);
+        // transform: scaleX(-1);
+    }
+}
+
+
+

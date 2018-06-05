@@ -41,13 +41,21 @@
         <p class="card-text">{{data.number}} </p>
         <p class="card-text par2">{{data.description}} </p>
         <ul>
-          <li class="pinkSpan">Capacity<br><span >{{data.capacity}}</span></li>
-          <li class="orangeSpan">Age<br><span> {{data.age}}</span></li>
-          <li class="blueSpan">Duration<br><span> {{data.time}}</span></li>
+          <div class="row">
+            <div class="col-4">
+                <li class="pinkSpan">Capacity<br><span >{{data.capacity}}</span></li>
+            </div>
+            <div class="col-4">
+                <li class="orangeSpan">Age<br><span> {{data.age}}</span></li>
+            </div>
+            <div class="col-4">
+                <li class="blueSpan">Duration<br><span> {{data.time}}</span></li>
+            </div>
+          </div>
         </ul>  
       </div>
     </div> 
   </div>
   <br>
-  <ngb-pagination class="d-flex justify-content-center" [collectionSize]="50" [(page)]="currentPage"></ngb-pagination>
+  <ngb-pagination class="d-flex justify-content-center margin" [collectionSize]="50" [(page)]="currentPage"></ngb-pagination>
 </div>

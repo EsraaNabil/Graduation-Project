@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {QueryService} from '../query.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-media',
@@ -7,8 +8,12 @@ import {QueryService} from '../query.service';
   styleUrls: ['./media.component.scss']
 })
 export class MediaComponent implements OnInit {
-  videoData: Array<object>;
-  constructor(private q:QueryService) { 
+   videoData: Array<object>;
+  // videoData=[{
+  //   link:'1hyjLD7pk10'
+  // }]
+  constructor(private q:QueryService,
+  private santizier:DomSanitizer) { 
     this.videoData=[];
     this.getVideoData();
   }
@@ -27,6 +32,12 @@ export class MediaComponent implements OnInit {
 
 
   ngOnInit() {
+  }
+
+
+  getEmbedURL(data){
+    // 'http://www.youtube.com/embed/1hyjLD7pk10?ecver=2'
+    return this.santizier.bypassSecurityTrustResourceUrl('http://www.youtube.com/embed/1hyjLD7pk10?ecver=2')
   }
 
 }
