@@ -14,7 +14,6 @@ export class ShopComponent implements OnInit {
     this.mydata=[];
     this.getCardData();
     this.q.setUrlHistoryObj("./assets/shop.json");
-
   }
 
   getCardData(): void{

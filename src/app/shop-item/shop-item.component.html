@@ -1,17 +1,17 @@
 <div class="container shopItem">
-  <div class="row"  *ngFor="let cd of itemData; let i = index;">
+  <div class="row">
     <div class="col-lg-4">
-      <img [src]="cd.pic">
+      <img [src]="itemData.pic">
     </div>
     <div class="col-lg-6">
-      <h4>{{cd.name}}</h4>
-      <p class="pt-3">{{cd.body}}</p>
-      <span>Price:</span><span class="redPrice ml-2">{{cd.price}}</span>
+      <h4>{{itemData.name}}</h4>
+      <p class="pt-3">{{itemData.body}}</p>
+      <span>Price:</span><span class="redPrice ml-2">{{itemData.price}}</span>
       <div class="row">
         <div class="col-lg-6">
           <p class="mt-4 mb-2">Size</p>
           <div class="btn-group">
-            <button type="button" class="btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{cd.size}}</button>
+            <button type="button" class="btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{itemData.size}}</button>
             <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
               <button class="btn btn-primary dropdown-toggle-split dropMenuToggle d-flex align-items-center" ngbDropdownToggle></button>
               <div class="dropdown-menu" ngbDropdownMenu>
@@ -25,7 +25,7 @@
         <div class="col-lg-6">
           <p class="mt-4 mb-2">Color</p>
           <div class="btn-group">
-            <button type="button" class="btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{cd.color}}</button>
+            <button type="button" class="btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{itemData.color}}</button>
             <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
               <button class="btn btn-primary dropdown-toggle-split dropMenuToggle d-flex align-items-center" ngbDropdownToggle></button>
               <div class="dropdown-menu" ngbDropdownMenu>
@@ -40,7 +40,7 @@
       <div>
         <p class="mt-4 mb-2">Material</p>
         <div class="btn-group">
-          <button type="button" class="btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{cd.material}}</button>
+          <button type="button" class="btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{itemData.material}}</button>
           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
             <button class="btn btn-primary dropdown-toggle-split dropMenuToggle d-flex align-items-center" ngbDropdownToggle></button>
             <div class="dropdown-menu" ngbDropdownMenu>
@@ -62,7 +62,7 @@
         </ul>
       </nav>
       <br>
-      <span>Subtotal:</span><span class="redPrice ml-2">{{cd.price}}</span><br>
+      <span>Subtotal:</span><span class="redPrice ml-2">{{itemData.price}}</span><br>
       <button type="button" class="btn margin button-shadow mt-5">ADD TO CART</button>
     </div>
   </div>
