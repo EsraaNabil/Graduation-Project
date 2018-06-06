@@ -8,10 +8,15 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./media.component.scss']
 })
 export class MediaComponent implements OnInit {
-   videoData: Array<object>;
-  // videoData=[{
-  //   link:'1hyjLD7pk10'
-  // }]
+   videoData=[{
+     link:'1hyjLD7pk10'
+   },
+   {
+    link:'1hyjLD7pk10'
+  },
+  {
+    link:'1hyjLD7pk10'
+  }]
   constructor(private q:QueryService,
   private santizier:DomSanitizer) { 
     this.videoData=[];
@@ -37,7 +42,7 @@ export class MediaComponent implements OnInit {
 
   getEmbedURL(data){
     // 'http://www.youtube.com/embed/1hyjLD7pk10?ecver=2'
-    return this.santizier.bypassSecurityTrustResourceUrl('http://www.youtube.com/embed/1hyjLD7pk10?ecver=2')
+    return this.santizier.bypassSecurityTrustResourceUrl('http://www.youtube.com/embed/'+data)
   }
 
 }
