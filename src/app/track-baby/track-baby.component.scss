@@ -1,7 +1,11 @@
 @import "../../assets/variables.scss";
 .trackBaby{
-    // background-color: lavenderblush;
-   
+   .paddTop{
+     padding-top: 140px;
+   }  
+   .marginBottom{
+       margin-bottom: 140px;
+   } 
     .track{
 background-color: white;
 box-shadow:5px 5px 10px #80808024  
