@@ -1,5 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Output} from '@angular/core';
 import {QueryService} from '../query.service';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-shop',
@@ -9,11 +10,10 @@ import {QueryService} from '../query.service';
 export class ShopComponent implements OnInit {
   mydata: Array<object>;
 
-  constructor(
-    private q:QueryService) { 
+  constructor(private q:QueryService) { 
     this.mydata=[];
     this.getCardData();
-
+    this.q.setUrlHistoryObj("./assets/shop.json");
   }
 
   getCardData(): void{
