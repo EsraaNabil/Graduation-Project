@@ -1,24 +1,24 @@
 [
     {
-        "cartImg":"../assets/shop/clothes1.jpg",
+        "cartImg":"assets/images/shop/clothes1.jpg",
         "productName":"Baby Salobit",
         "price":"100 LE",
         "stoke":"In Stoke"
     },
     {
-        "cartImg":"../assets/shop/clothes2.jpg",
+        "cartImg":"assets/images/shop/clothes2.jpg",
         "productName":"Baby Set",
         "price":"200 LE",
         "stoke":"In Stoke"
     },
     {
-        "cartImg":"../assets/shop/clothes1.jpg",
+        "cartImg":"assets/images/shop/clothes1.jpg",
         "productName":"Baby Salobit",
         "price":"100 LE",
         "stoke":"In Stoke"
     },
     {
-        "cartImg":"../assets/shop/clothes2.jpg",
+        "cartImg":"assets/images/shop/clothes2.jpg",
         "productName":"Baby Set",
         "price":"200 LE",
         "stoke":"In Stoke"
