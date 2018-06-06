@@ -22,7 +22,6 @@ import { EqualValidator } from '../assets/equal-validator.directive';
 import { ShopItemComponent } from './shop-item/shop-item.component';
 import { PlayComponent } from './play/play.component';  // import validator
 import { ViewCartComponent } from './view-cart/view-cart.component';  // import validator
-
 import { ResturantsComponent } from './resturants/resturants.component';
 import { SportComponent } from './sport/sport.component';
 import { WishListComponent } from './wish-list/wish-list.component';
@@ -32,7 +31,8 @@ import { MediaAllComponent } from './media-all/media-all.component';
 import { MediaBooksComponent } from './media-books/media-books.component';  // import validator
 import { SchoolComponent } from './school/school.component';
 import { NurseryComponent } from './nursery/nursery.component';
-import { EventsComponent } from './events/events.component';  // import validator
+import { EventsComponent } from './events/events.component';
+import { ContactComponent } from './contact/contact.component';  // import validator
 
 
 const routes:Routes=[
@@ -52,7 +52,8 @@ const routes:Routes=[
   {path:'nursery',component:NurseryComponent},
   {path:'doctors',component:DoctorComponent},
   {path:'cart',component:ViewCartComponent},
-  {path:'WishList',component:WishListComponent}
+  {path:'WishList',component:WishListComponent},
+  {path:'contact',component:ContactComponent}
 
 
 ];
@@ -79,7 +80,8 @@ const routes:Routes=[
     MediaBooksComponent ,
     SchoolComponent,
     NurseryComponent,
-    EventsComponent 
+    EventsComponent,
+    ContactComponent 
   ],
   imports: [
     BrowserModule,
