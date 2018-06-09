@@ -11,7 +11,6 @@ import {QueryService} from '../query.service';
 export class ShopItemComponent implements OnInit {
   itemData: Object;
   backUrl: string;
-  backUrl1:string;
   itemId;
 
   constructor(

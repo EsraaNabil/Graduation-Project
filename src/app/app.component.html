@@ -91,10 +91,15 @@
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="babyTracker">BabyTraker</button>
           </div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/">Contact Us</button>
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/contact">Contact Us</button>
           </div>
       </div>
-      <i class="fa fa-shopping-cart pr-3" routerLink="cart"></i>
+    </div>
+    <div>
+      <i class="fa fa-shopping-cart pr-3" routerLink="/cart"></i>
+      <span *ngIf="cardItemsQuantities > 0">
+        {{cardItemsQuantities}}
+      </span>
       <i class="fa fa-heart" routerLink="WishList" ></i>
     </div>
   </div>

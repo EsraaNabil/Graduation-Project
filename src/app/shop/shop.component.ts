@@ -1,6 +1,7 @@
-import { Component, OnInit, Output} from '@angular/core';
-import {QueryService} from '../query.service';
+import { Component, OnInit, Output } from '@angular/core';
+import { QueryService } from '../query.service';
 import { EventEmitter } from '@angular/core';
+import { DataPipeService } from '../data-pipe.service';
 
 @Component({
   selector: 'app-shop',
@@ -10,13 +11,16 @@ import { EventEmitter } from '@angular/core';
 export class ShopComponent implements OnInit {
   mydata: Array<object>;
 
-  constructor(private q:QueryService) { 
-    this.mydata=[];
+  constructor(
+    private q: QueryService,
+    private dataPipeService: DataPipeService
+  ) {
+    this.mydata = [];
     this.getCardData();
     this.q.setUrlHistoryObj("./assets/shop.json");
   }
 
-  getCardData(): void{
+  getCardData(): void {
     let path: string = './assets/shop.json';
     this.q.getData(path).subscribe(
       res => {
@@ -27,6 +31,10 @@ export class ShopComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  addItemToCart(id: number) {
+
   }
 
   ngOnInit() {

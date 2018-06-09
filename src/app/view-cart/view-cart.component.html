@@ -20,15 +20,19 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let x of cartdata "  >
+              <tr>
                 <th scope="row" class="cart-img pl-0 pr-3">
-                  <img class="card-img-top img-fluid " src="{{x.cartImg}}">
+                  <img class="card-img-top img-fluid " src="{{cartData.pic}}">
                   <div class="text-center " >
-                    <p class="  about-item mb-0 mt-2">{{x.aboutItem}}</p>
-                    <p class=" about-item">{{x.itemDetails}}</p>
+                    <p class="  about-item mb-0 mt-2">{{cartData.name}}</p>
+                    <p class=" about-item">
+                      <span>{{cartData.size}}/</span>
+                      <span>{{cartData.color}}/</span>
+                      <span>{{cartData.material}}</span>
+                    </p>
                   </div>
                 </th>
-                <td >{{x.price}}</td>
+                <td >{{cartData.price}}</td>
                 <td>
                   <nav class="item-nav" aria-label="...">
                     <ul class="pagination">
@@ -42,7 +46,7 @@
                     </ul>
                   </nav>
                 </td>
-                <td class="text-dark" >{{x.total}}</td>
+                <td class="text-dark" >{{cartData.subtotal}}</td>
                 <td class="delete"><i class="fa fa-trash"></i></td>
               </tr>
             </tbody>
