@@ -22,17 +22,17 @@
             <tbody>
               <tr>
                 <th scope="row" class="cart-img pl-0 pr-3">
-                  <img class="card-img-top img-fluid " src="{{itemData.pic}}">
+                  <img class="card-img-top img-fluid " src="{{cartData.pic}}">
                   <div class="text-center " >
-                    <p class="  about-item mb-0 mt-2">{{itemData.name}}</p>
+                    <p class="  about-item mb-0 mt-2">{{cartData.name}}</p>
                     <p class=" about-item">
-                      <span>{{itemData.size}}/</span>
-                      <span>{{itemData.color}}/</span>
-                      <span>{{itemData.material}}</span>
+                      <span>{{cartData.size}}/</span>
+                      <span>{{cartData.color}}/</span>
+                      <span>{{cartData.material}}</span>
                     </p>
                   </div>
                 </th>
-                <td >{{itemData.price}}</td>
+                <td >{{cartData.price}}</td>
                 <td>
                   <nav class="item-nav" aria-label="...">
                     <ul class="pagination">
@@ -46,7 +46,7 @@
                     </ul>
                   </nav>
                 </td>
-                <td class="text-dark" >{{itemData.price}}</td>
+                <td class="text-dark" >{{cartData.subtotal}}</td>
                 <td class="delete"><i class="fa fa-trash"></i></td>
               </tr>
             </tbody>

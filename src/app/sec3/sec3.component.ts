@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-sec3',
@@ -17,6 +18,12 @@ export class Sec3Component implements OnInit {
   }
 
   ngOnInit() {
+ 
+        // $("button").click(function(){
+        //     alert($(".k").scrollTop() + " px");
+        // });
+ 
+
   }
 
 }

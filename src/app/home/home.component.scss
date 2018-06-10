@@ -107,9 +107,18 @@ ngb-carousel /deep/ .carousel-control-next-icon{
         }
     }
     @keyframes example {
-        0%   { left:0px; }
-        100% {left:calc(100px);
+        0%   { 
+            //transform: rotate(0deg);
+             left:0px; 
         }
+        100% {
+             left:100px;
+           // transform: rotate(20deg);
+        }
+        // 100%{
+        //     transform: rotate(-20deg);
+
+        // }
     }
 
 
