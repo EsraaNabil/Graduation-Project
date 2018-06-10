@@ -29,7 +29,9 @@
             position: absolute;
             top:0;
             left: 0;       
-            color:white;     
+            color:white;  
+            transition: all 0.3s linear;
+   
         }
         .hover:hover{
             opacity:1;
