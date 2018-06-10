@@ -21,18 +21,18 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let x of wishListData "  >
+              <tr>
                 <th scope="row" class="text-center pr-5 pl-5"  >
                     <i class="fa fa-times"></i>
                 </th>
                 <td>
                   <div class="img-list">
-                    <img class="card-img-top img-fluid " src="{{x.cartImg}}">
+                    <img class="card-img-top img-fluid " src="{{wishListData.pic}}">
                   </div>
                 </td>
-                <td>{{x.productName}}</td>
-                <td >{{x.price}}</td>
-                <td class="text-dark">{{x.stoke}}</td>
+                <td>{{wishListData.name}}</td>
+                <td >{{wishListData.price}}</td>
+                <td class="text-dark">{{wishListData.stoke}}</td>
                 <td ><button class="button-shadow">View Product</button></td>
               </tr>
             </tbody>

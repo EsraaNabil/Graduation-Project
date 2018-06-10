@@ -8,29 +8,13 @@ import {QueryService} from '../query.service';
   styleUrls: ['./view-cart.component.scss']
 })
 export class ViewCartComponent implements OnInit {
-cartdata: Array<object>;
+
   constructor(
     private q:QueryService ,
     private modalService: NgbModal
   ) { 
-    this.cartdata=[];
-    this.getCartData();
+
   }
-
-  getCartData(): void{
-    let path: string = './assets/viewCart.json';
-    this.q.getData(path).subscribe(
-      res => {
-        this.cartdata = res;
-        console.log(res);
-      },
-      err => {
-        console.log(err);
-      }
-    );
-  }
-
-
 
 
 

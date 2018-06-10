@@ -15,6 +15,7 @@ nav{
     .dropdown-item:hover{
         background-color: $blue;
         color: white;
+        cursor: pointer;
     }
     .verticalLine{
         border-right: solid black 1px;
@@ -60,28 +61,28 @@ nav{
     color: white;
     .collapse{
         .navbar-nav{
-         .btn{
-             height: initial;
-             border: none;
-             color: white;
-             font-family: Chewy;
-             letter-spacing: 1px;
-         }
-         .dropdown-toggle:after{
-             display: none;
-         }
-         .btn:hover{
-             background: transparent;
-             border: none;
-         }
-         .btn:focus{
-            background: transparent;
-            border: none;
-            box-shadow: none;
-        }
-        .btn:active{
-            background-color: transparent;
-        }
+            .btn{
+                height: initial;
+                border: none;
+                color: white;
+                font-family: Chewy;
+                letter-spacing: 1px;
+            }
+            .dropdown-toggle:after{
+                display: none;
+            }
+            .btn:hover{
+                background: transparent;
+                border: none;
+            }
+            .btn:focus{
+                background: transparent;
+                border: none;
+                box-shadow: none;
+            }
+            .btn:active{
+                background-color: transparent;
+            }
         }
     }
     a{
@@ -103,13 +104,7 @@ nav{
     background-image: none;
 }
 
-
-
-
-
-
 // footer
-
 footer {
     background-color: #495052;
     color: white;
@@ -117,7 +112,6 @@ footer {
     font-size: 17px;
     h4{
         font-family: 'Nunito';
-
     }
     p{
      font-family: 'NunitoLight';
@@ -139,10 +133,9 @@ footer {
         .socialMedia{
             width: 40px;
             height: 40px;
-
-                i{
-                    font-size: 22px;
-                }
+            i{
+                font-size: 22px;
+            }
         }
     }
 
@@ -154,29 +147,8 @@ footer {
     font-family: 'NunitoLight';
  }
 }
-// #myBtn {
-//     display: none;
-//     position: fixed;
-//     bottom: 20px;
-//     right: 30px;
-//     z-index: 99;
-//     font-size: 18px;
-//     border: none;
-//     outline: none;
-//     background-color: red;
-//     color: white;
-//     cursor: pointer;
-//     padding: 15px;
-//     border-radius: 4px;
-//   }
-  
-//   #myBtn:hover {
-//     background-color: #555;
-//   }
-
 
 // media query
-
 @media (max-width:  768px) {
     footer{
         .row{

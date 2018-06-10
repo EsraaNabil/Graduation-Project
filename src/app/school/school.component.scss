@@ -18,19 +18,13 @@
     }
 }
 .blueBtn{
-    background-color: $blue;
-    border: 2px solid $blue;
-    box-shadow: 0px 6px 2.46px 0.54px rgba(1, 150, 169, 0.73);
+    background-color: #B066D8;
 }
 .greenBtn{
     background-color: $green;
-    border: 2px solid $green;
-    box-shadow: 0px 6px 2.46px 0.54px rgba(88, 172, 4, 0.73);
 }
 .orangeBtn{
     background-color: $orange;
-    border: 2px solid $orange;
-    box-shadow: 0px 6px 2.46px 0.54px rgba(192, 117, 5, 0.73);
 }       
 .card{
     height: 380px;
@@ -77,6 +71,31 @@
             font-size: 15px;           
         }
     }
+}
+ngb-carousel /deep/ .carousel-control-next-icon,
+ngb-carousel /deep/ .carousel-control-prev-icon {
+    background-color: $pink;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;   
+}
+ngb-carousel /deep/ .carousel-control-prev,
+ngb-carousel /deep/ .carousel-control-next {
+    top: inherit;
+    bottom: inherit;
+    margin-top: 40px;
+    cursor: pointer;
+    width: 3%;
+}
+ngb-carousel /deep/ .carousel-inner{
+    display: flex;
+    justify-content: center
+}
+ngb-carousel /deep/ .carousel-control-prev{
+    left: 45%;
+}
+ngb-carousel /deep/ .carousel-control-next{
+    right: 47%;
 }
 @media all and (max-width:991px){
     .card{

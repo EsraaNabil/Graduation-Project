@@ -51,8 +51,8 @@ const routes:Routes=[
   {path:'schools',component:SchoolComponent},
   {path:'nursery',component:NurseryComponent},
   {path:'doctors',component:DoctorComponent},
-  {path:'cart',component:ViewCartComponent},
-  {path:'WishList',component:WishListComponent},
+  {path:'cart/:id',component:ViewCartComponent},
+  {path:'WishList/:id',component:WishListComponent},
   {path:'contact',component:ContactComponent}
 
 
