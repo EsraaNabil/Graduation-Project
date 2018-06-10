@@ -2,9 +2,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 //app component
 import { AppComponent } from './app.component';
@@ -16,13 +16,14 @@ import { RegisterComponent } from './register/register.component';
 import { DoctorComponent } from './doctor/doctor.component';
 
 //app srvice
-import {QueryService} from './query.service';
+import { QueryService } from './query.service';
+import { DataPipeService } from './data-pipe.service';
+
 //app validator
 import { EqualValidator } from '../assets/equal-validator.directive';
 import { ShopItemComponent } from './shop-item/shop-item.component';
 import { PlayComponent } from './play/play.component';  // import validator
 import { ViewCartComponent } from './view-cart/view-cart.component';  // import validator
-
 import { ResturantsComponent } from './resturants/resturants.component';
 import { SportComponent } from './sport/sport.component';
 import { WishListComponent } from './wish-list/wish-list.component';
@@ -32,27 +33,31 @@ import { MediaAllComponent } from './media-all/media-all.component';
 import { MediaBooksComponent } from './media-books/media-books.component';  // import validator
 import { SchoolComponent } from './school/school.component';
 import { NurseryComponent } from './nursery/nursery.component';
-import { EventsComponent } from './events/events.component';  // import validator
+import { EventsComponent } from './events/events.component';
+import { ContactComponent } from './contact/contact.component';  // import validator
+import { PageNotFoundComponent } from './page-not-found-component/page-not-found-component.component';
 
 
-const routes:Routes=[
-  {path:'',component:HomeComponent},
-  {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent},
-  {path:'play' , component:PlayComponent},
-  {path:'shopItem/:id' , component:ShopItemComponent},
-  {path:'shop', component:ShopComponent},
-  {path:'mediavideos', component:MediaComponent},
-  {path:'mediabooks', component:MediaBooksComponent},
-  {path:'events', component:EventsComponent},
-  {path:'babyTracker', component:TrackBabyComponent},
-  {path:'resturants', component:ResturantsComponent},
-  {path:'sport',component:SportComponent},
-  {path:'schools',component:SchoolComponent},
-  {path:'nursery',component:NurseryComponent},
-  {path:'doctors',component:DoctorComponent},
-  {path:'cart',component:ViewCartComponent},
-  {path:'WishList',component:WishListComponent}
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'play', component: PlayComponent },
+  { path: 'shop/item/:id', component: ShopItemComponent },
+  { path: 'shop', component: ShopComponent },
+  { path: 'mediavideos', component: MediaComponent },
+  { path: 'mediabooks', component: MediaBooksComponent },
+  { path: 'events', component: EventsComponent },
+  { path: 'babyTracker', component: TrackBabyComponent },
+  { path: 'resturants', component: ResturantsComponent },
+  { path: 'sport', component: SportComponent },
+  { path: 'schools', component: SchoolComponent },
+  { path: 'nursery', component: NurseryComponent },
+  { path: 'doctors', component: DoctorComponent },
+  { path: 'cart', component: ViewCartComponent },
+  { path: 'WishList', component: WishListComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: '**', component: PageNotFoundComponent }
 
 
 ];
@@ -67,7 +72,7 @@ const routes:Routes=[
     RegisterComponent,
     EqualValidator,
     ShopItemComponent,
-    PlayComponent ,
+    PlayComponent,
     DoctorComponent,
     ViewCartComponent,
     ResturantsComponent,
@@ -76,10 +81,12 @@ const routes:Routes=[
     TrackBabyComponent,
     MediaComponent,
     MediaAllComponent,
-    MediaBooksComponent ,
+    MediaBooksComponent,
     SchoolComponent,
     NurseryComponent,
-    EventsComponent 
+    EventsComponent,
+    ContactComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +96,7 @@ const routes:Routes=[
     FormsModule,
     HttpClientModule
   ],
-  providers: [QueryService],
+  providers: [QueryService, DataPipeService],
   bootstrap: [AppComponent]
 })
 

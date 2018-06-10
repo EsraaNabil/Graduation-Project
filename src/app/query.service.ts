@@ -12,8 +12,7 @@ export class QueryService {
   private urlHistory: string;
   mydata: Array<object>;
 
-
-  constructor(private http:HttpClient) {this.urlHistory = ""; }
+  constructor(private http: HttpClient) { this.urlHistory = ""; }
 
   public setUrlHistoryObj(val: string): void {
     this.urlHistory = val;
@@ -23,11 +22,7 @@ export class QueryService {
     return this.urlHistory;
   }
 
-  getData(path:string):Observable<any> {
+  getData(path: string): Observable<any> {
     return this.http.get(path)
   }
-
-
-
-
 }
