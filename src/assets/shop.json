@@ -9,7 +9,8 @@
         "color":"yellow",
         "material":"coton",
         "quantity":"1",
-        "subtotal":"120.00 LE"
+        "subtotal":"120.00 LE",
+        "stoke":"In Stoke"
     },
     {
         "pic":"../assets/images/shop/clothes1.jpg",
@@ -21,7 +22,8 @@
         "color":"blue",
         "material":"coton",
         "quantity":"1",
-        "subtotal":"100.00 LE"
+        "subtotal":"100.00 LE",
+        "stoke":"In Stoke"
     },
     {
         "pic":"../assets/images/shop/clothes2.jpg",
@@ -33,7 +35,8 @@
         "color":"blue",
         "material":"coton",
         "quantity":"1",
-        "subtotal":"150.00 LE"
+        "subtotal":"150.00 LE",
+        "stoke":"In Stoke"
     },
     {
         "pic":"../assets/images/shop/clothes2.jpg",
@@ -45,7 +48,8 @@
         "color":"blue",
         "material":"coton",
         "quantity":"1",
-        "subtotal":"120.00 LE"
+        "subtotal":"120.00 LE",
+        "stoke":"In Stoke"
     },
     {
         "pic":"../assets/images/shop/clothes1.jpg",
@@ -57,7 +61,8 @@
         "color":"blue",
         "material":"coton",
         "quantity":"1",
-        "subtotal":"100.00 LE"
+        "subtotal":"100.00 LE",
+        "stoke":"In Stoke"
     },
     {
         "pic":"../assets/images/shop/clothes1.jpg",
@@ -69,6 +74,7 @@
         "color":"blue",
         "material":"coton",
         "quantity":"1",
-        "subtotal":"150.00 LE"
+        "subtotal":"150.00 LE",
+        "stoke":"In Stoke"
     }
 ]

@@ -20,33 +20,33 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor= "let data of newData">
                 <th scope="row" class="cart-img pl-0 pr-3">
-                  <img class="card-img-top img-fluid " src="{{cartData.pic}}">
+                  <img class="card-img-top img-fluid " src="{{data.pic}}">
                   <div class="text-center " >
-                    <p class="  about-item mb-0 mt-2">{{cartData.name}}</p>
+                    <p class="  about-item mb-0 mt-2">{{data.name}}</p>
                     <p class=" about-item">
-                      <span>{{cartData.size}}/</span>
-                      <span>{{cartData.color}}/</span>
-                      <span>{{cartData.material}}</span>
+                      <span>{{data.size}}/</span>
+                      <span>{{data.color}}/</span>
+                      <span>{{data.material}}</span>
                     </p>
                   </div>
                 </th>
-                <td >{{cartData.price}}</td>
+                <td >{{data.price}}</td>
                 <td>
                   <nav class="item-nav" aria-label="...">
                     <ul class="pagination">
-                      <li class="page-item disabled">
-                        <a class="page-link background" href="#" tabindex="-1"><i class="fa fa-minus"></i></a>
+                      <li class="page-item disabled minus">
+                        <a class="page-link background" tabindex="-1"><i class="fa fa-minus"></i></a>
                       </li>
-                      <li class="page-item"><a class="page-link quantity" >1</a></li>
-                      <li class="page-item">
-                        <a class="page-link background" href="#"><i class="fa fa-plus"></i></a>
+                      <li class="page-item"><a class="page-link quantity" id="any">1</a></li>
+                      <li class="page-item plus">
+                        <a class="page-link background"><i class="fa fa-plus"></i></a>
                       </li>
                     </ul>
                   </nav>
                 </td>
-                <td class="text-dark" >{{cartData.subtotal}}</td>
+                <td class="text-dark" >{{data.subtotal}}</td>
                 <td class="delete"><i class="fa fa-trash"></i></td>
               </tr>
             </tbody>

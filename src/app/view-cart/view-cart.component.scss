@@ -3,6 +3,11 @@
     background-image:url('/assets/images/view-cart/bg4.png');
     background-position: top;
 }
+.table thead th{
+    border-bottom: hidden;
+    border-top: hidden;
+}
+
 @media all and (max-width:780px){
     .view-cart{
         .col-12{

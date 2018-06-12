@@ -9,32 +9,37 @@ import {QueryService} from '../query.service';
 })
 export class WishListComponent implements OnInit {
   wishListData: Array<object>;
+  wishListStorage;
   constructor(
     private q:QueryService ,
     private modalService: NgbModal
   ) { 
     this.wishListData=[];
-    this.getListData();
   }
-
-  getListData(): void{
-    let path: string = './assets/wishList.json';
-    this.q.getData(path).subscribe(
-      res => {
-        this.wishListData = res;
-        console.log(res);
-      },
-      err => {
-        console.log(err);
-      }
-    );
+  
+  getWishListItems(){
+    if(localStorage.getItem('wishList')){
+      this.wishListStorage = JSON.parse(localStorage.getItem('wishList'));
+      this.q.getData('assets/shop.json').subscribe(res =>{
+        res.forEach(element => {
+          console.log(this.wishListStorage.indexOf(element.id));
+          console.log(this.wishListStorage);
+          if(this.wishListStorage.indexOf(element.id)!=-1){
+            this.wishListData.push(element);
+          }
+        });     
+        console.log("wishListdata",this.wishListData);
+      })
+    }
+    else{
+      this.wishListData = [];
+    }
   }
-
-
 
 
 
   ngOnInit() {
+    this.getWishListItems();
   }
 
 }
