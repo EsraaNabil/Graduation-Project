@@ -58,6 +58,23 @@ export class ShopItemComponent implements OnInit {
       }
     );
   }
+  getItemData3(): void{
+    let path: string = './assets/toys.json';
+    this.q.getData(path).subscribe(
+      res => {
+        res.forEach(element => {
+          if(element.id == this.itemId){
+            this.itemData = element;
+          }
+        });;
+
+      },
+      err => {
+        console.log(err);
+        console.log('did not receive data');
+      }
+    );
+  }
 
   
 
@@ -66,6 +83,7 @@ export class ShopItemComponent implements OnInit {
       this.itemId= param.id;
       this.getItemData();
       this.getItemData2();
+      this.getItemData3();
     }))
   }
   

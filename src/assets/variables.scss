@@ -256,12 +256,11 @@ ngb-rating /deep/ span{
                 background-color: $pink;
                 padding: 12px 13px;
                 font-size: 18px;
-                // transition: all 0.3s linear;
-
             }
             .zoomIcon:hover{
                 background-color: $blue;
                 cursor: pointer;
+                transition: background-color 0.5s ease-in-out;
             }
             .zoomBtn{
                 background-color: transparent;
@@ -337,7 +336,6 @@ ngb-rating /deep/ span{
     .subtotal{
         font-size:30px;
     }
-
     table{
         thead{
         background-color:$pink;
@@ -381,7 +379,6 @@ ngb-rating /deep/ span{
 .marginTop{
     padding-top: 140px;
 }
-
 .home-contact{
     position:relative;
     .movegirl{
@@ -403,15 +400,44 @@ ngb-rating /deep/ span{
         100% {left:calc(100px);
         }
     }
-
-
     button{
         background-color: $pink;
         color: white;
         transition: all 0.2s linear;
     }
-  
 }
+ngb-carousel /deep/ .carousel-control-next-icon,
+ngb-carousel /deep/ .carousel-control-prev-icon {
+    background-color: $pink;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;   
+}
+ngb-carousel /deep/ .carousel-control-prev,
+ngb-carousel /deep/ .carousel-control-next {
+    top: inherit;
+    bottom: inherit;
+    margin-top: 40px;
+    cursor: pointer;
+    width: 3%;
+    opacity: 1;
+}
+ngb-carousel /deep/ .carousel-control-prev-icon:hover,
+ngb-carousel /deep/ .carousel-control-next-icon:hover {
+    background-color: $blue;
+    transition: background-color 0.4s ease-in-out;
+}
+ngb-carousel /deep/ .carousel-inner{
+    display: flex;
+    justify-content: center
+}
+ngb-carousel /deep/ .carousel-control-prev{
+    left: 45%;
+}
+ngb-carousel /deep/ .carousel-control-next{
+    right: 47%;
+}
+:focus {outline:0}
 
 
 
