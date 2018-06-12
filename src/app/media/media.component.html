@@ -4,12 +4,8 @@
     <div class="col-md-4 books mediaa " *ngFor="let data of videoData">
       <div class="card mb-5" >
         <div class="cardImg">
-          <!-- <div [innerHTML]="data.link"></div> -->
-          <!-- <div [innerHTML]='"<h1>kkk</h1>"'></div> -->
           <div> <iframe class='w-100' [src]="getEmbedURL(data.link)" frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe></div>
         </div> 
-        <!-- "link":"<div> <iframe class='w-100' src='http://www.youtube.com/embed/W7qWa52k-nE' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe></div>", -->
-
         <div class="card-body ">
           <h5 class="card-title mb-0">{{data.name}}</h5>
           <p class="card-text par mb-0">By : <span>{{data.by}} </span></p>

@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { QueryService } from '../query.service';
 import { EventEmitter } from '@angular/core';
 import { DataPipeService } from '../data-pipe.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-shop',
@@ -38,6 +39,19 @@ export class ShopComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    $(document).ready(function(){
+      $(".cartBtn").click(function(){
+       // $(".added").css("visibility","visible");
+        //$(this).parents().find(".added").css("visibility","visible");
+        $(this).parents(".cardImg").find(".added").css("visibility","visible");
+        // $(".cartBtn").css( 'pointer-events', 'none' );
+        // $(".cartBtn").css( 'cursor', 'default' );
+
+      });
+    });
+
+
   }
 
 }

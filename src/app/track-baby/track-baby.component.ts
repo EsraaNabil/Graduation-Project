@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm , NgModel } from '@angular/forms';
-import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-track-baby',
@@ -19,7 +19,7 @@ export class TrackBabyComponent implements OnInit {
   }
 
   ngOnInit() {
-  
+
     
   }
 

@@ -29,13 +29,13 @@ import { SportComponent } from './sport/sport.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { TrackBabyComponent } from './track-baby/track-baby.component';
 import { MediaComponent } from './media/media.component';
-import { MediaAllComponent } from './media-all/media-all.component';
 import { MediaBooksComponent } from './media-books/media-books.component';  // import validator
 import { SchoolComponent } from './school/school.component';
 import { NurseryComponent } from './nursery/nursery.component';
 import { EventsComponent } from './events/events.component';
 import { ContactComponent } from './contact/contact.component';  // import validator
 import { PageNotFoundComponent } from './page-not-found-component/page-not-found-component.component';
+import { GameComponent } from './game/game.component';
 
 
 const routes: Routes = [
@@ -57,9 +57,8 @@ const routes: Routes = [
   { path: 'cart', component: ViewCartComponent },
   { path: 'WishList', component: WishListComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'games', component: GameComponent },
   { path: '**', component: PageNotFoundComponent }
-
-
 ];
 
 @NgModule({
@@ -80,13 +79,13 @@ const routes: Routes = [
     WishListComponent,
     TrackBabyComponent,
     MediaComponent,
-    MediaAllComponent,
     MediaBooksComponent,
     SchoolComponent,
     NurseryComponent,
     EventsComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
