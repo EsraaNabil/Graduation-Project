@@ -5,12 +5,12 @@
     .card-deck{
         margin-bottom: 140px;
         img{
-            height: 210px;
-            transition: .3s ease-in-out;
+            height: 240px;
+            // transition: .3s ease-in-out;
         }
-        .card:hover img{
-            transform: rotate(-15deg) scale(1);
-        }
+        // .card:hover img{
+        //     transform: rotate(-15deg) scale(1);
+        // }
         .card-body{
             background-color: #f7f7f7;
             h5{

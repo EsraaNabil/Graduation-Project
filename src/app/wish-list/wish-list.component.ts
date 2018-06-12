@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {QueryService} from '../query.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-wish-list',
@@ -8,11 +9,12 @@ import {QueryService} from '../query.service';
   styleUrls: ['./wish-list.component.scss']
 })
 export class WishListComponent implements OnInit {
-  wishListData: Array<object>;
+  wishListData:Array<any>;
   wishListStorage;
+
   constructor(
     private q:QueryService ,
-    private modalService: NgbModal
+    private modalService: NgbModal,
   ) { 
     this.wishListData=[];
   }
@@ -36,11 +38,7 @@ export class WishListComponent implements OnInit {
     }
   }
 
-
-
   ngOnInit() {
     this.getWishListItems();
   }
-
 }
-

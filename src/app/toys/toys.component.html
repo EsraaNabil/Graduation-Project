@@ -2,7 +2,7 @@
   <div class="secBg text-center">
     <h1>OUR PRODUCTS</h1>
     <span><a routerLink="/">HOME</a></span>
-    <span><a routerLink="shop" class="clicked">PRODUCTS</a></span>
+    <span><a routerLink="toys" class="clicked">PRODUCTS</a></span>
   </div>
 </div> 
 <div class="container">
@@ -11,12 +11,12 @@
       <h4>Shop By Type</h4>
       <form class="form">
         <div class="inputGroup">
-          <input id="radio1" name="radio" type="radio" CHECKED/>
+          <input id="radio1" name="radio" type="radio" routerLink="shop"/>
           <label for="radio1">Clothes</label>
           <div class="check"></div>
         </div>
         <div class="inputGroup">
-          <input id="radio2" name="radio" type="radio" routerLink="toys"/>
+          <input id="radio2" name="radio" type="radio" CHECKED/>
           <label for="radio2">Toys</label>
           <div class="check"></div>
         </div>
@@ -60,12 +60,6 @@
             </a>
         </li>
       </ul>
-      <h4>Shop By Size</h4>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">S</button>
-        <button type="button" class="btn btn-secondary">M</button>
-        <button type="button" class="btn btn-secondary">L</button>
-      </div>
       <h4>Shop By Price</h4>
       <form class="form">
         <div class="inputGroup">
@@ -88,11 +82,11 @@
     <div class="col-12 col-md-8">
       <div class="text-right">
           <div class="btn-group mb-5 dropDownData mr-auto ml-auto">
-              <button type="button" class="inputBtn btn btn-primary left">Sort By</button>
+              <button id="myText" type="button" class="inputBtn btn btn-primary left">Sort By</button>
               <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
                 <button class="btn btn-primary dropdown-toggle-split right" ngbDropdownToggle></button>
                 <div class="dropdown-menu" ngbDropdownMenu style="right:0px ;left:auto">
-                  <button class="dropdown-item">Price, low to high</button>
+                  <button (click)="myFunction($event)" class="dropdown-item">Price, low to high</button>
                   <button class="dropdown-item">Price, high to low</button>
                   <button class="dropdown-item">Date, old to new</button>
                   <button class="dropdown-item">Date, new to old</button>
@@ -101,13 +95,13 @@
           </div>
       </div>
       <div class="card-columns" >
-        <div class="card mb-5 text-center" *ngFor="let data of mydata">
+        <div class="card mb-5 text-center" *ngFor="let data of toysData">
           <div class="cardImg">  
             <div class="hover">
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary" [routerLink]="['/shop/item',data.id]"><i class="fa fa-eye"></i></button>
+                    <button type="button" class="btn btn-secondary" [routerLink]="['/toys/item',data.id]"><i class="fa fa-eye"></i></button>
                     <button type="button" class="btn btn-secondary" (click)="addItemToCart(data.id)"><i class="fa fa-shopping-cart"></i></button>
-                    <button type="button" class="btn btn-secondary"(click)="addWishListCart(data.id)"><i class="fa fa-heart"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa fa-heart"></i></button>
                 </div>
             </div>              
             <img class="card-img-top" [src]="data.pic" alt="Card image cap">
@@ -124,5 +118,3 @@
     </div>
   </div>
 </div>
-
-

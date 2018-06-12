@@ -24,9 +24,11 @@ ngb-carousel /deep/ .carousel-control-prev-icon{
 }
 ngb-carousel /deep/ .carousel-control-next-icon{
     background-image: none;
-
 }
-
+ngb-carousel /deep/ .carousel-control-next,
+ngb-carousel /deep/ .carousel-control-prev{
+    opacity: 0;
+}
 .Categories{
     button{
         width: 141px;

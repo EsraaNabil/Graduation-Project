@@ -36,6 +36,7 @@ import { NurseryComponent } from './nursery/nursery.component';
 import { EventsComponent } from './events/events.component';
 import { ContactComponent } from './contact/contact.component';  // import validator
 import { PageNotFoundComponent } from './page-not-found-component/page-not-found-component.component';
+import { ToysComponent } from './toys/toys.component';
 
 
 const routes: Routes = [
@@ -44,7 +45,14 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'play', component: PlayComponent },
   { path: 'shop/item/:id', component: ShopItemComponent },
+  { path: 'toys/item/:id', component: ShopItemComponent },
   { path: 'shop', component: ShopComponent },
+  { path: 'shop/shop', component: ShopComponent },
+  { path: 'shop/toys', component: ToysComponent },
+  { path: 'toys', component: ToysComponent },
+  { path: 'toys/toys', component: ToysComponent },
+  { path: 'toys/shop', component: ShopComponent },
+  { path: 'toys/toys/shop', component: ShopComponent },
   { path: 'mediavideos', component: MediaComponent },
   { path: 'mediabooks', component: MediaBooksComponent },
   { path: 'events', component: EventsComponent },
@@ -86,7 +94,8 @@ const routes: Routes = [
     NurseryComponent,
     EventsComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ToysComponent
   ],
   imports: [
     BrowserModule,

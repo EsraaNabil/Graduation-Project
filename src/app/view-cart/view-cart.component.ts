@@ -10,7 +10,6 @@ import * as $ from 'jquery';
   styleUrls: ['./view-cart.component.scss']
 })
 export class ViewCartComponent implements OnInit {
-backUrl :string;
 newData: Array<object>;
 cartStorage;
 

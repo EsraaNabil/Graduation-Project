@@ -6,7 +6,6 @@ $inputGrey:hsl(0, 0%, 72%);
 $mai_margin:140px;
 $cardGray:#696464;
 $cardBG:#f8f8f8;
-
 @font-face {
     font-family: 'Supermercado';
 	src: url('/assets/Fonts/supermercado/SupermercadoOne-Regular.ttf');
@@ -24,7 +23,6 @@ $cardBG:#f8f8f8;
     font-family: 'NunitoLight';
 	src: url('/assets/Fonts/nunito/Nunito-Light.ttf');
 }
-
 h1{
     font-family: 'Chewy';
 }
@@ -85,25 +83,20 @@ button:focus{
 a{
     cursor: pointer;
 }
-
 .button-shadow{
     background-color: #e21c3f;
     color: white;
-    border: 2px solid #e21c3f;
+    border: 2px solid transparent;
     border-radius: 10px;
     padding: 5px 30px;
-    box-shadow:0px 6px 2.46px 0.54px rgba(167, 1, 30, 0.73);
     font-size: 16px;
     font-family: 'Nunito';
-    transition: box-shadow 0.3s ease-in-out;
 }
 .button-shadow:hover{
-    box-shadow: none;
+    background-color: $blue;
+    transition: background-color 0.5s ease-in-out;
     cursor: pointer;
-    transition: box-shadow 0.5s ease-in-out;
 }
-
-
 select{
     width: 200px;
     height: 60px;
@@ -115,12 +108,10 @@ select{
         background-color: $blue;
     }
 }
-
 .form-control:focus{
     box-shadow:none;
     border-color: $pink;
 }
-
 .socialMedia{
     width: 30px;
     height: 30px;
@@ -147,8 +138,6 @@ a:hover{
 .twitter{
     background-color: #00aced;
 }
-
-
 hr {
     display: block;
     border: 0;
@@ -157,8 +146,6 @@ hr {
     margin-top: 0;
     padding:0;
 }
-
-
 button:focus{
     box-shadow:none;
 }
@@ -269,12 +256,11 @@ ngb-rating /deep/ span{
                 background-color: $pink;
                 padding: 12px 13px;
                 font-size: 18px;
-                // transition: all 0.3s linear;
-
             }
             .zoomIcon:hover{
                 background-color: $blue;
                 cursor: pointer;
+                transition: background-color 0.5s ease-in-out;
             }
             .zoomBtn{
                 background-color: transparent;
@@ -292,7 +278,6 @@ ngb-rating /deep/ span{
         } 
     }
 }
-
 .dropDownData{
     .inputBtn{
         width: 200px;
@@ -322,12 +307,11 @@ ngb-rating /deep/ span{
         right: 0px;
         width: 230px;
         .dropdown-item:hover{
-        background-color: $pink;
-        color: white;
+            background-color: $pink;
+            color: white;
         }
     }
 }
-
 .item-nav{
     ul{
         li{
@@ -348,12 +332,10 @@ ngb-rating /deep/ span{
         }
     }
 }
-
 .view-cart{
     .subtotal{
         font-size:30px;
     }
-
     table{
         thead{
         background-color:$pink;
@@ -379,10 +361,7 @@ ngb-rating /deep/ span{
         td , th{
             vertical-align:middle;
             border-top:0px;
-            font-family: 'NunitoLight';
-            
-
-            
+            font-family: 'NunitoLight';           
         }
         td{
             color:$cardGray;
@@ -397,11 +376,9 @@ ngb-rating /deep/ span{
     
     }
 }
-
 .marginTop{
     padding-top: 140px;
 }
-
 .home-contact{
     position:relative;
     .movegirl{
@@ -423,15 +400,44 @@ ngb-rating /deep/ span{
         100% {left:calc(100px);
         }
     }
-
-
     button{
         background-color: $pink;
         color: white;
         transition: all 0.2s linear;
     }
-  
 }
+ngb-carousel /deep/ .carousel-control-next-icon,
+ngb-carousel /deep/ .carousel-control-prev-icon {
+    background-color: $pink;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;   
+}
+ngb-carousel /deep/ .carousel-control-prev,
+ngb-carousel /deep/ .carousel-control-next {
+    top: inherit;
+    bottom: inherit;
+    margin-top: 40px;
+    cursor: pointer;
+    width: 3%;
+    opacity: 1;
+}
+ngb-carousel /deep/ .carousel-control-prev-icon:hover,
+ngb-carousel /deep/ .carousel-control-next-icon:hover {
+    background-color: $blue;
+    transition: background-color 0.4s ease-in-out;
+}
+ngb-carousel /deep/ .carousel-inner{
+    display: flex;
+    justify-content: center
+}
+ngb-carousel /deep/ .carousel-control-prev{
+    left: 45%;
+}
+ngb-carousel /deep/ .carousel-control-next{
+    right: 47%;
+}
+:focus {outline:0}
 
 
 
