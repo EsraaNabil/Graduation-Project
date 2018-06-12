@@ -11,12 +11,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class WishListComponent implements OnInit {
   wishListData:Array<any>;
   wishListStorage;
+  flag:boolean;
 
   constructor(
     private q:QueryService ,
     private modalService: NgbModal,
   ) { 
     this.wishListData=[];
+    this.flag=true;
   }
   
   getWishListItems(){
@@ -31,7 +33,17 @@ export class WishListComponent implements OnInit {
           }
         });     
         console.log("wishListdata",this.wishListData);
-      })
+      });
+      if(this.flag==true){
+        this.q.getData('assets/toys.json').subscribe(res =>{
+          res.forEach(element => {
+            if(this.wishListStorage.indexOf(element.id)!=-1){
+              this.wishListData.push(element);
+            }
+          });     
+          console.log(this.wishListData);
+        })
+      }
     }
     else{
       this.wishListData = [];

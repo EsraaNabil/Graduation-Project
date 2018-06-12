@@ -82,14 +82,11 @@
       </div>
     </div>
     <div>
-      <i class="fa fa-shopping-cart pr-3" routerLink="/cart"></i>
-      <span class="cart" *ngIf="cardItemsQuantities > 0">
+      <i class="fa fa-heart pointer" routerLink="WishList" ></i>
+      <span class="cart" *ngIf="cardItemsQuantities > 0"  routerLink="WishList">
         {{cardItemsQuantities}}
       </span>
-      <i class="fa fa-heart ml-4" routerLink="WishList" ></i>
-      <span class="wishList" *ngIf="cardItemsQuantities > 0">
-        {{WishListItemsQuantities}}
-      </span>
+      <i class="fa fa-shopping-cart pl-3 pointer" routerLink="/cart"></i>
     </div>
   </div>
 </nav>

@@ -99,20 +99,20 @@ nav{
     .navbar-toggler{
         border-color: white;
     }
-    .wishList,.cart{
-        position: absolute;
-        background-color: white;
-        color: $pink;
-        border-radius: 50%;
-        padding: 0px 8px;
-    }
-    .wishList{
-        top: 29%;
-        right: 6.8%;
+    .pointer{
+        cursor: pointer;
     }
     .cart{
         position: absolute;
-        right: 10.9%;
+        right: 6.9%;
+        top: 34.9%;
+        padding: 0px 6px;
+        font-size: 12;
+        font-size: 12px;
+        background-color: white;
+        color: $pink;
+        border-radius: 50%;
+        cursor: pointer;
     }
 }
 .navbar-light .navbar-toggler-icon{
