@@ -34,7 +34,29 @@ export class ShopComponent implements OnInit {
   }
 
   addItemToCart(id: number) {
+    if(localStorage.getItem('cart')){
+      var cart = JSON.parse(localStorage.getItem('cart'));
+      if(cart.indexOf(id) == -1){
+        cart.push(id);
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }
+    }
+    else{
+      localStorage.setItem('cart',JSON.stringify([id]));
+    }
+  }
 
+  addWishListCart(id: number) {
+    if(localStorage.getItem('wishList')){
+      var wishList = JSON.parse(localStorage.getItem('wishList'));
+      if(wishList.indexOf(id) == -1){
+        wishList.push(id);
+        localStorage.setItem('wishList', JSON.stringify(wishList));
+      }
+    }
+    else{
+      localStorage.setItem('wishList',JSON.stringify([id]));
+    }
   }
 
   ngOnInit() {

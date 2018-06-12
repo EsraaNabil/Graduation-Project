@@ -68,22 +68,10 @@
             </div>
           </div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Events</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button class="dropdown-item" routerLink="events">All Events</button>
-              <button class="dropdown-item" routerLink="/">Alexandria Bibliotheca</button>
-              <button class="dropdown-item" routerLink="/">Alexandria Center of Arts</button>
-              <button class="dropdown-item" routerLink="/">Palace of Culture</button>
-            </div>
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle  routerLink="events">Events</button>
           </div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Games</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button class="dropdown-item" routerLink="/play">Our Games</button>
-              <button class="dropdown-item" routerLink="/">Action - 1</button>
-              <button class="dropdown-item" routerLink="/">Another Action</button>
-              <button class="dropdown-item" routerLink="/">Something else is here</button>
-            </div>
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/play">Games</button>
           </div>
           <div ngbDropdown class="d-inline-block">
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="babyTracker">BabyTraker</button>
@@ -95,10 +83,13 @@
     </div>
     <div>
       <i class="fa fa-shopping-cart pr-3" routerLink="/cart"></i>
-      <span *ngIf="cardItemsQuantities > 0">
+      <span class="cart" *ngIf="cardItemsQuantities > 0">
         {{cardItemsQuantities}}
       </span>
-      <i class="fa fa-heart" routerLink="WishList" ></i>
+      <i class="fa fa-heart ml-4" routerLink="WishList" ></i>
+      <span class="wishList" *ngIf="cardItemsQuantities > 0">
+        {{WishListItemsQuantities}}
+      </span>
     </div>
   </div>
 </nav>

@@ -48,11 +48,11 @@ nav{
         color: white;
     }
     .register:focus{
-        border-color: #80bdff;
-        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        border-color: none;
+        box-shadow: none;
     }
     .fa:focus{
-        outline: none
+        outline: none;
     }
 }
 
@@ -99,6 +99,21 @@ nav{
     .navbar-toggler{
         border-color: white;
     }
+    .wishList,.cart{
+        position: absolute;
+        background-color: white;
+        color: $pink;
+        border-radius: 50%;
+        padding: 0px 8px;
+    }
+    .wishList{
+        top: 29%;
+        right: 6.8%;
+    }
+    .cart{
+        position: absolute;
+        right: 10.9%;
+    }
 }
 .navbar-light .navbar-toggler-icon{
     background-image: none;
@@ -121,13 +136,38 @@ footer {
         a{
             color: white;
         }
+        li{
+            i{
+                transition: all 0.5s ease;
+            }
+        }
+        li:hover{
+            i{
+                transform: rotate(360deg);
+            }
+        }
     }
     .mobile{
         background-color: $blue;
+        i{
+            transition: all 0.5s ease;
+        }
+    }
+    .mobile:hover{
+        i{
+            transform: rotate(360deg);
+        }
     }
     .envelope{
         background-color: $pink;
-
+        i{
+            transition: all 0.5s ease;
+        }
+    }
+    .envelope:hover{
+        i{
+            transform: rotate(360deg);
+        }
     }
     .follow{
         .socialMedia{

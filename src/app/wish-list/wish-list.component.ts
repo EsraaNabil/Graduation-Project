@@ -9,63 +9,36 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./wish-list.component.scss']
 })
 export class WishListComponent implements OnInit {
-  wishListData: object;
-  backUrl: string;
-  wishListId;
+  wishListData:Array<any>;
+  wishListStorage;
+
   constructor(
     private q:QueryService ,
     private modalService: NgbModal,
-    private route: ActivatedRoute,
-    private router: Router
   ) { 
-    this.wishListData={};
-    this.getListData();
-    this.backUrl = this.q.getUrlHistoryObj();
+    this.wishListData=[];
   }
-
-  getListData(): void{
-    let path: string = this.backUrl;
-    this.q.getData(path).subscribe(
-      res => {
+  
+  getWishListItems(){
+    if(localStorage.getItem('wishList')){
+      this.wishListStorage = JSON.parse(localStorage.getItem('wishList'));
+      this.q.getData('assets/shop.json').subscribe(res =>{
         res.forEach(element => {
-          if(element.id == this.wishListId){
-            this.wishListData = element;
+          console.log(this.wishListStorage.indexOf(element.id));
+          console.log(this.wishListStorage);
+          if(this.wishListStorage.indexOf(element.id)!=-1){
+            this.wishListData.push(element);
           }
-        });
-      },
-      err => {
-        console.log(err);
-        console.log('did not receive data');
-      }
-    );
+        });     
+        console.log("wishListdata",this.wishListData);
+      })
+    }
+    else{
+      this.wishListData = [];
+    }
   }
-
-  getListData2(): void{
-    let path: string = './assets/shop.json';
-    this.q.getData(path).subscribe(
-      res => {
-        res.forEach(element => {
-          if(element.id == this.wishListId){
-            this.wishListData = element;
-          }
-        });;
-
-      },
-      err => {
-        console.log(err);
-        console.log('did not receive data');
-      }
-    );
-  }
-
 
   ngOnInit() {
-    console.log(this.route.params.subscribe(param=>{
-      this.wishListId= param.id;
-      this.getListData();
-      this.getListData2();
-    }))
+    this.getWishListItems();
   }
-
 }
-

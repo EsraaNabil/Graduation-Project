@@ -49,11 +49,11 @@ button{
 }
 .inputForm:active{
     border-color: $pink;
-    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
+    box-shadow: none;
 }
 .inputForm:focus{
     border-color: $pink;
-    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
+    box-shadow: none;
 }
 .dropMenu{
     border-radius: 10px;
@@ -75,10 +75,10 @@ button{
     border-color: $pink;
 }
 .show>.btn-primary.dropdown-toggle:focus{
-    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
+    box-shadow: none;
 }
 button:focus{
-    box-shadow: 0 0 0 0.2rem rgba(224, 154, 169, 0.5);
+    box-shadow: none;
 }
 a{
     cursor: pointer;
