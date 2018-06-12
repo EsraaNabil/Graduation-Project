@@ -12,12 +12,14 @@ import * as $ from 'jquery';
 export class ViewCartComponent implements OnInit {
 newData: Array<object>;
 cartStorage;
+flag:boolean;
 
   constructor(
     private q:QueryService ,
     private modalService: NgbModal,
   ) { 
     this.newData=[];
+    this.flag=true;
   }
 
 getCartItems(){
@@ -30,11 +32,23 @@ getCartItems(){
         console.log(this.cartStorage);
         if(this.cartStorage.indexOf(element.id)!=-1){
           this.newData.push(element);
+          this.flag=false;
         }
-      });     
+      });
       console.log(this.newData);
-    })
+    });
+    if(this.flag==true){
+      this.q.getData('assets/toys.json').subscribe(res =>{
+        res.forEach(element => {
+          if(this.cartStorage.indexOf(element.id)!=-1){
+            this.newData.push(element);
+          }
+        });     
+        console.log(this.newData);
+      })
+    }
   }
+
   else{
     this.newData = [];
   }
