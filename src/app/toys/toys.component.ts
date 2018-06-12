@@ -37,8 +37,8 @@ export class ToysComponent implements OnInit {
   ngOnInit() {
     function myFunction(e):void {
       console.log(e)
-      // $("#myText").eq(0).html($(e).text());  
-      document.getElementById("myText").innerHTML=e.target.innerText;
+      $("#myText").eq(0).html($(e).text());  
+      // document.getElementById("myText").innerHTML=e.target.innerText;
     }
   }
 }
