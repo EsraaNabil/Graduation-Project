@@ -45,7 +45,7 @@
                   </nav>
                 </td>
                 <td class="text-dark" >{{data.subtotal}}</td>
-                <td class="delete"><i class="fa fa-trash"></i></td>
+                <td class="delete"><a (click)="delete(data.id)"><i class="fa fa-trash"></i></a></td>
               </tr>
             </tbody>
         </table>

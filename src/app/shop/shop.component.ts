@@ -13,7 +13,7 @@ export class ShopComponent implements OnInit {
 
   constructor(
     private q: QueryService,
-    private dataPipeService: DataPipeService
+    private data: DataPipeService
   ) {
     this.mydata = [];
     this.getCardData();
@@ -44,6 +44,7 @@ export class ShopComponent implements OnInit {
     else{
       localStorage.setItem('cart',JSON.stringify([id]));
     }
+    this.newMessage();
   }
 
   addWishListCart(id: number) {
@@ -58,7 +59,9 @@ export class ShopComponent implements OnInit {
       localStorage.setItem('wishList',JSON.stringify([id]));
     }
   }
-
+  newMessage() {
+    this.data.changeMessage(JSON.parse(localStorage.getItem('cart')).length)
+  }
   ngOnInit() {
   }
 

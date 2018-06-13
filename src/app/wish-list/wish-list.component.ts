@@ -50,6 +50,18 @@ export class WishListComponent implements OnInit {
     }
   }
 
+  delete(itemId:number){
+    if(localStorage.getItem('wishList')){
+      this.wishListStorage = JSON.parse(localStorage.getItem('wishList'));
+        if(this.wishListStorage.indexOf(itemId) != -1){
+          this.wishListData.splice(this.wishListStorage.indexOf(itemId),1);
+          this.wishListStorage.splice(this.wishListStorage.indexOf(itemId),1);
+          localStorage.setItem('wishList', JSON.stringify(this.wishListStorage));
+          this.flag=false;
+        }
+    }
+  }
+
   ngOnInit() {
     this.getWishListItems();
   }

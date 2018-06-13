@@ -23,7 +23,7 @@
         <tbody>
           <tr *ngFor= "let data of wishListData">
             <th scope="row" class="text-center pr-5 pl-5"  >
-                <i class="fa fa-times"></i>
+                <a (click)="delete(data.id)"><i class="fa fa-times"></i></a>
             </th>
             <td>
               <div class="img-list">
