@@ -9,35 +9,34 @@
 <section class="container view-cart mb-5">
   <div class="row">
     <div class="col-12 table-responsive mb-3 ">
-        <table class="table">
-            <thead class="">
-              <tr>
-                <th scope="col" > </th>
-                <th scope="col" > </th>
-                <th scope="col" >Product Name</th>
-                <th scope="col" class="pl-0">Unit Price</th>
-                <th scope="col" class="pl-0">Stoke Status</th>
-                <th scope="col" > </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor= "let data of wishListData">
-                <th scope="row" class="text-center pr-5 pl-5"  >
-                    <i class="fa fa-times"></i>
-                </th>
-                <td>
-                  <div class="img-list">
-                    <img class="card-img-top img-fluid " src="{{data.pic}}">
-                  </div>
-                </td>
-                <td>{{data.name}}</td>
-                <td >{{data.price}}</td>
-                <td class="text-dark">{{data.stoke}}</td>
-                <td ><button class="button-shadow">View Product</button></td>
-              </tr>
-            </tbody>
-        </table>
-          
+      <table class="table">
+        <thead class="">
+          <tr>
+            <th scope="col" > </th>
+            <th scope="col" > </th>
+            <th scope="col" >Product Name</th>
+            <th scope="col" class="pl-0">Unit Price</th>
+            <th scope="col" class="pl-0">Stoke Status</th>
+            <th scope="col" > </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor= "let data of wishListData">
+            <th scope="row" class="text-center pr-5 pl-5"  >
+                <i class="fa fa-times"></i>
+            </th>
+            <td>
+              <div class="img-list">
+                <img class="card-img-top img-fluid " src="{{data.pic}}">
+              </div>
+            </td>
+            <td>{{data.name}}</td>
+            <td >{{data.price}}</td>
+            <td class="text-dark">{{data.stoke}}</td>
+            <td ><button class="button-shadow" [routerLink]="['/shop/item',data.id]">View Product</button></td>
+          </tr>
+        </tbody>
+      </table>      
     </div>
 
   </div>

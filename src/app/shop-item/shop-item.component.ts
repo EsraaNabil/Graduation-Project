@@ -1,6 +1,7 @@
 import { Component, OnInit ,Output} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import {QueryService} from '../query.service';
+import * as $ from 'jquery';
 
 
 @Component({
@@ -84,6 +85,45 @@ export class ShopItemComponent implements OnInit {
       this.getItemData();
       this.getItemData2();
       this.getItemData3();
+
+      $(document).ready(function(){
+
+        $('.minus').click(function(){
+          let quan= $('.quantity').html();
+          if(parseInt(quan)>1){
+            $(this).parent("ul").find(".quantity").html(parseInt(quan)-1);
+            quen();
+          }        
+        });
+        $('.plus').click(function(){
+          let quan= $('.quantity').html();
+          $(this).parent("ul").find(".quantity").html(parseInt(quan)+1);
+          quen();
+        });
+
+        function quen(){
+
+          let h= $("#price").text();
+          let n= $("#a").text();
+          let o= $("#itemTotal");
+          
+          // for(var i=0; i<h.length-1; i++){
+            // let zz = h.eq(i)
+            // alert("z=" + zz);
+            // let yy = n.eq(i).text();
+            let tt = parseInt(h)  * parseInt(n) ;
+            // alert("ttt=" + tt);
+
+            o.text(tt);
+          
+          // }
+          
+          }
+          
+          quen();
+
+
+      });
     }))
   }
   

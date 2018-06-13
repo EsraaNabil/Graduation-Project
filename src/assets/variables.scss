@@ -366,7 +366,7 @@ ngb-rating /deep/ span{
         td{
             color:$cardGray;
             span{
-                border:1px solid gray;
+                // border:1px solid gray;
                 height:25px;
                 display:inline-block;
 
@@ -405,6 +405,9 @@ ngb-rating /deep/ span{
         color: white;
         transition: all 0.2s linear;
     }
+}
+.minus{
+    cursor: pointer;
 }
 ngb-carousel /deep/ .carousel-control-next-icon,
 ngb-carousel /deep/ .carousel-control-prev-icon {

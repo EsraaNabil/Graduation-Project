@@ -3,66 +3,54 @@
         "pic":"../assets/images/shop/clothes1.jpg",
         "name":"Baby Salobit",
         "id":"1",
-        "price":"120.00 LE",
+        "price":"240.00",
         "body":"The perfect soft salobit , it is made from conton,it is suitable for baby’s skin , it’s style is very nice and very comfortable and easy to waer. Love the print and the fabric is lightweight. Perfect for summer.",
         "color":"yellow",
-        "quantity":"1",
-        "subtotal":"120.00 LE",
         "stoke":"In Stoke"
     },
     {
         "pic":"../assets/images/shop/clothes1.jpg",
         "name":"Baby Salobit",
         "id":"2",
-        "price":"100.00 LE",
+        "price":"100.00",
         "body":"The perfect soft salobit , it is made from conton,it is suitable for baby’s skin , it’s style is very nice and very comfortable and easy to waer. Love the print and the fabric is lightweight. Perfect for summer.",
         "color":"blue",
-        "quantity":"1",
-        "subtotal":"100.00 LE",
         "stoke":"In Stoke"
     },
     {
         "pic":"../assets/images/shop/clothes2.jpg",
         "name":"Baby Salobit",
         "id":"3",
-        "price":"150.00 LE",
+        "price":"150.00 ",
         "body":"The perfect soft salobit , it is made from conton,it is suitable for baby’s skin , it’s style is very nice and very comfortable and easy to waer. Love the print and the fabric is lightweight. Perfect for summer.",
         "color":"blue",
-        "quantity":"1",
-        "subtotal":"150.00 LE",
         "stoke":"In Stoke"
     },
     {
         "pic":"../assets/images/shop/clothes2.jpg",
         "name":"Baby Salobit",
         "id":"4",
-        "price":"120.00 LE",
+        "price":"120.00 ",
         "body":"The perfect soft salobit , it is made from conton,it is suitable for baby’s skin , it’s style is very nice and very comfortable and easy to waer. Love the print and the fabric is lightweight. Perfect for summer.",
         "color":"blue",
-        "quantity":"1",
-        "subtotal":"120.00 LE",
         "stoke":"In Stoke"
     },
     {
         "pic":"../assets/images/shop/clothes1.jpg",
         "name":"Baby Salobit",
         "id":"5",
-        "price":"100.00 LE",
+        "price":"100.00 ",
         "body":"The perfect soft salobit , it is made from conton,it is suitable for baby’s skin , it’s style is very nice and very comfortable and easy to waer. Love the print and the fabric is lightweight. Perfect for summer.",
         "color":"blue",
-        "quantity":"1",
-        "subtotal":"100.00 LE",
         "stoke":"In Stoke"
     },
     {
         "pic":"../assets/images/shop/clothes1.jpg",
         "name":"Baby Salobit",
         "id":"6",
-        "price":"150.00 LE",
+        "price":"150.00",
         "body":"The perfect soft salobit , it is made from conton,it is suitable for baby’s skin , it’s style is very nice and very comfortable and easy to waer. Love the print and the fabric is lightweight. Perfect for summer.",
         "color":"blue",
-        "quantity":"1",
-        "subtotal":"150.00 LE",
         "stoke":"In Stoke"
     }
 ]

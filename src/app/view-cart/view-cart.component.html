@@ -30,21 +30,21 @@
                     </p>
                   </div>
                 </th>
-                <td >{{data.price}}</td>
+                <td > <span class="price" >{{data.price}}</span>LE</td>
                 <td>
                   <nav class="item-nav" aria-label="...">
                     <ul class="pagination">
                       <li class="page-item disabled minus">
-                        <a class="page-link background" tabindex="-1"><i class="fa fa-minus"></i></a>
+                        <a class="page-link background" tabindex="-1"><i class="fa fa-minus "></i></a>
                       </li>
-                      <li class="page-item"><a class="page-link quantity" id="any">1</a></li>
+                      <li class="page-item"><a class="page-link quantity a" id="any" >2</a></li>
                       <li class="page-item plus">
                         <a class="page-link background"><i class="fa fa-plus"></i></a>
                       </li>
                     </ul>
                   </nav>
                 </td>
-                <td class="text-dark total" >{{data.subtotal}}</td>
+                <td class="text-dark total itemTotal"  ></td>
                 <td class="delete"><i class="fa fa-trash"></i></td>
               </tr>
             </tbody>
@@ -54,7 +54,7 @@
 
 
     <div class="col-12">
-      <p class="subtotal">Subtotal : <span class="totalPrice">2 </span> </p>
+      <p class="subtotal">Subtotal : <span id="totalPrice"> </span> </p>
       <button class="button-shadow mr-2 mb-3">Continue Shopping</button>
       <button class="button-shadow mr-2 mb-3">Update Cart</button>
       <button class="button-shadow">Check Out</button>
