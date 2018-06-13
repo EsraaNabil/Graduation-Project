@@ -56,18 +56,18 @@ getCartItems(){
 
   ngOnInit() {
     this.getCartItems();
-
-    $('.quantity').css('backgroundColor','red');
-    $('.minus').click(function(){
-      let quan= $('.quantity').html();
-      // if(parseInt(quan)>1){
-        $('.quantity').html('parseInt(quan)-1');
-      // }
-      $('.quantity').css('color','red')
-      
-    })
+    $(document).ready(function(){
+      $('.minus').click(function(){
+        let quan= $('.quantity').html();
+        if(parseInt(quan)>1){
+          $(this).parent("ul").find(".quantity").html(parseInt(quan)-1);
+        }        
+      })
+      $('.plus').click(function(){
+        let quan= $('.quantity').html();
+        $(this).parent("ul").find(".quantity").html(parseInt(quan)+1);
+      })
+    });
   }
-  
-
 }
 

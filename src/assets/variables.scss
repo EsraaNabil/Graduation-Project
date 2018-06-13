@@ -406,6 +406,9 @@ ngb-rating /deep/ span{
         transition: all 0.2s linear;
     }
 }
+.minus{
+    cursor: pointer;
+}
 ngb-carousel /deep/ .carousel-control-next-icon,
 ngb-carousel /deep/ .carousel-control-prev-icon {
     background-color: $pink;

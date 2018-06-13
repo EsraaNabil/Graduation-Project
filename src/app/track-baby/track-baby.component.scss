@@ -8,8 +8,19 @@
    } 
     .track{
         background-color: white;
-        box-shadow:5px 5px 10px #80808024  
-
+        box-shadow:5px 5px 10px #80808024  ;
+        h5{
+            font-size: 15px;
+            color: black;
+        }
+        .pink{
+            font-size: 13px;
+            color: $blue;
+        }
+        .blue{
+            font-size: 13px;
+            color: $pink;
+        }
     }
     input{
     border-radius: 10px;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm , NgModel } from '@angular/forms';
+import {QueryService} from '../query.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -8,8 +9,10 @@ import * as $ from 'jquery';
   styleUrls: ['./track-baby.component.scss']
 })
 export class TrackBabyComponent implements OnInit {
-  constructor() {
-  
+  data:object;
+  constructor(private q:QueryService) {
+    this.data={};
+    // this.getBabyData();
    }
   
   trackForm(drData:NgForm): void{
@@ -18,8 +21,22 @@ export class TrackBabyComponent implements OnInit {
 
   }
 
+  getBabyData():void{
+    let path:string='./assets/trackBaby.json';
+    this.q.getData(path).subscribe(
+      res => {console.log(res);
+      this.data=res;
+      },
+      err => {console.log(err);},
+      () => {}
+    );
+  }
+
   ngOnInit() {
-  
+   
+    $("button").click(function(){
+        $("form").css("display","none");
+    })
     
   }
 

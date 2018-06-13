@@ -8,6 +8,15 @@
                 <h2 >Track Your Baby</h2>
               </div>
               <div class="col-md-6 track offset-md-3  pb-5 pl-5 pr-5  ">
+                    <div>
+                        <h5>{{data.head}}</h5>
+                        <p class="pink">{{data.p1}}</p>
+                        <p class="blue">{{data.p2}}</p>
+                        <p class="pink">{{data.p3}}</p>
+                        <p class="blue">{{data.p4}}</p>
+                        <p class="pink">{{data.p5}}</p>
+                        <p class="blue">{{data.p6}}</p>
+                    </div>
                   <form class=" w-100" name="babyTrack" #babyTrack ="ngForm" novalidate (ngSubmit)="trackForm(babyTrack)">
                         <div class="form-group">
                           <input class="form-control " type="date" placeholder="Date Of Birth"  name="baby_birth" [(ngModel)]="baby_birth" required>
@@ -19,10 +28,11 @@
                             <input class="form-control  " type="number" placeholder="Eat every how many hours ?"  name="eat_time" [(ngModel)]="eat_time" required>
                         </div>
                         <div class="d-flex justify-content-end ">
-                            <button type="submit" class="btn  button-shadow marginBottom " [disabled]="!babyTrack.valid">Submit</button>
+                            <button type="submit" (click)="getBabyData()" class="btn  button-shadow marginBottom " [disabled]="!babyTrack.valid">Submit</button>
                         </div>         
                    </form>
               </div>
+
         
           
         <!-- </div> -->
@@ -36,6 +46,4 @@
       <img class="img-fluid"  src="../assets/images/trackbaby/girlCar-01.png">
   </div>
 </div>
-
-
 </section>

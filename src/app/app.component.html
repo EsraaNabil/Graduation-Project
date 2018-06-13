@@ -83,10 +83,10 @@
     </div>
     <div>
       <i class="fa fa-heart pointer" routerLink="WishList" ></i>
-      <span class="cart" *ngIf="cardItemsQuantities > 0"  routerLink="WishList">
+      <i class="fa fa-shopping-cart pl-3 pointer" routerLink="/cart"></i>
+      <span class="cart" *ngIf="cardItemsQuantities > 0"  routerLink="cart">
         {{cardItemsQuantities}}
       </span>
-      <i class="fa fa-shopping-cart pl-3 pointer" routerLink="/cart"></i>
     </div>
   </div>
 </nav>

@@ -1,6 +1,7 @@
 import { Component, OnInit ,Output} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import {QueryService} from '../query.service';
+import * as $ from 'jquery';
 
 
 @Component({
@@ -84,6 +85,18 @@ export class ShopItemComponent implements OnInit {
       this.getItemData();
       this.getItemData2();
       this.getItemData3();
+      $(document).ready(function(){
+        $('.minus').click(function(){
+          let quan= $('.quantity').html();
+          if(parseInt(quan)>1){
+            $(this).parent("ul").find(".quantity").html(parseInt(quan)-1);
+          }        
+        })
+        $('.plus').click(function(){
+          let quan= $('.quantity').html();
+          $(this).parent("ul").find(".quantity").html(parseInt(quan)+1);
+        })
+      });
     }))
   }
   
