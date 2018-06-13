@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import { Router, ActivatedRoute } from '@angular/router';
-
-
 import {QueryService} from '../query.service';
+import { element } from 'protractor';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-view-cart',
@@ -11,82 +10,101 @@ import {QueryService} from '../query.service';
   styleUrls: ['./view-cart.component.scss']
 })
 export class ViewCartComponent implements OnInit {
-// cartdata: Array<object>;
-backUrl :string;
-cartData: Object;
-cartId;
+newData: Array<object>;
+cartStorage;
+flag:boolean;
+
   constructor(
     private q:QueryService ,
     private modalService: NgbModal,
-    private route: ActivatedRoute,
-    private router: Router
   ) { 
-    // this.cartdata=[];
-    // this.getCartData();
-    this.backUrl = this.q.getUrlHistoryObj();
-    this.cartData={};
-
+    this.newData=[];
+    this.flag=true;
   }
 
-
-  getCartData(): void{
-    let path: string = this.backUrl;
-    this.q.getData(path).subscribe(
-      res => {
+getCartItems(){
+  if(localStorage.getItem('cart')){
+    this.cartStorage = JSON.parse(localStorage.getItem('cart'));
+    this.q.getData('assets/shop.json').subscribe(res =>{
+      res.forEach(element => {
+        console.log("data",this.newData);
+        console.log(this.cartStorage.indexOf(element.id));
+        console.log(this.cartStorage);
+        if(this.cartStorage.indexOf(element.id)!=-1){
+          this.newData.push(element);
+          this.flag=false;
+        }
+      });
+      console.log(this.newData);
+    });
+    if(this.flag==true){
+      this.q.getData('assets/toys.json').subscribe(res =>{
         res.forEach(element => {
-          if(element.id == this.cartId){
-            this.cartData = element;
+          if(this.cartStorage.indexOf(element.id)!=-1){
+            this.newData.push(element);
           }
-        });;
-
-      },
-      err => {
-        console.log(err);
-        console.log('did not receive data');
-      }
-    );
+        });     
+        console.log(this.newData);
+      })
+    }
   }
 
-  getCartData2(): void{
-    let path: string = './assets/shop.json';
-    this.q.getData(path).subscribe(
-      res => {
-        res.forEach(element => {
-          if(element.id == this.cartId){
-            this.cartData = element;
-          }
-        });;
-
-      },
-      err => {
-        console.log(err);
-        console.log('did not receive data');
-      }
-    );
+  else{
+    this.newData = [];
   }
-
-  // getCartData(): void{
-  //   let path: string = './assets/viewCart.json';
-  //   this.q.getData(path).subscribe(
-  //     res => {
-  //       this.cartdata = res;
-  //       console.log(res);
-  //     },
-  //     err => {
-  //       console.log(err);
-  //     }
-  //   );
-  // }
-
-
-
+}
 
   ngOnInit() {
-    console.log(this.route.params.subscribe(param=>{
-      this.cartId= param.id;
-      this.getCartData();
-      this.getCartData2();
-    }))
+    this.getCartItems();
+
+    $('.quantity').css('backgroundColor','red');
+    $('.minus').click(function(){
+      let quan= $('.quantity').html();
+      // if(parseInt(quan)>1){
+        $('.quantity').html('parseInt(quan)-1');
+      // }
+      $('.quantity').css('color','red')
+      
+    })
+
+
+
+    $(document).ready(function(){
+
+      $(".delete").click(function(){
+        $(this).parent().remove();
+      });
+
+      // let x= $(".total").eq(0).html();
+      // alert(x);
+
+      let x= $(".total")
+      let y=0;
+      let arr=[];
+      console.log("x=" + x);
+      for(var i=0; i<x.length; i++){
+      let z = x.eq(i).html();
+      z=parseInt(z);
+      arr.push(z)
+
+      }
+      alert("z=" + arr);
+
+      let r=0;
+      for(var i=0; i<arr.length; i++){
+        r+=arr[i];
+      // alert("r=");
+
+      }
+
+      alert("r="+r);
+
+
+    });
+
+
+
+
   }
   
 

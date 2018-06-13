@@ -10,6 +10,7 @@ import { DataPipeService } from './data-pipe.service';
 })
 export class AppComponent {
   cardItemsQuantities: number;
+  WishListItemsQuantities:number;
   constructor(
     private router: Router,
     private dataPipeService: DataPipeService
@@ -17,8 +18,10 @@ export class AppComponent {
     this.dataPipeService.getCartItemsQuantity().subscribe(quantity => {
       if (!quantity || quantity === 0) {
         this.cardItemsQuantities = window.localStorage.getItem('cart') ? window.localStorage.getItem('cart').split(',').length : 0;
+        this.WishListItemsQuantities = window.localStorage.getItem('wishList') ? window.localStorage.getItem('wishList').split(',').length : 0;
       } else {
         this.cardItemsQuantities = quantity;
+        this.WishListItemsQuantities = quantity;
       }
     });
   }
@@ -31,5 +34,5 @@ export class AppComponent {
     this.router.navigate(['/register/']);
   }
 
-
 }
+

@@ -1,31 +1,30 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { QueryService } from '../query.service';
 import { EventEmitter } from '@angular/core';
 import { DataPipeService } from '../data-pipe.service';
 import * as $ from 'jquery';
 
 @Component({
-  selector: 'app-shop',
-  templateUrl: './shop.component.html',
-  styleUrls: ['./shop.component.scss']
+  selector: 'app-toys',
+  templateUrl: './toys.component.html',
+  styleUrls: ['./toys.component.scss']
 })
-export class ShopComponent implements OnInit {
-  mydata: Array<object>;
-
+export class ToysComponent implements OnInit {
+  toysData: Array<object>;
   constructor(
     private q: QueryService,
     private dataPipeService: DataPipeService
   ) {
-    this.mydata = [];
-    this.getCardData();
-    this.q.setUrlHistoryObj("./assets/shop.json");
-  }
+    this.toysData = [];
+    this.getToysData();
+    this.q.setUrlHistoryObj("./assets/toys.json");
+   }
 
-  getCardData(): void {
-    let path: string = './assets/shop.json';
+   getToysData(): void {
+    let path: string = './assets/toys.json';
     this.q.getData(path).subscribe(
       res => {
-        this.mydata = res;
+        this.toysData = res;
         console.log(res);
       },
       err => {
@@ -60,15 +59,12 @@ export class ShopComponent implements OnInit {
     }
   }
 
+
   ngOnInit() {
-
-    $(document).ready(function(){
-      $(".cartBtn").click(function(){
-        $(this).parents(".cardImg").find(".added").css("visibility","visible");
-      });
-    });
-
-
+    function myFunction(e):void {
+      console.log(e)
+      // $("#myText").eq(0).html($(e).text());  
+      document.getElementById("myText").innerHTML=e.target.innerText;
+    }
   }
-
 }

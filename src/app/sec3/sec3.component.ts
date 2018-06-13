@@ -16,13 +16,11 @@ export class Sec3Component implements OnInit {
   redirectTo(): void {
     this.router.navigate(['/shop/']);
   }
+  redirectToToys(): void {
+    this.router.navigate(['/toys/']);
+  }
 
   ngOnInit() {
- 
-        // $("button").click(function(){
-        //     alert($(".k").scrollTop() + " px");
-        // });
- 
 
   }
 
