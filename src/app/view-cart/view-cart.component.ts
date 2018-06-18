@@ -158,8 +158,8 @@ ngOnInit() {
         let quan=$(this).parent("ul").find(".quantity").html();
         if(parseInt(quan)>1){
           $(this).parent("ul").find(".quantity").html(parseInt(quan)-1);
-          quen();
-          sum();
+           quen();
+           sum();
         }        
       })
       $('.plus').click(function(){
@@ -171,7 +171,7 @@ ngOnInit() {
 
         $(".delete").click(function(){
        $(this).parent().remove();
-      sum();
+        sum();
     });
 
 

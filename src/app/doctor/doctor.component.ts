@@ -2,8 +2,10 @@ import { Component, OnInit , ViewEncapsulation } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { NgForm , NgModel } from '@angular/forms';
 import {QueryService} from '../query.service';
+import * as $ from 'jquery';
+// import { NgwWowService } from 'ngx-wow';
 
-
+// import { WOW } from 'wowjs/dist/wow.min';
 @Component({
   selector: 'app-doctor',
   templateUrl: './doctor.component.html',
@@ -12,6 +14,7 @@ import {QueryService} from '../query.service';
   styleUrls: ['./doctor.component.scss']
 })
 export class DoctorComponent implements OnInit {
+  //  new WOW().init();
   closeResult: string;
   drdata: Array<object>;
   constructor(
@@ -91,6 +94,15 @@ export class DoctorComponent implements OnInit {
 
 
   ngOnInit() {
+    $(document).ready(function(){
+
+    jQuery(window).resize(function () {
+      var width = jQuery(window).width();
+      var height = jQuery(window).height();
+      console.log(width);
+      console.log(height);
+      });
+    });
   }
 
 }

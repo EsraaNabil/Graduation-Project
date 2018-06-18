@@ -108,4 +108,14 @@
 
 
 
-   
+   #scrolLeft{
+       position: absolute;
+       left: -700px;
+    display: none;
+   }
+
+   #scrolRight{
+    position: absolute;
+    right: -700px;
+ display: none;
+}

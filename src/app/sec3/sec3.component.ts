@@ -22,6 +22,46 @@ export class Sec3Component implements OnInit {
 
   ngOnInit() {
 
+
+    var distance =  $("#j").offset().top;
+    
+  var w = $(document).scrollTop()-250;
+
+    $(window).scroll(function() {
+      if ( w >= distance ) {
+        console.log("w==" + w)
+        console.log("d==" + distance)
+
+console.log("omniaaa");
+        setTimeout(function(){ 
+          
+
+          $("#scrolLeft").css("display", "block");
+          $("#scrolLeft").animate({
+            left: '0px',
+        
+        });
+
+        $("#scrolRight").css("display", "block");
+        $("#scrolRight").animate({
+          right: '0px',
+      
+      });
+
+        
+
+        }, 1000);
+
+
+
+     
+
+
+}
+  });
+  
+
+
   }
 
 }
