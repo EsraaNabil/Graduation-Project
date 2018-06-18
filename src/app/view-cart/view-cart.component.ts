@@ -3,6 +3,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {QueryService} from '../query.service';
 import { element } from 'protractor';
 import * as $ from 'jquery';
+import { DataPipeService } from '../data-pipe.service';
 
 @Component({
   selector: 'app-view-cart',
@@ -10,13 +11,16 @@ import * as $ from 'jquery';
   styleUrls: ['./view-cart.component.scss']
 })
 export class ViewCartComponent implements OnInit {
-newData: Array<object>;
+newData;
+deletedItem;
 cartStorage;
 flag:boolean;
+itemId;
 
   constructor(
     private q:QueryService ,
     private modalService: NgbModal,
+    private data: DataPipeService
   ) { 
     this.newData=[];
     this.flag=true;
@@ -31,6 +35,7 @@ getCartItems(){
         console.log(this.cartStorage.indexOf(element.id));
         console.log(this.cartStorage);
         if(this.cartStorage.indexOf(element.id)!=-1){
+          element.quantity = 1;
           this.newData.push(element);
           this.flag=false;
         }
@@ -48,97 +53,39 @@ getCartItems(){
       })
     }
   }
-
   else{
     this.newData = [];
   }
 }
 
-
-
-ngOnInit() {
-  this.getCartItems();
-  $(document).ready(function(){
-
-
-      $('.minus').click(function(){
-        let quan=$(this).parent("ul").find(".quantity").html();
-        if(parseInt(quan)>1){
-          $(this).parent("ul").find(".quantity").html(parseInt(quan)-1);
-          quen();
-          sum();
-        }        
-      })
-      $('.plus').click(function(){
-        let quan=$(this).parent("ul").find(".quantity").html();
-        $(this).parent("ul").find(".quantity").html(parseInt(quan)+1);
-         quen();
-         sum();
-      });
-
-      //   $(".delete").click(function(){
-      //  $(this).parent().remove();
-      // sum();
-    });
-
-
-
-
-
-   
- 
-function quen(){
-
-let h= $(".price");
-console.log("hhh=" + h);
-let n= $(".a");
-let o= $(".itemTotal");
-
-for(var i=0; i<h.length; i++){
-  let zz = h.eq(i).text();
-  let yy = n.eq(i).text();
-  let tt = parseInt(zz)  * parseInt(yy) ;
-  o.eq(i).text(tt);
-
+plus(index,quantity){
+  this.newData[index].quantity = parseInt(quantity)+1;
 }
 
-}
-
-quen();
-
-function sum(){
-
-  let x= $(".total")
-  let y=0;
-  let arr=[];
-  console.log("x=" + x);
-  for(var i=0; i<x.length; i++){
-  let z = x.eq(i).html();
-  z=parseInt(z);
-  arr.push(z)
+minus(index,quantity){
+  if(quantity > 1){
+    this.newData[index].quantity = parseInt(quantity)-1;
   }
-  let r=0;
-  for(var i=0; i<arr.length; i++){
-    r+=arr[i];
+}
+delete(itemId){
+  for(let i=0;i< this.newData.length;i++){
+    if(this.newData[i].id == itemId){
+      this.newData.splice(i,1);
+      this.deletedItem = JSON.parse(localStorage.getItem('cart'));
+      this.deletedItem.splice(i,1);
+      localStorage.setItem('cart',JSON.stringify(this.deletedItem));
+      break;
+    }
   }
-  $("#totalPrice").text(r);
-
-
+  this.newMessage();
 }
-sum();
 
-
-
-
-
-
-
-
-
-
-   });
-
- 
+newMessage() {
+  this.data.changeMessage(JSON.parse(localStorage.getItem('cart')).length)
 }
+  ngOnInit() {
+    this.getCartItems();
+  }
 }
+
 

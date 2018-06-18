@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
 import { DataPipeService } from './data-pipe.service';
-import { BehaviorSubject } from 'rxjs';
 
 
 @Component({
@@ -10,23 +9,16 @@ import { BehaviorSubject } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
-  cardItemsQuantities: number;
+export class AppComponent {
+  cardItemsQuantities;
   WishListItemsQuantities:number;
   constructor(
     private router: Router,
-    private dataPipeService: DataPipeService
+    private data: DataPipeService
   ) {
-    this.dataPipeService.getCartItemsQuantity().subscribe(quantity => {
-      if (!quantity || quantity === 0) {
-        this.cardItemsQuantities = window.localStorage.getItem('cart') ? window.localStorage.getItem('cart').split(',').length : 0;
-        this.WishListItemsQuantities = window.localStorage.getItem('wishList') ? window.localStorage.getItem('wishList').split(',').length : 0;
-      } else {
-        this.cardItemsQuantities = quantity;
-        this.WishListItemsQuantities = quantity;
-      }
-    });
+    this.data.currentMessage.subscribe(message => this.cardItemsQuantities = message);
   }
+
 
   redirectToLogin(): void {
     this.router.navigate(['/login/']);

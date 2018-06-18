@@ -1,6 +1,7 @@
 import { Component, OnInit ,Output} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import {QueryService} from '../query.service';
+import { DataPipeService } from '../data-pipe.service';
 import * as $ from 'jquery';
 
 
@@ -10,12 +11,14 @@ import * as $ from 'jquery';
   styleUrls: ['./shop-item.component.scss']
 })
 export class ShopItemComponent implements OnInit {
-  itemData: Object;
+  itemData;
   backUrl: string;
+  deletedItem;
   itemId;
 
   constructor(
     private q:QueryService,
+    private data: DataPipeService,
     private route: ActivatedRoute,
     private router: Router
   ) 
@@ -77,6 +80,48 @@ export class ShopItemComponent implements OnInit {
     );
   }
 
+  
+  addItemToCart(id: number) {
+    if(localStorage.getItem('cart')){
+      var cart = JSON.parse(localStorage.getItem('cart'));
+      if(cart.indexOf(id) == -1){
+        cart.push(id);
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }
+    }
+    else{
+      localStorage.setItem('cart',JSON.stringify([id]));
+    }
+    this.newMessage();
+  }
+
+  addWishListCart(id: number) {
+    if(localStorage.getItem('wishList')){
+      var wishList = JSON.parse(localStorage.getItem('wishList'));
+      if(wishList.indexOf(id) == -1){
+        wishList.push(id);
+        localStorage.setItem('wishList', JSON.stringify(wishList));
+      }
+    }
+    else{
+      localStorage.setItem('wishList',JSON.stringify([id]));
+    }
+  }
+ 
+  newMessage() {
+    this.data.changeMessage(JSON.parse(localStorage.getItem('cart')).length)
+  }
+
+  plus(quantity){
+    this.itemData.quantity = parseInt(quantity)+1;
+  }
+  
+  minus(quantity){
+    if(quantity > 1){
+      this.itemData.quantity = parseInt(quantity)-1;
+    }
+  }
+  
 
   ngOnInit() {
     $(".dropdown-menu button").click(function(){

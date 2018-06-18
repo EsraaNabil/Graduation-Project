@@ -14,7 +14,7 @@ export class ShopComponent implements OnInit {
   priceRange: Array<any>;
   constructor(
     private q: QueryService,
-    private dataPipeService: DataPipeService
+    private data: DataPipeService
   ) {
     this.mydata = [];
     this.priceRange = [];
@@ -46,6 +46,7 @@ export class ShopComponent implements OnInit {
     else{
       localStorage.setItem('cart',JSON.stringify([id]));
     }
+    this.newMessage();
   }
 
   addWishListCart(id: number) {
@@ -59,6 +60,10 @@ export class ShopComponent implements OnInit {
     else{
       localStorage.setItem('wishList',JSON.stringify([id]));
     }
+  }
+  
+  newMessage() {
+    this.data.changeMessage(JSON.parse(localStorage.getItem('cart')).length)
   }
 
   addColor(color:string){

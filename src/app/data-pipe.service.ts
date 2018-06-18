@@ -1,18 +1,15 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataPipeService {
-  cartItemsQuantity: BehaviorSubject<number> = new BehaviorSubject(0); 
+  private messageSource = new BehaviorSubject(JSON.parse(localStorage.getItem('cart')));
+  currentMessage = this.messageSource.asObservable();
   
-  setCartItemsQuantity(quantity: number): void {
-    this.cartItemsQuantity.next(quantity);
-  }
-
-  getCartItemsQuantity(): Observable<any> {
-    return this.cartItemsQuantity;
+  changeMessage(message: string) {
+    this.messageSource.next(message)
   }
 
 }

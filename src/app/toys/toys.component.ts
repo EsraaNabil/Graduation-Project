@@ -4,6 +4,7 @@ import { EventEmitter } from '@angular/core';
 import { DataPipeService } from '../data-pipe.service';
 import * as $ from 'jquery';
 
+
 @Component({
   selector: 'app-toys',
   templateUrl: './toys.component.html',
@@ -15,7 +16,7 @@ export class ToysComponent implements OnInit {
   colorStorage;
   constructor(
     private q: QueryService,
-    private dataPipeService: DataPipeService
+    private data: DataPipeService
   ) {
     this.toysData = [];
     this.priceRange = [];
@@ -48,6 +49,7 @@ export class ToysComponent implements OnInit {
     else{
       localStorage.setItem('cart',JSON.stringify([id]));
     }
+    this.newMessage();
   }
 
   addWishListCart(id: number) {
@@ -63,6 +65,10 @@ export class ToysComponent implements OnInit {
     }
   }
 
+  newMessage() {
+    this.data.changeMessage(JSON.parse(localStorage.getItem('cart')).length)
+  }
+  
 
   addColor(color:string){ 
       this.q.getData('assets/toys.json').subscribe(res =>{

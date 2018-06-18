@@ -1,11 +1,3 @@
-$pink:#e21c3f;
-$blue:#04a2b6;
-$orange:#ff9800;
-$green:#80cd33;
-$inputGrey:#9c9b9b;
-$mai_margin:140px;
-$cardGray:#696464;
-$cardBG:#f8f8f8;
 @font-face {
     font-family: 'Supermercado';
 	src: url('/assets/Fonts/supermercado/SupermercadoOne-Regular.ttf');
@@ -23,6 +15,14 @@ $cardBG:#f8f8f8;
     font-family: 'NunitoLight';
 	src: url('/assets/Fonts/nunito/Nunito-Light.ttf');
 }
+$pink:#e21c3f;
+$blue:#04a2b6;
+$orange:#ff9800;
+$green:#80cd33;
+$inputGrey:hsl(0, 0%, 72%);
+$mai_margin:140px;
+$cardGray:#696464;
+$cardBG:#f8f8f8;
 h1{
     font-family: 'Chewy';
 }
