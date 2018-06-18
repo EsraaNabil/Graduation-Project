@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
 import { DataPipeService } from './data-pipe.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   cardItemsQuantities: number;
   WishListItemsQuantities:number;
   constructor(
@@ -34,5 +35,13 @@ export class AppComponent {
     this.router.navigate(['/register/']);
   }
 
+  ngOnInit() {
+        $(".toyBtn").click(function(){
+          location.reload();
+        });  
+        $(".clothesBtn").click(function(){
+          location.reload();
+        });  
+  }
 }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit ,Output} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import {QueryService} from '../query.service';
-
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-shop-item',
@@ -84,7 +84,11 @@ export class ShopItemComponent implements OnInit {
       this.getItemData();
       this.getItemData2();
       this.getItemData3();
-    }))
+    }));
+    $(".dropdown-menu button").click(function(){
+        console.log($(".dropdown-menu button"));
+        $("#myText").eq(0).html($(this).text());
+    });  
   }
   
 

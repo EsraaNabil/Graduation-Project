@@ -29,7 +29,6 @@ import { SportComponent } from './sport/sport.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { TrackBabyComponent } from './track-baby/track-baby.component';
 import { MediaComponent } from './media/media.component';
-import { MediaAllComponent } from './media-all/media-all.component';
 import { MediaBooksComponent } from './media-books/media-books.component';  // import validator
 import { SchoolComponent } from './school/school.component';
 import { NurseryComponent } from './nursery/nursery.component';
@@ -47,11 +46,11 @@ const routes: Routes = [
   { path: 'shop/item/:id', component: ShopItemComponent },
   { path: 'toys/item/:id', component: ShopItemComponent },
   { path: 'shop', component: ShopComponent },
-  { path: 'shop/shop', component: ShopComponent },
   { path: 'shop/toys', component: ToysComponent },
+  { path: 'shop/toys/shop', component: ShopComponent },
   { path: 'toys', component: ToysComponent },
-  { path: 'toys/toys', component: ToysComponent },
   { path: 'toys/shop', component: ShopComponent },
+  { path: 'toys/shop/toys', component: ToysComponent },
   { path: 'toys/toys/shop', component: ShopComponent },
   { path: 'mediavideos', component: MediaComponent },
   { path: 'mediabooks', component: MediaBooksComponent },
@@ -66,8 +65,6 @@ const routes: Routes = [
   { path: 'WishList', component: WishListComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: PageNotFoundComponent }
-
-
 ];
 
 @NgModule({
@@ -88,7 +85,6 @@ const routes: Routes = [
     WishListComponent,
     TrackBabyComponent,
     MediaComponent,
-    MediaAllComponent,
     MediaBooksComponent,
     SchoolComponent,
     NurseryComponent,

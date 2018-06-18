@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {QueryService} from '../query.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-sport',
@@ -66,6 +67,10 @@ export class SportComponent implements OnInit {
 
 
   ngOnInit() {
+    $(".dropdown-menu button").click(function(){
+      console.log($(".dropdown-menu button"));
+        $("#myText").eq(0).html($(this).text());
+    });     
   }
 
 }

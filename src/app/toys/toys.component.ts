@@ -11,24 +11,28 @@ import * as $ from 'jquery';
 })
 export class ToysComponent implements OnInit {
   toysData: Array<object>;
+  priceRange: Array<any>;
+  colorStorage;
   constructor(
     private q: QueryService,
     private dataPipeService: DataPipeService
   ) {
     this.toysData = [];
+    this.priceRange = [];
     this.getToysData();
     this.q.setUrlHistoryObj("./assets/toys.json");
    }
 
    getToysData(): void {
+    this.toysData = [];
     let path: string = './assets/toys.json';
     this.q.getData(path).subscribe(
       res => {
         this.toysData = res;
-        console.log(res);
+        // console.log(res);
       },
       err => {
-        console.log(err);
+        // console.log(err);
       }
     );
   }
@@ -60,11 +64,64 @@ export class ToysComponent implements OnInit {
   }
 
 
+  addColor(color:string){ 
+      this.q.getData('assets/toys.json').subscribe(res =>{
+        this.toysData=[];
+        res.forEach(element => {
+          // console.log(element.color);
+          // console.log(color);
+          if(element.color == color){
+            this.toysData.push(element);
+          }
+        });
+        // console.log(this.toysData);
+      });
+  }
+  addPrice(a,b){
+    this.q.getData('assets/toys.json').subscribe(res =>{
+      this.toysData=[];
+      res.forEach(element => {
+        console.log(element.price);
+        if(parseInt(element.price) >= a && parseInt(element.price) < b ){
+          this.toysData.push(element);
+        }
+      });
+    });
+  }
+
+  arrange(type:String){
+    this.q.getData('assets/toys.json').subscribe(res =>{
+      this.toysData=[];
+      this.priceRange=[];
+      res.forEach(element => {
+        this.priceRange.push(parseInt(element.price));
+      });
+      if(type=="ascending"){
+        this.priceRange.sort(function(a, b){return a-b});
+      }
+      else if (type=="descending"){
+        this.priceRange.sort(function(a, b){return b-a});
+      }
+      for (var i = 0 ; i<this.priceRange.length ; i++ ){
+        res.forEach(element => {
+          if (parseInt(element.price) == this.priceRange[i]){
+            this.toysData.push(element);
+          }
+        });
+      }
+    });
+  }
+
+
+
+
   ngOnInit() {
-    function myFunction(e):void {
-      console.log(e)
-      $("#myText").eq(0).html($(e).text());  
-      // document.getElementById("myText").innerHTML=e.target.innerText;
-    }
+    $(".dropdown-menu button").click(function(){
+        console.log($(".dropdown-menu button"));
+        $("#myText").eq(0).html($(this).text());
+    }); 
+    $(".allBtn").click(function(){
+        location.reload();
+    });    
   }
 }

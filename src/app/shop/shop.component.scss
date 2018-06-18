@@ -128,6 +128,20 @@
             .row{
                 margin-bottom: 15px;
             }
+            .allBtn{
+                border: solid 2px $pink;
+                color: white;
+                border-radius: 10px;
+                background-color: $pink;
+                padding: 8px 18px;
+                font-family: 'Nunito';
+            }
+            .allBtn:hover{
+                background-color: $blue;
+                border: solid 2px $blue;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
             .card-columns{
                 .card{
                     .cardImg{
@@ -177,6 +191,16 @@
             }
         }
     }
+}
+ngb-carousel /deep/ .carousel-control-prev,
+ngb-carousel /deep/ .carousel-control-next {
+    width: 4%;
+}
+ngb-carousel /deep/ .carousel-control-prev{
+    left: 45%;
+}
+ngb-carousel /deep/ .carousel-control-next{
+    right: 44%;
 }
 @media all and (max-width:768px){
     .container{
