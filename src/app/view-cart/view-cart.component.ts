@@ -54,20 +54,91 @@ getCartItems(){
   }
 }
 
-  ngOnInit() {
-    this.getCartItems();
 
-    $('.quantity').css('backgroundColor','red');
-    $('.minus').click(function(){
-      let quan= $('.quantity').html();
-      // if(parseInt(quan)>1){
-        $('.quantity').html('parseInt(quan)-1');
-      // }
-      $('.quantity').css('color','red')
-      
-    })
+
+ngOnInit() {
+  this.getCartItems();
+  $(document).ready(function(){
+
+
+      $('.minus').click(function(){
+        let quan=$(this).parent("ul").find(".quantity").html();
+        if(parseInt(quan)>1){
+          $(this).parent("ul").find(".quantity").html(parseInt(quan)-1);
+          quen();
+          sum();
+        }        
+      })
+      $('.plus').click(function(){
+        let quan=$(this).parent("ul").find(".quantity").html();
+        $(this).parent("ul").find(".quantity").html(parseInt(quan)+1);
+         quen();
+         sum();
+      });
+
+      //   $(".delete").click(function(){
+      //  $(this).parent().remove();
+      // sum();
+    });
+
+
+
+
+
+   
+ 
+function quen(){
+
+let h= $(".price");
+console.log("hhh=" + h);
+let n= $(".a");
+let o= $(".itemTotal");
+
+for(var i=0; i<h.length; i++){
+  let zz = h.eq(i).text();
+  let yy = n.eq(i).text();
+  let tt = parseInt(zz)  * parseInt(yy) ;
+  o.eq(i).text(tt);
+
+}
+
+}
+
+quen();
+
+function sum(){
+
+  let x= $(".total")
+  let y=0;
+  let arr=[];
+  console.log("x=" + x);
+  for(var i=0; i<x.length; i++){
+  let z = x.eq(i).html();
+  z=parseInt(z);
+  arr.push(z)
   }
-  
+  let r=0;
+  for(var i=0; i<arr.length; i++){
+    r+=arr[i];
+  }
+  $("#totalPrice").text(r);
 
+
+}
+sum();
+
+
+
+
+
+
+
+
+
+
+   });
+
+ 
+}
 }
 

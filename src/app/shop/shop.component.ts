@@ -120,8 +120,12 @@ export class ShopComponent implements OnInit {
     });
   }
 
-
   ngOnInit() {
+    $(document).ready(function(){
+      $(".cartBtn").click(function(){
+        $(this).parents(".cardImg").find(".added").css("visibility","visible");
+      });
+    });
     $(".dropdown-menu button").click(function(){
       console.log($(".dropdown-menu button"));
         $("#myText").eq(0).html($(this).text());

@@ -5,6 +5,13 @@
 }
 .mediaa{
     font-family: "Nunito";
+    .cardImg{
+        height: 250px;
+        iframe{
+            height: 250px;
+        }
+    }
+  
     .time{
         background-color: $pink;
         position: absolute;

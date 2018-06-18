@@ -35,6 +35,7 @@ import { NurseryComponent } from './nursery/nursery.component';
 import { EventsComponent } from './events/events.component';
 import { ContactComponent } from './contact/contact.component';  // import validator
 import { PageNotFoundComponent } from './page-not-found-component/page-not-found-component.component';
+import { GameComponent } from './game/game.component';
 import { ToysComponent } from './toys/toys.component';
 
 
@@ -64,6 +65,7 @@ const routes: Routes = [
   { path: 'cart', component: ViewCartComponent },
   { path: 'WishList', component: WishListComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'games', component: GameComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -91,6 +93,7 @@ const routes: Routes = [
     EventsComponent,
     ContactComponent,
     PageNotFoundComponent,
+    GameComponent,
     ToysComponent
   ],
   imports: [

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <span class="verticalLine pr-3"><a href="#"><img src="../assets/images/home/girl.png" /></a></span>
+      <a href="#"><img src="../assets/images/home/girl.png" /></a>
       <a href="#"><img src="../assets/images/home/boy.png" class="boy"/></a>
       <div>
           <button (click)="redirectToRegister()" type="button" class="btn text-center register  pt-0 pb-0 none">Register</button>
@@ -33,12 +33,11 @@
   </nav>
 
 <nav class="navbar navbar-expand-lg navbar-light pl-0 pr-0 secondNav">
-  <div class="container">
+  <div class="container d-flex  justify-content-between ">
+
     <a class="navbar-brand" href="#">ANGULAR</a>
-    <button class="navbar-toggler pb-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" (click)="navbarCollapsed = !navbarCollapsed">
-      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" [ngbCollapse]="navbarCollapsed">
+
+    <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNavAltMarkup" [ngbCollapse]="navbarCollapsed">
       <div class="navbar-nav d-flex align-items-center justify-content-center ml-auto mr-auto">
           <div ngbDropdown class="d-inline-block">
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/">Home</button>
@@ -71,7 +70,13 @@
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle  routerLink="events">Events</button>
           </div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="/play">Games</button>
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Games</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item" routerLink="/play">Our Games</button>
+              <button class="dropdown-item" routerLink="games">World Discovery</button>
+              <button class="dropdown-item" routerLink="/">Another Action</button>
+              <button class="dropdown-item" routerLink="/">Something else is here</button>
+            </div>
           </div>
           <div ngbDropdown class="d-inline-block">
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle routerLink="babyTracker">BabyTraker</button>
@@ -81,13 +86,32 @@
           </div>
       </div>
     </div>
-    <div>
-      <i class="fa fa-heart pointer" routerLink="WishList" ></i>
-      <span class="cart" *ngIf="cardItemsQuantities > 0"  routerLink="WishList">
-        {{cardItemsQuantities}}
+
+   
+   
+
+    <div class="navIcons">
+
+      <button class="navbar-toggler pb-0 mr-4 " type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" (click)="navbarCollapsed = !navbarCollapsed">
+          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+      </button> 
+
+      <i class="fa fa-heart pointer  mr-3" routerLink="WishList" ></i>
+      <i class="fa fa-shopping-cart  pointer  mr-1" routerLink="/cart"></i>
+      <span class="cart text-center  " *ngIf="cardItemsQuantities > 0"  routerLink="WishList">
+          {{cardItemsQuantities}}
       </span>
-      <i class="fa fa-shopping-cart pl-3 pointer" routerLink="/cart"></i>
     </div>
+
+
+
+
+
+
+
+
+
+
   </div>
 </nav>
 <router-outlet></router-outlet> 

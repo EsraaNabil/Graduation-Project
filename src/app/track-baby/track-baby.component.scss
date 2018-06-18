@@ -1,15 +1,32 @@
 @import "../../assets/variables.scss";
+
 .trackBaby{
-   .paddTop{
-     padding-top: 140px;
+  
+   .paddTop {
+     padding-top: 110px;
    }  
+   .paddBottom{
+    padding-bottom: 110px;
+
+   }
    .marginBottom{
        margin-bottom: 140px;
    } 
     .track{
         background-color: white;
-        box-shadow:5px 5px 10px #80808024  
-
+        box-shadow:5px 5px 10px #80808024  ;
+        h5{
+            font-size: 15px;
+            color: black;
+        }
+        .pink{
+            font-size: 13px;
+            color: $blue;
+        }
+        .blue{
+            font-size: 13px;
+            color: $pink;
+        }
     }
     input{
     border-radius: 10px;
@@ -28,7 +45,7 @@
     width:200px;
     height: 200px;
     position: relative;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: example; 
     animation-name: example;
     animation-duration: 6s;
     animation-iteration-count: infinite;
@@ -40,23 +57,11 @@
 
 
 
-/* Safari 4.0 - 8.0 */
-// @-webkit-keyframes example {
-//     0%   { left:0px; top:0px;}
-//     25%  { left:200px; top:0px;}
-//     50%  { left:200px; top:200px;}
-//     75%  { left:0px; top:200px;}
-//     100% {left:0px; top:0px;}
-// }
-
-/* Standard syntax */
 
 @keyframes example {
     0%   { left:0px; }
     100% {left:calc(100vw - 250px);
-        // transform: scaleX(-1);
     }
 }
-
 
 

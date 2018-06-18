@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
 import { DataPipeService } from './data-pipe.service';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Component({
@@ -30,7 +31,6 @@ export class AppComponent implements OnInit{
   redirectToLogin(): void {
     this.router.navigate(['/login/']);
   }
-
   redirectToRegister(): void {
     this.router.navigate(['/register/']);
   }

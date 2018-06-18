@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import {QueryService} from '../query.service';
 import * as $ from 'jquery';
 
+
 @Component({
   selector: 'app-shop-item',
   templateUrl: './shop-item.component.html',
@@ -76,20 +77,27 @@ export class ShopItemComponent implements OnInit {
     );
   }
 
-  
 
   ngOnInit() {
+    $(".dropdown-menu button").click(function(){
+        console.log($(".dropdown-menu button"));
+        $("#myText").eq(0).html($(this).text());
+    }); 
     console.log(this.route.params.subscribe(param=>{
       this.itemId= param.id;
       this.getItemData();
       this.getItemData2();
       this.getItemData3();
     }));
-    $(".dropdown-menu button").click(function(){
-        console.log($(".dropdown-menu button"));
-        $("#myText").eq(0).html($(this).text());
-    });  
+      $(document).ready(function(){
+        function quen(){
+            let h= $("#price").text();
+            let n= $("#a").text();
+            let o= $("#itemTotal");
+            let tt = parseInt(h)  * parseInt(n) ;
+            o.text(tt);        
+        }
+          quen();
+      });
   }
-  
-
 }
