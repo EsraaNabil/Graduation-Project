@@ -11,7 +11,8 @@ import { DataPipeService } from '../data-pipe.service';
   styleUrls: ['./view-cart.component.scss']
 })
 export class ViewCartComponent implements OnInit {
-newData: Array<object>;
+newData;
+deletedItem;
 cartStorage;
 flag:boolean;
 itemId;
@@ -34,6 +35,7 @@ getCartItems(){
         console.log(this.cartStorage.indexOf(element.id));
         console.log(this.cartStorage);
         if(this.cartStorage.indexOf(element.id)!=-1){
+          element.quantity = 1;
           this.newData.push(element);
           this.flag=false;
         }
@@ -56,15 +58,24 @@ getCartItems(){
   }
 }
 
-delete(itemId:number){
-  if(localStorage.getItem('cart')){
-    this.cartStorage = JSON.parse(localStorage.getItem('cart'));
-      if(this.cartStorage.indexOf(itemId) != -1){
-        this.newData.splice(this.cartStorage.indexOf(itemId),1);
-        this.cartStorage.splice(this.cartStorage.indexOf(itemId),1);
-        localStorage.setItem('cart', JSON.stringify(this.cartStorage));
-        this.flag=false;
-      }
+plus(index,quantity){
+  this.newData[index].quantity = parseInt(quantity)+1;
+}
+
+minus(index,quantity){
+  if(quantity > 1){
+    this.newData[index].quantity = parseInt(quantity)-1;
+  }
+}
+delete(itemId){
+  for(let i=0;i< this.newData.length;i++){
+    if(this.newData[i].id == itemId){
+      this.newData.splice(i,1);
+      this.deletedItem = JSON.parse(localStorage.getItem('cart'));
+      this.deletedItem.splice(i,1);
+      localStorage.setItem('cart',JSON.stringify(this.deletedItem));
+      break;
+    }
   }
   this.newMessage();
 }
@@ -74,18 +85,6 @@ newMessage() {
 }
   ngOnInit() {
     this.getCartItems();
-    $(document).ready(function(){
-      $('.minus').click(function(){
-        let quan=$(this).parent("ul").find(".quantity").html();
-        if(parseInt(quan)>1){
-          $(this).parent("ul").find(".quantity").html(parseInt(quan)-1);
-        }        
-      })
-      $('.plus').click(function(){
-        let quan=$(this).parent("ul").find(".quantity").html();
-        $(this).parent("ul").find(".quantity").html(parseInt(quan)+1);
-      })
-    });
   }
 }
 

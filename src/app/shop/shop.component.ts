@@ -59,6 +59,7 @@ export class ShopComponent implements OnInit {
       localStorage.setItem('wishList',JSON.stringify([id]));
     }
   }
+  
   newMessage() {
     this.data.changeMessage(JSON.parse(localStorage.getItem('cart')).length)
   }

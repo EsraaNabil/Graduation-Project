@@ -33,7 +33,7 @@
         <div class="alert alert-danger mb-5" role="alert" *ngIf="ConfirmPassword.touched && !ConfirmPassword.valid">
           Password mismatch
         </div>
-      <button class="btn LoginDiv"  [disabled]="!RegisterForm.valid" type="submit">Register</button>
+      <button class="btn LoginDiv"  [disabled]="!RegisterForm.valid" type="submit" routerLink="/">Register</button>
       </form>
     </div>
   </div>

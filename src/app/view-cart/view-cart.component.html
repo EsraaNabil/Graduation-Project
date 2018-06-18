@@ -20,7 +20,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor= "let data of newData">
+              <tr *ngFor= "let data of newData;let i = index">
                 <th scope="row" class="cart-img pl-0 pr-3">
                   <img class="card-img-top img-fluid " src="{{data.pic}}">
                   <div class="text-center " >
@@ -34,11 +34,11 @@
                 <td>
                   <nav class="item-nav" aria-label="...">
                     <ul class="pagination">
-                      <li class="page-item disabled minus">
+                      <li class="page-item disabled minus" (click)="minus(i,data.quantity)">
                         <a class="page-link background" tabindex="-1"><i class="fa fa-minus"></i></a>
                       </li>
-                      <li class="page-item"><a class="page-link quantity" id="any">1</a></li>
-                      <li class="page-item plus">
+                      <li class="page-item"><a class="page-link quantity" id="any">{{data.quantity}}</a></li>
+                      <li class="page-item plus" (click)="plus(i,data.quantity)">
                         <a class="page-link background"><i class="fa fa-plus"></i></a>
                       </li>
                     </ul>

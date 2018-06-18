@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataPipeService {
-  private messageSource = new BehaviorSubject(JSON.parse(localStorage.getItem('cart')).length);
+  private messageSource = new BehaviorSubject(JSON.parse(localStorage.getItem('cart')));
   currentMessage = this.messageSource.asObservable();
   
   changeMessage(message: string) {

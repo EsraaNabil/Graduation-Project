@@ -50,11 +50,14 @@ export class WishListComponent implements OnInit {
     }
   }
 
-  delete(itemId:number){
+  delete(itemId){
     if(localStorage.getItem('wishList')){
       this.wishListStorage = JSON.parse(localStorage.getItem('wishList'));
+      console.log("before",this.wishListData)
+      console.log("intm",itemId)
         if(this.wishListStorage.indexOf(itemId) != -1){
           this.wishListData.splice(this.wishListStorage.indexOf(itemId),1);
+          console.log("after",this.wishListData)
           this.wishListStorage.splice(this.wishListStorage.indexOf(itemId),1);
           localStorage.setItem('wishList', JSON.stringify(this.wishListStorage));
           this.flag=false;
