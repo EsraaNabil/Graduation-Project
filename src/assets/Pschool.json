@@ -1,42 +1,42 @@
 [{
- "img":"assets/images/school/school13.jpg",
- "name":"El Ibrahimeya School",
- "location":"1 Etehaad Al Mohamin, Qasr an Nile, Cairo Governorate",
- "description":"delivers an outstanding best education in Egypt",
- "link":"https://www.facebook.com/pages/El-Ibrahimeya-Secondary-School-for-Boys/132950150147932"
+ "img":"assets/images/school/school12.PNG",
+ "name":"Aly Ibn Abi Taleb Preparatory School",
+ "location":"Sidi Beshr Bahri, Qism El-Montaza, Alexandria Governorate",
+ "description":"delivers an outstanding best education in alex",
+ "link":"https://www.facebook.com/groups/aly.for.boys/about/"
 },
 {
- "img":"assets/images/school/school14.jpg",
- "name":"Al Amgad School",
- "location":"Rd 300, New Maadi, Maadi, Cairo Near To GUPCO",
- "description":"delivers an outstanding best education in Egypt",
- "link":"https://www.facebook.com/AlAmjadInternationalSchool/"
+ "img":"assets/images/school/school13.PNG",
+ "name":"Hoda Shaarawy Secondary School For Girls",
+ "location":"43 Sharawy Street, Loran, Qism El-Raml, Alexandria Governorate",
+ "description":"delivers an outstanding best education in alex",
+ "link":"http://placesmap.net/EG/Hoda-Shaarawy-Secondary-School-For-Girls-81688/"
 },
 {
- "img":"assets/images/school/school14.jpg",
- "name":"Al Amgad School",
- "location":"Rd 300, New Maadi, Maadi, Cairo Near To GUPCO",
- "description":"delivers an outstanding best education in Egypt",
- "link":"https://www.facebook.com/AlAmjadInternationalSchool/"
+ "img":"assets/images/school/school13.PNG",
+ "name":"Hoda Shaarawy Secondary School For Girls",
+ "location":"43 Sharawy Street, Loran, Qism El-Raml, Alexandria Governorate",
+ "description":"delivers an outstanding best education in alex",
+ "link":"http://placesmap.net/EG/Hoda-Shaarawy-Secondary-School-For-Girls-81688/"
 },
 {
- "img":"assets/images/school/school13.jpg",
- "name":"El Ibrahimeya School",
- "location":"1 Etehaad Al Mohamin, Qasr an Nile, Cairo Governorate",
- "description":"delivers an outstanding best education in Egypt",
- "link":"https://www.facebook.com/pages/El-Ibrahimeya-Secondary-School-for-Boys/132950150147932"
+ "img":"assets/images/school/school12.PNG",
+ "name":"Aly Ibn Abi Taleb Preparatory School",
+ "location":"Sidi Beshr Bahri, Qism El-Montaza, Alexandria Governorate",
+ "description":"delivers an outstanding best education in alex",
+ "link":"https://www.facebook.com/groups/aly.for.boys/about/"
 },
 {
- "img":"assets/images/school/school13.jpg",
- "name":"El Ibrahimeya School",
- "location":"1 Etehaad Al Mohamin, Qasr an Nile, Cairo Governorate",
- "description":"delivers an outstanding best education in Egypt",
- "link":"https://www.facebook.com/pages/El-Ibrahimeya-Secondary-School-for-Boys/132950150147932"
+ "img":"assets/images/school/school12.PNG",
+ "name":"Aly Ibn Abi Taleb Preparatory School",
+ "location":"Sidi Beshr Bahri, Qism El-Montaza, Alexandria Governorate",
+ "description":"delivers an outstanding best education in alex",
+ "link":"https://www.facebook.com/groups/aly.for.boys/about/"
 },
 {
- "img":"assets/images/school/school14.jpg",
- "name":"Al Amgad School",
- "location":"Rd 300, New Maadi, Maadi, Cairo Near To GUPCO",
- "description":"delivers an outstanding best education in Egypt",
- "link":"https://www.facebook.com/AlAmjadInternationalSchool/"
+    "img":"assets/images/school/school13.PNG",
+    "name":"Hoda Shaarawy Secondary School For Girls",
+    "location":"43 Sharawy Street, Loran, Qism El-Raml, Alexandria Governorate",
+    "description":"delivers an outstanding best education in alex",
+    "link":"http://placesmap.net/EG/Hoda-Shaarawy-Secondary-School-For-Girls-81688/"
 }]

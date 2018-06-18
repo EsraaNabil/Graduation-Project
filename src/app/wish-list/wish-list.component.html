@@ -2,7 +2,7 @@
     <div class="secBg text-center">
       <h1>WISHLIST</h1>
       <span><a routerLink="/">HOME</a></span>
-      <span><a routerLink="resturants" class="clicked">WISHLIST</a></span>
+      <span><a class="clicked">WISHLIST</a></span>
     </div>
   </div> 
 
@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col-12 table-responsive mb-3 ">
       <table class="table">
-        <thead class="">
+        <thead>
           <tr>
             <th scope="col" > </th>
             <th scope="col" > </th>
@@ -31,7 +31,7 @@
               </div>
             </td>
             <td>{{data.name}}</td>
-            <td >{{data.price}}</td>
+            <td class="pr-2">{{data.price}} <span>LE</span></td>
             <td class="text-dark">{{data.stoke}}</td>
             <td ><button class="button-shadow" [routerLink]="['/shop/item',data.id]">View Product</button></td>
           </tr>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm , NgModel } from '@angular/forms';
+
 import {QueryService} from '../query.service';
 import * as $ from 'jquery';
 
@@ -12,7 +13,6 @@ export class TrackBabyComponent implements OnInit {
   data:object;
   constructor(private q:QueryService) {
     this.data={};
-    // this.getBabyData();
    }
   
   trackForm(drData:NgForm): void{
@@ -33,6 +33,7 @@ export class TrackBabyComponent implements OnInit {
   }
 
   ngOnInit() {
+
    
     $("button").click(function(){
         $("form").css("display","none");

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
 import { DataPipeService } from './data-pipe.service';
+
 
 @Component({
   selector: 'app-root',
@@ -26,5 +27,13 @@ export class AppComponent {
     this.router.navigate(['/register/']);
   }
 
+  ngOnInit() {
+        $(".toyBtn").click(function(){
+          location.reload();
+        });  
+        $(".clothesBtn").click(function(){
+          location.reload();
+        });  
+  }
 }
 

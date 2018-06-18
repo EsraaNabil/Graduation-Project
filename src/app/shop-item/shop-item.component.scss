@@ -8,6 +8,11 @@
         color: red;
         font-size: 18px;
     }
+    .btn-group{
+        .selectBtn{
+            width: 90px;
+        }
+    }
     .dropdown-item{
         color: $inputGrey;
     }

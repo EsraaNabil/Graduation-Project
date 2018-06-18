@@ -6,12 +6,12 @@
     <div class="col-lg-6">
       <h4>{{itemData.name}}</h4>
       <p class="pt-3">{{itemData.body}}</p>
-      <span>Price:</span><span class="redPrice ml-2">{{itemData.price}}</span>
+      <span>Price:</span><span class="redPrice ml-2 " id="price">{{itemData.price}}</span><span class="redPrice">LE</span>
       <div class="row">
         <div class="col-lg-6">
           <p class="mt-4 mb-2">Color</p>
           <div class="btn-group">
-            <button type="button" class="btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{itemData.color}}</button>
+            <button id="myText" type="button" class="selectBtn btn dropMenu d-flex align-items-center pl-2 pr-5 pb-1 pt-1">{{itemData.color}}</button>
             <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
               <button class="btn btn-primary dropdown-toggle-split dropMenuToggle d-flex align-items-center" ngbDropdownToggle></button>
               <div class="dropdown-menu" ngbDropdownMenu>
@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-      <p class="mt-4 mb-2">Quantity</p>
+      <p class="mt-4 mb-2 a">Quantity</p>
       <nav class="item-nav" aria-label="...">
         <ul class="pagination">
           <li class="page-item disabled minus" (click)="minus(itemData.quantity)">

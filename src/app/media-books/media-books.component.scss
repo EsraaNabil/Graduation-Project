@@ -1,11 +1,9 @@
 @import "../../assets/variables.scss";
-.books{
-    
-    .secshop{
-        background-image:url('/assets/images/doctors/doctorbg.png');
-        background-position: top;
-       
-    }
+.secshop{
+    background-image:url('/assets/images/media/book.jpg');
+    background-position: center;
+}
+.books{   
     a:hover{
         color: white;
     }

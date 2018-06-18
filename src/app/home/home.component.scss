@@ -104,6 +104,10 @@ ngb-carousel /deep/ .carousel-control-prev{
    
 }
 
+
+
+
+
 //contact us
 
 .home-contact{
@@ -124,17 +128,12 @@ ngb-carousel /deep/ .carousel-control-prev{
     }
     @keyframes example {
         0%   { 
-            //transform: rotate(0deg);
              left:0px; 
         }
         100% {
              left:100px;
-           // transform: rotate(20deg);
         }
-        // 100%{
-        //     transform: rotate(-20deg);
-
-        // }
+      
     }
 
 
@@ -209,4 +208,25 @@ ngb-carousel /deep/ .carousel-control-prev{
     .movegirl{
         display: none;
     }
+}
+  
+
+
+#return-to-top {
+
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    // -webkit-transition: all 0.3s 
+}
+
+.scroll{
+    width:70px;
+    height: 150px;
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
 }

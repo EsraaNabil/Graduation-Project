@@ -2,7 +2,7 @@
     <div class="secBg text-center">
       <h1>Events</h1>
       <span><a routerLink="/">HOME</a></span>
-      <span><a routerLink="events" class="clicked">EVENTS</a></span>
+      <span><a class="clicked">EVENTS</a></span>
     </div>
   </div> 
   <div class="container">
@@ -28,32 +28,62 @@
             </ng-template>
         </ngb-tab>
     </ngb-tabset>
-    <div class="card-columns" >
-      <div class="card mb-5" *ngFor="let data of eventsData">
-        <div class="cardImg">
-            <div class="hover">
-              <div>
-                <p>{{data.imgDate}}</p>
-                <p>{{data.imgMonth}}</p>
+    <ngb-carousel class="margin" data-interval="false">
+        <ng-template ngbSlide>
+            <div class="card-columns" >
+                <div class="card mb-5" *ngFor="let data of eventsData">
+                  <div class="cardImg">
+                      <div class="hover">
+                        <div>
+                          <p>{{data.imgDate}}</p>
+                          <p>{{data.imgMonth}}</p>
+                        </div>
+                      </div>
+                      <div class="allDiv">
+                          <div class="hover2">
+                              <p>{{data.place}}</p>
+                          </div>
+                      </div>           
+                      <img class="card-img-top" src="{{data.img}}" alt="Card image cap">
+                  </div> 
+                  <div class="card-body pl-0">
+                    <h5 class="card-title">{{data.name}}</h5>
+                    <p class="card-text">{{data.type}} </p>      
+                    <p class="card-text">{{data.location}} </p>
+                    <p class="card-text">{{data.date}} </p> 
+                    <p class="card-text">{{data.description}} </p> 
+                    <button class="button-shadow"><a href="{{data.link}}" target="_blank">CHECK IT</a></button>  
+                  </div>
+                </div> 
               </div>
-            </div>
-            <div class="allDiv">
-                <div class="hover2">
-                    <p>{{data.place}}</p>
-                </div>
-            </div>           
-            <img class="card-img-top" src="{{data.img}}" alt="Card image cap">
-        </div> 
-        <div class="card-body pl-0">
-          <h5 class="card-title">{{data.name}}</h5>
-          <p class="card-text">{{data.type}} </p>      
-          <p class="card-text">{{data.location}} </p>
-          <p class="card-text">{{data.date}} </p> 
-          <p class="card-text">{{data.description}} </p> 
-          <button class="button-shadow"><a href="{{data.link}}" target="_blank">CHECK IT</a></button>  
-        </div>
-      </div> 
-    </div>
-    <br>
-    <ngb-pagination class="d-flex justify-content-center margin" [collectionSize]="50" [(page)]="currentPage"></ngb-pagination>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="card-columns" >
+                <div class="card mb-5" *ngFor="let data of eventsData">
+                  <div class="cardImg">
+                      <div class="hover">
+                        <div>
+                          <p>{{data.imgDate}}</p>
+                          <p>{{data.imgMonth}}</p>
+                        </div>
+                      </div>
+                      <div class="allDiv">
+                          <div class="hover2">
+                              <p>{{data.place}}</p>
+                          </div>
+                      </div>           
+                      <img class="card-img-top" src="{{data.img}}" alt="Card image cap">
+                  </div> 
+                  <div class="card-body pl-0">
+                    <h5 class="card-title">{{data.name}}</h5>
+                    <p class="card-text">{{data.type}} </p>      
+                    <p class="card-text">{{data.location}} </p>
+                    <p class="card-text">{{data.date}} </p> 
+                    <p class="card-text">{{data.description}} </p> 
+                    <button class="button-shadow"><a href="{{data.link}}" target="_blank">CHECK IT</a></button>  
+                  </div>
+                </div> 
+              </div>
+        </ng-template>
+      </ngb-carousel>
   </div>

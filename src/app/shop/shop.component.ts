@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { QueryService } from '../query.service';
 import { EventEmitter } from '@angular/core';
 import { DataPipeService } from '../data-pipe.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-shop',
@@ -10,12 +11,13 @@ import { DataPipeService } from '../data-pipe.service';
 })
 export class ShopComponent implements OnInit {
   mydata: Array<object>;
-
+  priceRange: Array<any>;
   constructor(
     private q: QueryService,
     private data: DataPipeService
   ) {
     this.mydata = [];
+    this.priceRange = [];
     this.getCardData();
     this.q.setUrlHistoryObj("./assets/shop.json");
   }
@@ -63,7 +65,78 @@ export class ShopComponent implements OnInit {
   newMessage() {
     this.data.changeMessage(JSON.parse(localStorage.getItem('cart')).length)
   }
-  ngOnInit() {
+
+  addColor(color:string){
+    this.q.getData('assets/shop.json').subscribe(res =>{
+      this.mydata=[];
+      res.forEach(element => {
+        console.log(element.color);
+        console.log(color);
+        if(element.color == color){
+          this.mydata.push(element);
+        }
+      });
+      // console.log(this.toysData);
+    });
+  }
+  addPrice(a,b){
+    this.q.getData('assets/shop.json').subscribe(res =>{
+      this.mydata=[];
+      res.forEach(element => {
+        console.log(element.price);
+        if(parseInt(element.price) >= a && parseInt(element.price) < b ){
+          this.mydata.push(element);
+        }
+      });
+    });
+  }
+  addSize(size:string){
+    this.q.getData('assets/shop.json').subscribe(res =>{
+      this.mydata=[];
+      res.forEach(element => {
+        console.log(element.price);
+        if(element.size == size ){
+          this.mydata.push(element);
+        }
+      });
+    });
   }
 
+  arrange(type:String){
+    this.q.getData('assets/shop.json').subscribe(res =>{
+      this.mydata=[];
+      this.priceRange=[];
+      res.forEach(element => {
+        this.priceRange.push(parseInt(element.price));
+      });
+      if(type=="ascending"){
+        this.priceRange.sort(function(a, b){return a-b});
+      }
+      else if (type=="descending"){
+        this.priceRange.sort(function(a, b){return b-a});
+      }
+      for (var i = 0 ; i<this.priceRange.length ; i++ ){
+        res.forEach(element => {
+          if (parseInt(element.price) == this.priceRange[i]){
+            this.mydata.push(element);
+          }
+        });
+      }
+    });
+  }
+
+  ngOnInit() {
+    $(document).ready(function(){
+      $(".cartBtn").click(function(){
+        $(this).parents(".cardImg").find(".added").css("visibility","visible");
+      });
+    });
+    $(".dropdown-menu button").click(function(){
+      console.log($(".dropdown-menu button"));
+        $("#myText").eq(0).html($(this).text());
+    }); 
+    $(".allBtn").click(function(){
+        location.reload();
+    });    
+  }
 }
