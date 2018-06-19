@@ -21,6 +21,9 @@ export class AppComponent {
     this.navbarCollapsed = true;
   }
 
+  reload(){
+    location.reload();
+  }
 
   redirectToLogin(): void {
     this.router.navigate(['/login/']);
