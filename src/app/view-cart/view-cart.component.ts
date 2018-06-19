@@ -108,13 +108,15 @@ ngOnInit() {
 quen();
 
 $(".minus").on("click",function(){
+  quen();
+
  sum();
- quen();
 })
 
 $(".plus").on("click",function(){
-  sum();
   quen();
+
+  sum();
 })
 
 $(".delete").on("click",function(){
