@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container ">
-      <a href="#"><img src="../assets/images/logo9-01.png" class="none" /></a> 
-      <a href="#"><img src="../assets/images/logo9-01.png" /></a> 
+      <a href="#"><img src="../assets/images/logo9-01.png" class="none" routerLink="/" /></a> 
+      <a href="#"><img src="../assets/images/logo9-01.png" routerLink="/" /></a> 
 
       <div>
           <button (click)="redirectToRegister()" type="button" class="btn text-center register  pt-0 pb-0 none">Register</button>
@@ -64,9 +64,9 @@
           <div ngbDropdown class="d-inline-block">
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Games</button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button class="dropdown-item" routerLink="/play">Our Games</button>
-              <button class="dropdown-item" href="https://esraanabil.github.io/numbers-game-for-kids/game">Easy Numbers</button>
-              <button class="dropdown-item" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fesraa-hassan-ahmed.github.io%2FSimple-Animal-Game%2Findex.html&h=ATMA3YVCbhYaNvTdyIwKeMznQsAHeFi5nm5yTL1mrFIgnyMJvsRmicKx1nLhj9Tofg-WXqAfAzk2r4eowBkUhD2b6ve1bIyrjZsleEFiE_TGZFP_bo4NBw">Lovely Animals</button>
+              <button class="dropdown-item" routerLink="/play">All Games</button>
+              <a href="https://esraanabil.github.io/numbers-game-for-kids/game">  <button class="dropdown-item">Easy Numbers</button></a>
+              <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fesraa-hassan-ahmed.github.io%2FSimple-Animal-Game%2Findex.html&h=ATMA3YVCbhYaNvTdyIwKeMznQsAHeFi5nm5yTL1mrFIgnyMJvsRmicKx1nLhj9Tofg-WXqAfAzk2r4eowBkUhD2b6ve1bIyrjZsleEFiE_TGZFP_bo4NBw"> <button class="dropdown-item">Lovely Animals</button></a>
               <button class="dropdown-item" routerLink="games">World Discovery</button>
             </div>
           </div>
