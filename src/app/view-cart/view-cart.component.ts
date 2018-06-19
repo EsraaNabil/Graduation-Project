@@ -61,7 +61,6 @@ getCartItems(){
 plus(index,quantity){
   this.newData[index].quantity = parseInt(quantity)+1;
 }
-
 minus(index,quantity){
   if(quantity > 1){
     this.newData[index].quantity = parseInt(quantity)-1;
@@ -83,9 +82,68 @@ delete(itemId){
 newMessage() {
   this.data.changeMessage(JSON.parse(localStorage.getItem('cart')).length)
 }
-  ngOnInit() {
-    this.getCartItems();
-  }
+
+
+
+
+ngOnInit() {
+  this.getCartItems();
+  $(document).ready(function(){ 
+  function quen(){
+
+  let h= $(".price");
+  console.log("hhh=" + h);
+  let n= $(".a");
+  let o= $(".itemTotal");
+
+  for(var i=0; i<h.length; i++){
+  let zz = h.eq(i).text();
+  let yy = n.eq(i).text();
+  let tt = parseInt(zz)  * parseInt(yy) ;
+  o.eq(i).text(tt);
+
 }
 
+}
+quen();
 
+$(".minus").on("click",function(){
+  sum();
+  quen();
+})
+
+$(".plus").on("click",function(){
+  sum();
+  quen();
+})
+
+$(".delete").on("click",function(){
+  sum();
+})
+
+function sum(){
+
+        let x= $(".total")
+        let y=0;
+        let arr=[];
+        console.log("x=" + x);
+        for(var i=0; i<x.length; i++){
+        let z = x.eq(i).html();
+        z=parseInt(z);
+        arr.push(z)
+        }
+        let r=0;
+        for(var i=0; i<arr.length; i++){
+          r+=arr[i];
+        }
+        $("#totalPrice").text(r);
+    
+    
+      }
+      sum();
+      
+    
+
+});
+}
+}

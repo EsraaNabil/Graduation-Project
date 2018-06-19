@@ -6,25 +6,25 @@
     </div>
   </div> 
   <div class="container">
-    <ngb-tabset>
+    <ngb-tabset >
         <ngb-tab>
             <ng-template ngbTabTitle>
-                <div (click)="geteventsData()">ALL</div>
+                <div (click)="geteventsData()" class="all">ALL</div>
             </ng-template>
         </ngb-tab>
         <ngb-tab >
           <ng-template ngbTabTitle>
-            <div (click)="getABeventsData()">Alexandria Bibliotheca</div>
+            <div (click)="getABeventsData()"  class="tabs">Alexandria Bibliotheca</div>
           </ng-template>
         </ngb-tab>
         <ngb-tab>
             <ng-template ngbTabTitle>
-                <div (click)="getACeventsData()">Alexandria Center of Arts</div>
+                <div (click)="getACeventsData()"  class="tabs" >Alexandria Center of Arts</div>
             </ng-template>
         </ngb-tab>
         <ngb-tab>
             <ng-template ngbTabTitle>
-                <div (click)="getPCeventsData()">Palace of Culture</div>
+                <div (click)="getPCeventsData()"  class="tabs" >Palace of Culture</div>
             </ng-template>
         </ngb-tab>
     </ngb-tabset>

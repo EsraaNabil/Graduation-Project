@@ -51,6 +51,7 @@ export class ShopItemComponent implements OnInit {
       res => {
         res.forEach(element => {
           if(element.id == this.itemId){
+            element.quantity = 1;
             this.itemData = element;
           }
         });;
@@ -119,6 +120,7 @@ export class ShopItemComponent implements OnInit {
   minus(quantity){
     if(quantity > 1){
       this.itemData.quantity = parseInt(quantity)-1;
+     
     }
   }
   
@@ -143,6 +145,17 @@ export class ShopItemComponent implements OnInit {
             o.text(tt);        
         }
           quen();
+
+          $(".minus").on("click",function(){
+            quen();
+          })
+          
+          $(".plus").on("click",function(){
+            quen();
+          })
+
       });
+
+
   }
 }

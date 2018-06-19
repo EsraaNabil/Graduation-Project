@@ -4,6 +4,9 @@
     .secshop{
         background-image:url('/assets/images/doctors/doctorbg.png');
         background-position: top;
+        .clicked{
+            color:white;
+        }
        
     }
     a:hover{
@@ -75,7 +78,7 @@
 
 
 .add-doctor{
-     background-image: url('../../assets/images/addDoctor.png');
+     background-image: url('../../assets/images/doctors/addDoctor.png');
     background-attachment: fixed;
     h3{
         color:white;

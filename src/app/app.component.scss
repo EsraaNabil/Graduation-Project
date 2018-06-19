@@ -138,11 +138,19 @@ footer {
     color: white;
     font-family: 'NunitoLight';
     font-size: 17px;
+    .usfel{
+        margin-top: 28px;
+    }
     h4{
         font-family: 'Nunito';
     }
     p{
      font-family: 'NunitoLight';
+    }
+    .navLi{
+        li{
+            border-bottom: 1px dashed #7d7b7b;
+        }
     }
     ul{
         list-style-type: none;
@@ -184,10 +192,10 @@ footer {
     }
     .follow{
         .socialMedia{
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             i{
-                font-size: 22px;
+                font-size: 19px;
             }
         }
     }
@@ -210,8 +218,6 @@ footer {
             margin-bottom: 50px;
             }
         }
-
-
     }
 }
 a{
@@ -253,21 +259,17 @@ a{
         }
     }
 }
-
-
-
-
-
-
-
 .navIcons{
 position: absolute;
-top: 15px;
-right: 8vw;
+top: 10px;
+right:15px;
 }
 
+.p{
+    width: 1px;
+    height: 40px;
+}
 
-
-
-
-
+.b{
+    position: relative;
+}
