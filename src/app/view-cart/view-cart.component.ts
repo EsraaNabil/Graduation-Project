@@ -108,8 +108,8 @@ ngOnInit() {
 quen();
 
 $(".minus").on("click",function(){
-  sum();
-  quen();
+ sum();
+ quen();
 })
 
 $(".plus").on("click",function(){
