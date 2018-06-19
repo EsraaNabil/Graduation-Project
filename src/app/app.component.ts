@@ -13,7 +13,6 @@ export class AppComponent {
   cardItemsQuantities;
   WishListItemsQuantities:number;
   navbarCollapsed: boolean;
-
   constructor(
     private router: Router,
     private data: DataPipeService
@@ -22,6 +21,9 @@ export class AppComponent {
     this.navbarCollapsed = true;
   }
 
+  reload(){
+    location.reload();
+  }
 
   redirectToLogin(): void {
     this.router.navigate(['/login/']);

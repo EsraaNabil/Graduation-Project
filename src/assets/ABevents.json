@@ -1,5 +1,5 @@
 [{
-    "img":"assets/images/events/pic4.jpg",
+    "img":"assets/images/events/pic4.jpeg",
     "place":"Alexandria Bibliotheca",
     "imgDate":"7",
     "imgMonth":"aug",
@@ -11,7 +11,7 @@
     "description":"write a short story and illustrate its events, as well as read it out in a storytelling event"
 },
 {
-    "img":"assets/images/events/pic5.jpg",
+    "img":"assets/images/events/pic5.jpeg",
     "place":"Alexandria Bibliotheca",
     "imgDate":"11",
     "imgMonth":"oct",
@@ -23,7 +23,7 @@
     "description":"help children conduct scientific and architectural experiments, acquainting them with robotics."
 },
 {
-    "img":"assets/images/events/pic6.jpg",
+    "img":"assets/images/events/pic6.jpeg",
     "place":"Alexandria Bibliotheca",
     "imgDate":"5",
     "imgMonth":"sep",
@@ -35,7 +35,7 @@
     "description":"Students from Alex will participate in the competition by presenting research on wildlife."
 },
 {
-    "img":"assets/images/events/pic4.jpg",
+    "img":"assets/images/events/pic4.jpeg",
     "place":"Alexandria Bibliotheca",
     "imgDate":"7",
     "imgMonth":"aug",
@@ -47,7 +47,7 @@
     "description":"write a short story and illustrate its events, as well as read it out in a storytelling event."
 },
 {
-    "img":"assets/images/events/pic5.jpg",
+    "img":"assets/images/events/pic5.jpeg",
     "place":"Alexandria Bibliotheca",
     "imgDate":"11",
     "imgMonth":"oct",
@@ -59,7 +59,7 @@
     "description":"help children conduct scientific and architectural experiments, acquainting them with robotics."
 },
 {
-    "img":"assets/images/events/pic6.jpg",
+    "img":"assets/images/events/pic6.jpeg",
     "place":"Alexandria Bibliotheca",
     "imgDate":"5",
     "imgMonth":"sep",

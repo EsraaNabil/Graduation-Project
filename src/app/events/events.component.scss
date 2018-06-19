@@ -1,10 +1,7 @@
 @import "../../assets/variables.scss";
 .secshop{
-    background-image: url('/assets/images/events/header.jpg');
+    background-image: url('/assets/images/events/header.jpeg');
     background-position: top; 
-}
-.tabs{
-    color:$blue;
 }
 
 ngb-tabset /deep/ ul {
@@ -12,8 +9,11 @@ ngb-tabset /deep/ ul {
     font-size: 18px;
     font-family: 'Nunito'
 }
+ngb-tabset /deep/ .nav-tabs .nav-link{
+    color:$blue;
+}
 ngb-tabset /deep/ .nav-tabs .nav-link.active{
-    color: $pink;
+    color:$pink;
 }
 .card{
     height: 550px;
