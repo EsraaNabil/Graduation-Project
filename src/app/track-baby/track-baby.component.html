@@ -6,7 +6,6 @@
                 <h2 >Track Your Baby</h2>
               </div>
    
-    <!-- <div class="col-md-6 track offset-md-3   pl-5 pr-5  paddBottom  "> -->
               <div class="col-md-6 track offset-md-3  pb-5 pl-5 pr-5  ">
                     <div>
                         <h5>{{data.head}}</h5>
@@ -27,7 +26,7 @@
                         <div class="form-group pb-4">
                             <input class="form-control  " type="number" placeholder="The frequency at which your baby feeds?"  name="eat_time" [(ngModel)]="eat_time" required>
                         </div>
-                        <div class="d-flex justify-content-end ">
+                        <div class="d-flex justify-content-center ">
                             <button type="submit" (click)="getBabyData()" class="btn  button-shadow marginBottom " [disabled]="!babyTrack.valid">Submit</button>
                         </div>         
                    </form>
@@ -40,7 +39,6 @@
       </div>
       </div>
     </div>
-<!-- </div> -->
 <div class="trackBaby">
   <div class="move ">
       <img class="img-fluid"  src="../assets/images/trackbaby/girlCar-01.png">

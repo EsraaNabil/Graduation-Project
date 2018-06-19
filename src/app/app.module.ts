@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+// import { NgwWowModule } from 'ngx-wow';
 //app component
 import { AppComponent } from './app.component';
 import { Sec3Component } from './sec3/sec3.component';
@@ -94,7 +95,7 @@ const routes: Routes = [
     ContactComponent,
     PageNotFoundComponent,
     GameComponent,
-    ToysComponent
+    ToysComponent,
   ],
   imports: [
     BrowserModule,
@@ -102,7 +103,7 @@ const routes: Routes = [
     AngularFontAwesomeModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [QueryService, DataPipeService],
   bootstrap: [AppComponent]

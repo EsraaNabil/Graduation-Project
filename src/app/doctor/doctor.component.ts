@@ -3,7 +3,6 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { NgForm , NgModel } from '@angular/forms';
 import {QueryService} from '../query.service';
 import * as $ from 'jquery';
-
 @Component({
   selector: 'app-doctor',
   templateUrl: './doctor.component.html',
@@ -91,10 +90,14 @@ export class DoctorComponent implements OnInit {
 
 
   ngOnInit() {
-    $(".dropdown-menu button").click(function(){
-      console.log($(".dropdown-menu button"));
-        $("#myText").eq(0).html($(this).text());
-    });  
+    
+    $(document).ready(function(){
+
+      $(".dropdown-menu button").click(function(){
+        console.log($(".dropdown-menu button"));
+          $("#myText").eq(0).html($(this).text());
+      }); 
+    });
   }
 
 }

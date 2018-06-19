@@ -3,6 +3,10 @@
     background-image: url('/assets/images/events/header.jpg');
     background-position: top; 
 }
+.tabs{
+    color:$blue;
+}
+
 ngb-tabset /deep/ ul {
     margin-bottom: 80px;
     font-size: 18px;

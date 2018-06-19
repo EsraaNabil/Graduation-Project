@@ -34,17 +34,17 @@
                 <td>
                   <nav class="item-nav" aria-label="...">
                     <ul class="pagination">
-                      <li class="page-item disabled minus" (click)="minus(i,data.quantity)">
+                      <li class="page-item disabled minus" (click)="minus(i,data.quantity) ">
                         <a class="page-link background" tabindex="-1"><i class="fa fa-minus"></i></a>
                       </li>
-                      <li class="page-item"><a class="page-link quantity" id="any">{{data.quantity}}</a></li>
+                      <li class="page-item"><a class="page-link quantity a" id="any">{{data.quantity}}</a></li>
                       <li class="page-item plus" (click)="plus(i,data.quantity)">
                         <a class="page-link background"><i class="fa fa-plus"></i></a>
                       </li>
                     </ul>
                   </nav>
                 </td>
-                <td class="text-dark" >{{data.subtotal}}</td>
+                <td class="text-dark total itemTotal" >{{data.subtotal}}</td>
                 <td class="delete"><a (click)="delete(data.id)"><i class="fa fa-trash"></i></a></td>
               </tr>
             </tbody>
