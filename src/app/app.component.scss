@@ -247,6 +247,13 @@ a{
            display: none;
        }
     }
+    footer{
+       a{
+           img{
+               width: 200px;
+           }
+       }
+    }
 }
 
 @media all and (max-width:576px){

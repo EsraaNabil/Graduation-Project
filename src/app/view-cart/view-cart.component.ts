@@ -129,7 +129,7 @@ function sum(){
         console.log("x=" + x);
         for(var i=0; i<x.length; i++){
         let z = x.eq(i).html();
-        z=parseInt(z);
+        // z=parseInt(z);
         arr.push(z)
         }
         let r=0;
