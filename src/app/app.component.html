@@ -34,9 +34,10 @@
 
 <nav class="navbar navbar-expand-lg navbar-light pl-0 pr-0 secondNav">
   <div class="container d-flex  justify-content-between ">
-
     <a class="navbar-brand" href="#">ANGULAR</a>
-
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" (click)="navbarCollapsed = !navbarCollapsed">
+      <i class="fa fa-bars menu"></i>
+    </button>
     <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNavAltMarkup" [ngbCollapse]="navbarCollapsed">
       <div class="navbar-nav d-flex align-items-center justify-content-center ml-auto mr-auto">
           <div ngbDropdown class="d-inline-block">
@@ -86,10 +87,10 @@
           </div>
       </div>
     </div>
-    <div>
+    <div class="divNav">
       <i class="fa fa-heart pointer" routerLink="WishList" ></i>
       <i class="fa fa-shopping-cart pl-3 pointer" routerLink="/cart"></i>
-      <span class="cart" *ngIf="cardItemsQuantities>=0"  routerLink="cart">
+      <span class="cart" *ngIf="cardItemsQuantities > 0"  routerLink="cart">
         {{cardItemsQuantities}}
       </span>
     </div>

@@ -12,11 +12,13 @@ import { DataPipeService } from './data-pipe.service';
 export class AppComponent {
   cardItemsQuantities;
   WishListItemsQuantities:number;
+  navbarCollapsed: boolean;
   constructor(
     private router: Router,
     private data: DataPipeService
   ) {
     this.data.currentMessage.subscribe(message => this.cardItemsQuantities = message);
+    this.navbarCollapsed = true;
   }
 
 
