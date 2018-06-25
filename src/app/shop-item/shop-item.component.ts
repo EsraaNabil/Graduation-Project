@@ -69,6 +69,7 @@ export class ShopItemComponent implements OnInit {
       res => {
         res.forEach(element => {
           if(element.id == this.itemId){
+            element.quantity = 1;
             this.itemData = element;
           }
         });;

@@ -21,8 +21,27 @@
           <div class="check"></div>
         </div>
       </form>
+      <h4>Shop By Price</h4>
+      <form class="form">
+        <div class="inputGroup">
+            <input (click)= "addPrice(10,100)" id="radio3" name="radio" type="radio"/>
+            <label for="radio3">10 LE - 100 LE</label>
+            <div class="check"></div>
+        </div>
+        <div class="inputGroup">
+          <input (click)= "addPrice(100,300)" id="radio3" name="radio" type="radio"/>
+          <label for="radio3">100 LE - 300 LE</label>
+          <div class="check"></div>
+        </div>
+        <div class="inputGroup">
+          <input (click)= "addPrice(300,500)" id="radio4" name="radio" type="radio"/>
+          <label for="radio4">300 LE - 500 LE</label>
+          <div class="check"></div>
+        </div>
+      </form>
+      
       <h4>Shop By Color</h4>
-      <ul>
+      <ul class="margin">
         <li>
           <a (click)="addColor('red')">
               <i class="fa fa-circle" style="color:red"></i>
@@ -72,24 +91,6 @@
           </a>
         </li>
       </ul>
-      <h4>Shop By Price</h4>
-      <form class="form margin">
-        <div class="inputGroup">
-            <input (click)= "addPrice(10,100)" id="radio3" name="radio" type="radio"/>
-            <label for="radio3">10 LE - 100 LE</label>
-            <div class="check"></div>
-        </div>
-        <div class="inputGroup">
-          <input (click)= "addPrice(100,300)" id="radio3" name="radio" type="radio"/>
-          <label for="radio3">100 LE - 300 LE</label>
-          <div class="check"></div>
-        </div>
-        <div class="inputGroup">
-          <input (click)= "addPrice(300,500)" id="radio4" name="radio" type="radio"/>
-          <label for="radio4">300 LE - 500 LE</label>
-          <div class="check"></div>
-        </div>
-      </form>
     </div>
     <div class="col-12 col-md-8">
       <div class="row">
@@ -117,8 +118,8 @@
                 <div class="hover">
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-secondary" [routerLink]="['/toys/item',data.id]"><i class="fa fa-eye"></i></button>
-                        <button type="button" class="btn btn-secondary" (click)="addItemToCart(data.id)"><i class="fa fa-shopping-cart"></i></button>
-                        <button type="button" class="btn btn-secondary" (click)="addWishListCart(data.id)"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="btn btn-secondary cart" (click)="addItemToCart(data.id)"><i class="fa fa-shopping-cart"></i></button>
+                        <button type="button" class="btn btn-secondary cart" (click)="addWishListCart(data.id)"><i class="fa fa-heart"></i></button>
                     </div>
                 </div>              
                 <img class="card-img-top" [src]="data.pic" alt="Card image cap">

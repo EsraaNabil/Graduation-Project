@@ -122,12 +122,17 @@ export class ToysComponent implements OnInit {
 
 
   ngOnInit() {
+    $(document).ready(function(){
     $(".dropdown-menu button").click(function(){
         console.log($(".dropdown-menu button"));
         $("#myText").eq(0).html($(this).text());
     }); 
     $(".allBtn").click(function(){
         location.reload();
-    });    
+    });  
+    $(".cart").on("click",function(){
+      $(this).find("i").css("color","#e21c3f");
+    });
+  });
   }
 }

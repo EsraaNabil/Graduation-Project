@@ -46,6 +46,7 @@ getCartItems(){
       this.q.getData('assets/toys.json').subscribe(res =>{
         res.forEach(element => {
           if(this.cartStorage.indexOf(element.id)!=-1){
+            element.quantity = 1;
             this.newData.push(element);
           }
         });     
@@ -109,13 +110,11 @@ quen();
 
 $(".minus").on("click",function(){
   quen();
-
- sum();
+  sum();
 })
 
 $(".plus").on("click",function(){
   quen();
-
   sum();
 })
 

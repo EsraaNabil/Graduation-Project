@@ -9,7 +9,7 @@
   <nav class="navbar navbar-ligh mb-5">
     <form class="form-inline">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search For a Place" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="Search For a Place" aria-label="Username" aria-describedby="basic-addon1" name="search" [(ngModel)]="term">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
         </div>
@@ -19,7 +19,7 @@
   <ngb-carousel class="margin" data-interval="false">
     <ng-template ngbSlide>
       <div class="card-columns" >
-        <div class="card mb-5" *ngFor="let data of nurseryData">
+        <div class="card mb-5" *ngFor="let data of nurseryData |filter:term">
           <div class="cardImg">
               <div class="hover">
                   <ng-template #content let-c="close" let-d="dismiss">

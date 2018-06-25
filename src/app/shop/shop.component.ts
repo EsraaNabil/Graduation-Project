@@ -130,13 +130,16 @@ export class ShopComponent implements OnInit {
       $(".cartBtn").click(function(){
         $(this).parents(".cardImg").find(".added").css("visibility","visible");
       });
-    });
     $(".dropdown-menu button").click(function(){
       console.log($(".dropdown-menu button"));
         $("#myText").eq(0).html($(this).text());
     }); 
     $(".allBtn").click(function(){
         location.reload();
-    });    
+    });  
+    $(".cart").on("click",function(){
+      $(this).find("i").css("color","#e21c3f");
+    })
+  });  
   }
 }

@@ -30,6 +30,20 @@
       </div>
     </div>  
   </div>  
+  <div class="text-right">
+    <div class="btn-group mb-5 dropDownData mr-auto ml-auto">
+        <button type="button" id="myText" class="inputBtn btn btn-primary left">Choose Stage</button>
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+          <button class="btn btn-primary dropdown-toggle-split right" ngbDropdownToggle></button>
+          <div class="dropdown-menu" ngbDropdownMenu style="right:0px ;left:auto">
+            <button class="dropdown-item" (click)="stage('All')">All Schools</button>
+            <button class="dropdown-item" (click)="stage('Primary')">Primary Schools</button>
+            <button class="dropdown-item" (click)="stage('Preparatory')">Preparatory Schools</button>
+            <button class="dropdown-item" (click)="stage('High')">High Schools </button>
+          </div>
+        </div>
+      </div>
+  </div>
   <ngb-carousel class="margin" data-interval="false">
       <ng-template ngbSlide>
         <div class="card-columns" >

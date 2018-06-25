@@ -38,6 +38,7 @@ import { ContactComponent } from './contact/contact.component';  // import valid
 import { PageNotFoundComponent } from './page-not-found-component/page-not-found-component.component';
 import { GameComponent } from './game/game.component';
 import { ToysComponent } from './toys/toys.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 const routes: Routes = [
@@ -104,6 +105,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [QueryService, DataPipeService],
   bootstrap: [AppComponent]

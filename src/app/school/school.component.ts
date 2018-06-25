@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {QueryService} from '../query.service';
+import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-school',
@@ -52,7 +54,31 @@ export class SchoolComponent implements OnInit {
       () => {}
     );
   }
+
+  
+stage(type:string){
+  if (type=="All"){
+    this.getPschoolData();
+  }
+  else{
+    this.q.getData('assets/Pschool.json').subscribe(res =>{
+      this.schoolData=[];
+      res.forEach(element => {
+        if(element.stage == type){
+          this.schoolData.push(element);
+        }
+      });
+    });
+  } 
+}
+
   ngOnInit() {
+    $(document).ready(function(){ 
+      $(".dropdown-menu button").click(function(){
+        console.log($(".dropdown-menu button"));
+          $("#myText").eq(0).html($(this).text());
+      });
+    });
   }
 
 }

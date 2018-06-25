@@ -12,6 +12,7 @@ export class WishListComponent implements OnInit {
   wishListData:Array<any>;
   wishListStorage;
   flag:boolean;
+  deletedItem;
 
   constructor(
     private q:QueryService ,
@@ -51,17 +52,14 @@ export class WishListComponent implements OnInit {
   }
 
   delete(itemId){
-    if(localStorage.getItem('wishList')){
-      this.wishListStorage = JSON.parse(localStorage.getItem('wishList'));
-      console.log("before",this.wishListData)
-      console.log("intm",itemId)
-        if(this.wishListStorage.indexOf(itemId) != -1){
-          this.wishListData.splice(this.wishListStorage.indexOf(itemId),1);
-          console.log("after",this.wishListData)
-          this.wishListStorage.splice(this.wishListStorage.indexOf(itemId),1);
-          localStorage.setItem('wishList', JSON.stringify(this.wishListStorage));
-          this.flag=false;
-        }
+    for(let i=0;i< this.wishListData.length;i++){
+      if(this.wishListData[i].id == itemId){
+        this.wishListData.splice(i,1);
+        this.deletedItem = JSON.parse(localStorage.getItem('wishList'));
+        this.deletedItem.splice(i,1);
+        localStorage.setItem('wishList',JSON.stringify(this.deletedItem));
+        break;
+      }
     }
   }
 
